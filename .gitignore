@@ -1,3 +1,5 @@
 mdcrd
 *.nc
 peptide
+.DS_Store
+__pycache__

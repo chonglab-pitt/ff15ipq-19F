@@ -1,0 +1,73 @@
+
+CPPTRAJ: Trajectory Analysis. V4.14.0 (AmberTools V19.11)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 07/01/21 16:36:01
+| Available memory: 186.549 GB
+
+INPUT: Reading input from 'cpptraj.in'
+  [parm ../../W4F_tet.prmtop]
+	Reading '../../W4F_tet.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+  [trajin prod.nc]
+	Reading 'prod.nc' as Amber NetCDF
+  [autoimage]
+    AUTOIMAGE: To box center based on center of mass, anchor is first molecule.
+  [strip :WAT]
+    STRIP: Stripping atoms in mask [:WAT]
+  [trajout prod-dry.nc]
+	Writing 'prod-dry.nc' as Amber NetCDF
+  [go]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: W4F_tet.prmtop, 3461 atoms, 1140 res, box: Trunc. Oct., 1136 mol, 1135 solvent
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'prod.nc' is a NetCDF AMBER trajectory with coordinates, time, box, Parm W4F_tet.prmtop (Trunc. Oct. box) (reading 4789 of 4789)
+  Coordinate processing will occur on 4789 frames.
+
+OUTPUT TRAJECTORIES (1 total):
+  'prod-dry.nc' (4789 frames) is a NetCDF AMBER trajectory
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'W4F_tet.prmtop' (2 actions):
+  0: [autoimage]
+	Original box is truncated octahedron, turning on 'familiar'.
+	Using first molecule as anchor.
+	1135 molecules are mobile.
+  1: [strip :WAT]
+	Stripping 3405 atoms.
+	Stripped topology: 56 atoms, 5 res, box: Trunc. Oct., 1 mol
+.....................................................
+ACTIVE OUTPUT TRAJECTORIES (1):
+  prod-dry.nc (coordinates, time, box)
+----- prod.nc (1-4789, 1) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 4789 frames and processed 4789 frames.
+TIME: Avg. throughput= 479.2478 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 9.9927 s ( 99.99%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0000 s (  0.00%)
+TIME:		Other              : 0.0007 s (  0.00%)
+TIME:	Run Total 9.9934 s
+---------- RUN END ---------------------------------------------------
+  [quit]
+TIME: Total execution time: 10.0142 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+

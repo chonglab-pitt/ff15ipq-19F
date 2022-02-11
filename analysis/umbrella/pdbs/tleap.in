@@ -1,0 +1,4 @@
+source leaprc.protein.ff15ipq
+PHE = sequence { ACE ALA PHE ALA NME }
+savepdb PHE PHE_tet.pdb
+quit

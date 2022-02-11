@@ -1,0 +1,562 @@
+&files
+  -p     ALA/ALADi.top
+  -o     fit.out
+&end
+
+&fitq
+  ipolq  ALA/Conf1/IPolQgrd.vacu   ALA/Conf1/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf3/IPolQgrd.vacu   ALA/Conf3/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf4/IPolQgrd.vacu   ALA/Conf4/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf5/IPolQgrd.vacu   ALA/Conf5/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf8/IPolQgrd.vacu   ALA/Conf8/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf9/IPolQgrd.vacu   ALA/Conf9/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf10/IPolQgrd.vacu   ALA/Conf10/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf11/IPolQgrd.vacu   ALA/Conf11/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf12/IPolQgrd.vacu   ALA/Conf12/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf13/IPolQgrd.vacu   ALA/Conf13/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf14/IPolQgrd.vacu   ALA/Conf14/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf18/IPolQgrd.vacu   ALA/Conf18/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf19/IPolQgrd.vacu   ALA/Conf19/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ALA/Conf20/IPolQgrd.vacu   ALA/Conf20/IPolQgrd.solv   ALA/vALADi.top  1.0
+  ipolq  ASP/Conf1/IPolQgrd.vacu   ASP/Conf1/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf2/IPolQgrd.vacu   ASP/Conf2/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf3/IPolQgrd.vacu   ASP/Conf3/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf4/IPolQgrd.vacu   ASP/Conf4/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf5/IPolQgrd.vacu   ASP/Conf5/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf6/IPolQgrd.vacu   ASP/Conf6/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf7/IPolQgrd.vacu   ASP/Conf7/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf8/IPolQgrd.vacu   ASP/Conf8/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf9/IPolQgrd.vacu   ASP/Conf9/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf10/IPolQgrd.vacu   ASP/Conf10/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf11/IPolQgrd.vacu   ASP/Conf11/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf12/IPolQgrd.vacu   ASP/Conf12/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf13/IPolQgrd.vacu   ASP/Conf13/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf14/IPolQgrd.vacu   ASP/Conf14/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf15/IPolQgrd.vacu   ASP/Conf15/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf16/IPolQgrd.vacu   ASP/Conf16/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf17/IPolQgrd.vacu   ASP/Conf17/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf18/IPolQgrd.vacu   ASP/Conf18/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf19/IPolQgrd.vacu   ASP/Conf19/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  ASP/Conf20/IPolQgrd.vacu   ASP/Conf20/IPolQgrd.solv   ASP/vASPDi.top  1.0
+  ipolq  GLN/Conf1/IPolQgrd.vacu   GLN/Conf1/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf2/IPolQgrd.vacu   GLN/Conf2/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf3/IPolQgrd.vacu   GLN/Conf3/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf4/IPolQgrd.vacu   GLN/Conf4/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf5/IPolQgrd.vacu   GLN/Conf5/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf6/IPolQgrd.vacu   GLN/Conf6/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf7/IPolQgrd.vacu   GLN/Conf7/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf8/IPolQgrd.vacu   GLN/Conf8/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf10/IPolQgrd.vacu   GLN/Conf10/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf11/IPolQgrd.vacu   GLN/Conf11/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf13/IPolQgrd.vacu   GLN/Conf13/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf14/IPolQgrd.vacu   GLN/Conf14/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf15/IPolQgrd.vacu   GLN/Conf15/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf16/IPolQgrd.vacu   GLN/Conf16/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf17/IPolQgrd.vacu   GLN/Conf17/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  GLN/Conf20/IPolQgrd.vacu   GLN/Conf20/IPolQgrd.solv   GLN/vGLNDi.top  1.0
+  ipolq  HIE/Conf1/IPolQgrd.vacu   HIE/Conf1/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf2/IPolQgrd.vacu   HIE/Conf2/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf3/IPolQgrd.vacu   HIE/Conf3/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf4/IPolQgrd.vacu   HIE/Conf4/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf5/IPolQgrd.vacu   HIE/Conf5/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf6/IPolQgrd.vacu   HIE/Conf6/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf7/IPolQgrd.vacu   HIE/Conf7/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf8/IPolQgrd.vacu   HIE/Conf8/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf9/IPolQgrd.vacu   HIE/Conf9/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf10/IPolQgrd.vacu   HIE/Conf10/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf11/IPolQgrd.vacu   HIE/Conf11/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf12/IPolQgrd.vacu   HIE/Conf12/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf13/IPolQgrd.vacu   HIE/Conf13/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf14/IPolQgrd.vacu   HIE/Conf14/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf15/IPolQgrd.vacu   HIE/Conf15/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf16/IPolQgrd.vacu   HIE/Conf16/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf17/IPolQgrd.vacu   HIE/Conf17/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf18/IPolQgrd.vacu   HIE/Conf18/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf19/IPolQgrd.vacu   HIE/Conf19/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  HIE/Conf20/IPolQgrd.vacu   HIE/Conf20/IPolQgrd.solv   HIE/vHIEDi.top  1.0
+  ipolq  LYN/Conf1/IPolQgrd.vacu   LYN/Conf1/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf2/IPolQgrd.vacu   LYN/Conf2/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf3/IPolQgrd.vacu   LYN/Conf3/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf4/IPolQgrd.vacu   LYN/Conf4/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf5/IPolQgrd.vacu   LYN/Conf5/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf6/IPolQgrd.vacu   LYN/Conf6/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf7/IPolQgrd.vacu   LYN/Conf7/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf8/IPolQgrd.vacu   LYN/Conf8/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf9/IPolQgrd.vacu   LYN/Conf9/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf10/IPolQgrd.vacu   LYN/Conf10/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf11/IPolQgrd.vacu   LYN/Conf11/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf12/IPolQgrd.vacu   LYN/Conf12/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf13/IPolQgrd.vacu   LYN/Conf13/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf14/IPolQgrd.vacu   LYN/Conf14/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf15/IPolQgrd.vacu   LYN/Conf15/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf16/IPolQgrd.vacu   LYN/Conf16/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf17/IPolQgrd.vacu   LYN/Conf17/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf18/IPolQgrd.vacu   LYN/Conf18/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf19/IPolQgrd.vacu   LYN/Conf19/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  LYN/Conf20/IPolQgrd.vacu   LYN/Conf20/IPolQgrd.solv   LYN/vLYNDi.top  1.0
+  ipolq  PRO/Conf1/IPolQgrd.vacu   PRO/Conf1/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  PRO/Conf2/IPolQgrd.vacu   PRO/Conf2/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  PRO/Conf4/IPolQgrd.vacu   PRO/Conf4/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  PRO/Conf5/IPolQgrd.vacu   PRO/Conf5/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  PRO/Conf6/IPolQgrd.vacu   PRO/Conf6/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  PRO/Conf7/IPolQgrd.vacu   PRO/Conf7/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  PRO/Conf8/IPolQgrd.vacu   PRO/Conf8/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  PRO/Conf10/IPolQgrd.vacu   PRO/Conf10/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  PRO/Conf12/IPolQgrd.vacu   PRO/Conf12/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  PRO/Conf15/IPolQgrd.vacu   PRO/Conf15/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  PRO/Conf20/IPolQgrd.vacu   PRO/Conf20/IPolQgrd.solv   PRO/vPRODi.top  1.0
+  ipolq  TRP/Conf1/IPolQgrd.vacu   TRP/Conf1/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf2/IPolQgrd.vacu   TRP/Conf2/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf3/IPolQgrd.vacu   TRP/Conf3/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf4/IPolQgrd.vacu   TRP/Conf4/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf5/IPolQgrd.vacu   TRP/Conf5/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf6/IPolQgrd.vacu   TRP/Conf6/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf7/IPolQgrd.vacu   TRP/Conf7/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf8/IPolQgrd.vacu   TRP/Conf8/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf9/IPolQgrd.vacu   TRP/Conf9/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf10/IPolQgrd.vacu   TRP/Conf10/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf11/IPolQgrd.vacu   TRP/Conf11/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf12/IPolQgrd.vacu   TRP/Conf12/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf13/IPolQgrd.vacu   TRP/Conf13/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf14/IPolQgrd.vacu   TRP/Conf14/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf15/IPolQgrd.vacu   TRP/Conf15/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf16/IPolQgrd.vacu   TRP/Conf16/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf17/IPolQgrd.vacu   TRP/Conf17/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf18/IPolQgrd.vacu   TRP/Conf18/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf19/IPolQgrd.vacu   TRP/Conf19/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  TRP/Conf20/IPolQgrd.vacu   TRP/Conf20/IPolQgrd.solv   TRP/vTRPDi.top  1.0
+  ipolq  ARG/Conf1/IPolQgrd.vacu   ARG/Conf1/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf3/IPolQgrd.vacu   ARG/Conf3/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf4/IPolQgrd.vacu   ARG/Conf4/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf5/IPolQgrd.vacu   ARG/Conf5/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf6/IPolQgrd.vacu   ARG/Conf6/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf7/IPolQgrd.vacu   ARG/Conf7/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf8/IPolQgrd.vacu   ARG/Conf8/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf9/IPolQgrd.vacu   ARG/Conf9/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf10/IPolQgrd.vacu   ARG/Conf10/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf11/IPolQgrd.vacu   ARG/Conf11/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf12/IPolQgrd.vacu   ARG/Conf12/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf13/IPolQgrd.vacu   ARG/Conf13/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf14/IPolQgrd.vacu   ARG/Conf14/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf15/IPolQgrd.vacu   ARG/Conf15/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf16/IPolQgrd.vacu   ARG/Conf16/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf17/IPolQgrd.vacu   ARG/Conf17/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf19/IPolQgrd.vacu   ARG/Conf19/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  ARG/Conf20/IPolQgrd.vacu   ARG/Conf20/IPolQgrd.solv   ARG/vARGDi.top  1.0
+  ipolq  CYS/Conf3/IPolQgrd.vacu   CYS/Conf3/IPolQgrd.solv   CYS/vCYSDi.top  1.0
+  ipolq  CYS/Conf5/IPolQgrd.vacu   CYS/Conf5/IPolQgrd.solv   CYS/vCYSDi.top  1.0
+  ipolq  CYS/Conf6/IPolQgrd.vacu   CYS/Conf6/IPolQgrd.solv   CYS/vCYSDi.top  1.0
+  ipolq  CYS/Conf8/IPolQgrd.vacu   CYS/Conf8/IPolQgrd.solv   CYS/vCYSDi.top  1.0
+  ipolq  CYS/Conf11/IPolQgrd.vacu   CYS/Conf11/IPolQgrd.solv   CYS/vCYSDi.top  1.0
+  ipolq  CYS/Conf13/IPolQgrd.vacu   CYS/Conf13/IPolQgrd.solv   CYS/vCYSDi.top  1.0
+  ipolq  CYS/Conf14/IPolQgrd.vacu   CYS/Conf14/IPolQgrd.solv   CYS/vCYSDi.top  1.0
+  ipolq  CYS/Conf17/IPolQgrd.vacu   CYS/Conf17/IPolQgrd.solv   CYS/vCYSDi.top  1.0
+  ipolq  CYS/Conf20/IPolQgrd.vacu   CYS/Conf20/IPolQgrd.solv   CYS/vCYSDi.top  1.0
+  ipolq  GLU/Conf2/IPolQgrd.vacu   GLU/Conf2/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf4/IPolQgrd.vacu   GLU/Conf4/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf5/IPolQgrd.vacu   GLU/Conf5/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf6/IPolQgrd.vacu   GLU/Conf6/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf7/IPolQgrd.vacu   GLU/Conf7/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf8/IPolQgrd.vacu   GLU/Conf8/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf9/IPolQgrd.vacu   GLU/Conf9/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf10/IPolQgrd.vacu   GLU/Conf10/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf12/IPolQgrd.vacu   GLU/Conf12/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf13/IPolQgrd.vacu   GLU/Conf13/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf14/IPolQgrd.vacu   GLU/Conf14/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf15/IPolQgrd.vacu   GLU/Conf15/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf16/IPolQgrd.vacu   GLU/Conf16/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf17/IPolQgrd.vacu   GLU/Conf17/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  GLU/Conf20/IPolQgrd.vacu   GLU/Conf20/IPolQgrd.solv   GLU/vGLUDi.top  1.0
+  ipolq  HIP/Conf1/IPolQgrd.vacu   HIP/Conf1/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf2/IPolQgrd.vacu   HIP/Conf2/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf3/IPolQgrd.vacu   HIP/Conf3/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf4/IPolQgrd.vacu   HIP/Conf4/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf5/IPolQgrd.vacu   HIP/Conf5/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf6/IPolQgrd.vacu   HIP/Conf6/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf7/IPolQgrd.vacu   HIP/Conf7/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf8/IPolQgrd.vacu   HIP/Conf8/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf9/IPolQgrd.vacu   HIP/Conf9/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf10/IPolQgrd.vacu   HIP/Conf10/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf11/IPolQgrd.vacu   HIP/Conf11/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf12/IPolQgrd.vacu   HIP/Conf12/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf13/IPolQgrd.vacu   HIP/Conf13/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf14/IPolQgrd.vacu   HIP/Conf14/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf15/IPolQgrd.vacu   HIP/Conf15/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf16/IPolQgrd.vacu   HIP/Conf16/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf17/IPolQgrd.vacu   HIP/Conf17/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf18/IPolQgrd.vacu   HIP/Conf18/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf19/IPolQgrd.vacu   HIP/Conf19/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  HIP/Conf20/IPolQgrd.vacu   HIP/Conf20/IPolQgrd.solv   HIP/vHIPDi.top  1.0
+  ipolq  LYS/Conf1/IPolQgrd.vacu   LYS/Conf1/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf2/IPolQgrd.vacu   LYS/Conf2/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf3/IPolQgrd.vacu   LYS/Conf3/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf4/IPolQgrd.vacu   LYS/Conf4/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf5/IPolQgrd.vacu   LYS/Conf5/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf6/IPolQgrd.vacu   LYS/Conf6/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf7/IPolQgrd.vacu   LYS/Conf7/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf8/IPolQgrd.vacu   LYS/Conf8/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf9/IPolQgrd.vacu   LYS/Conf9/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf10/IPolQgrd.vacu   LYS/Conf10/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf11/IPolQgrd.vacu   LYS/Conf11/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf12/IPolQgrd.vacu   LYS/Conf12/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf13/IPolQgrd.vacu   LYS/Conf13/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf14/IPolQgrd.vacu   LYS/Conf14/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf15/IPolQgrd.vacu   LYS/Conf15/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf16/IPolQgrd.vacu   LYS/Conf16/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf17/IPolQgrd.vacu   LYS/Conf17/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf18/IPolQgrd.vacu   LYS/Conf18/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf19/IPolQgrd.vacu   LYS/Conf19/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  LYS/Conf20/IPolQgrd.vacu   LYS/Conf20/IPolQgrd.solv   LYS/vLYSDi.top  1.0
+  ipolq  SER/Conf1/IPolQgrd.vacu   SER/Conf1/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf2/IPolQgrd.vacu   SER/Conf2/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf5/IPolQgrd.vacu   SER/Conf5/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf6/IPolQgrd.vacu   SER/Conf6/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf8/IPolQgrd.vacu   SER/Conf8/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf9/IPolQgrd.vacu   SER/Conf9/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf11/IPolQgrd.vacu   SER/Conf11/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf15/IPolQgrd.vacu   SER/Conf15/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf16/IPolQgrd.vacu   SER/Conf16/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf17/IPolQgrd.vacu   SER/Conf17/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf18/IPolQgrd.vacu   SER/Conf18/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf19/IPolQgrd.vacu   SER/Conf19/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  SER/Conf20/IPolQgrd.vacu   SER/Conf20/IPolQgrd.solv   SER/vSERDi.top  1.0
+  ipolq  TYR/Conf1/IPolQgrd.vacu   TYR/Conf1/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf2/IPolQgrd.vacu   TYR/Conf2/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf3/IPolQgrd.vacu   TYR/Conf3/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf4/IPolQgrd.vacu   TYR/Conf4/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf5/IPolQgrd.vacu   TYR/Conf5/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf6/IPolQgrd.vacu   TYR/Conf6/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf7/IPolQgrd.vacu   TYR/Conf7/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf8/IPolQgrd.vacu   TYR/Conf8/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf9/IPolQgrd.vacu   TYR/Conf9/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf10/IPolQgrd.vacu   TYR/Conf10/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf11/IPolQgrd.vacu   TYR/Conf11/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf12/IPolQgrd.vacu   TYR/Conf12/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf13/IPolQgrd.vacu   TYR/Conf13/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf14/IPolQgrd.vacu   TYR/Conf14/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf15/IPolQgrd.vacu   TYR/Conf15/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf16/IPolQgrd.vacu   TYR/Conf16/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf17/IPolQgrd.vacu   TYR/Conf17/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf18/IPolQgrd.vacu   TYR/Conf18/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf19/IPolQgrd.vacu   TYR/Conf19/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  TYR/Conf20/IPolQgrd.vacu   TYR/Conf20/IPolQgrd.solv   TYR/vTYRDi.top  1.0
+  ipolq  ASH/Conf1/IPolQgrd.vacu   ASH/Conf1/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf2/IPolQgrd.vacu   ASH/Conf2/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf3/IPolQgrd.vacu   ASH/Conf3/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf4/IPolQgrd.vacu   ASH/Conf4/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf7/IPolQgrd.vacu   ASH/Conf7/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf8/IPolQgrd.vacu   ASH/Conf8/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf10/IPolQgrd.vacu   ASH/Conf10/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf11/IPolQgrd.vacu   ASH/Conf11/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf12/IPolQgrd.vacu   ASH/Conf12/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf13/IPolQgrd.vacu   ASH/Conf13/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf14/IPolQgrd.vacu   ASH/Conf14/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf15/IPolQgrd.vacu   ASH/Conf15/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf16/IPolQgrd.vacu   ASH/Conf16/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf17/IPolQgrd.vacu   ASH/Conf17/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf18/IPolQgrd.vacu   ASH/Conf18/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf19/IPolQgrd.vacu   ASH/Conf19/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  ASH/Conf20/IPolQgrd.vacu   ASH/Conf20/IPolQgrd.solv   ASH/vASHDi.top  1.0
+  ipolq  GLY/Conf1/IPolQgrd.vacu   GLY/Conf1/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf2/IPolQgrd.vacu   GLY/Conf2/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf3/IPolQgrd.vacu   GLY/Conf3/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf4/IPolQgrd.vacu   GLY/Conf4/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf5/IPolQgrd.vacu   GLY/Conf5/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf6/IPolQgrd.vacu   GLY/Conf6/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf7/IPolQgrd.vacu   GLY/Conf7/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf8/IPolQgrd.vacu   GLY/Conf8/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf9/IPolQgrd.vacu   GLY/Conf9/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf10/IPolQgrd.vacu   GLY/Conf10/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf11/IPolQgrd.vacu   GLY/Conf11/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf12/IPolQgrd.vacu   GLY/Conf12/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf13/IPolQgrd.vacu   GLY/Conf13/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf14/IPolQgrd.vacu   GLY/Conf14/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf15/IPolQgrd.vacu   GLY/Conf15/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf16/IPolQgrd.vacu   GLY/Conf16/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf17/IPolQgrd.vacu   GLY/Conf17/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf18/IPolQgrd.vacu   GLY/Conf18/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf19/IPolQgrd.vacu   GLY/Conf19/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  GLY/Conf20/IPolQgrd.vacu   GLY/Conf20/IPolQgrd.solv   GLY/vGLYDi.top  1.0
+  ipolq  ILE/Conf1/IPolQgrd.vacu   ILE/Conf1/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf2/IPolQgrd.vacu   ILE/Conf2/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf3/IPolQgrd.vacu   ILE/Conf3/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf4/IPolQgrd.vacu   ILE/Conf4/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf5/IPolQgrd.vacu   ILE/Conf5/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf6/IPolQgrd.vacu   ILE/Conf6/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf7/IPolQgrd.vacu   ILE/Conf7/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf8/IPolQgrd.vacu   ILE/Conf8/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf9/IPolQgrd.vacu   ILE/Conf9/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf10/IPolQgrd.vacu   ILE/Conf10/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf11/IPolQgrd.vacu   ILE/Conf11/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf13/IPolQgrd.vacu   ILE/Conf13/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf14/IPolQgrd.vacu   ILE/Conf14/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf16/IPolQgrd.vacu   ILE/Conf16/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf17/IPolQgrd.vacu   ILE/Conf17/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf18/IPolQgrd.vacu   ILE/Conf18/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf19/IPolQgrd.vacu   ILE/Conf19/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  ILE/Conf20/IPolQgrd.vacu   ILE/Conf20/IPolQgrd.solv   ILE/vILEDi.top  1.0
+  ipolq  MET/Conf1/IPolQgrd.vacu   MET/Conf1/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf2/IPolQgrd.vacu   MET/Conf2/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf3/IPolQgrd.vacu   MET/Conf3/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf4/IPolQgrd.vacu   MET/Conf4/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf5/IPolQgrd.vacu   MET/Conf5/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf6/IPolQgrd.vacu   MET/Conf6/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf7/IPolQgrd.vacu   MET/Conf7/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf8/IPolQgrd.vacu   MET/Conf8/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf9/IPolQgrd.vacu   MET/Conf9/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf10/IPolQgrd.vacu   MET/Conf10/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf11/IPolQgrd.vacu   MET/Conf11/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf12/IPolQgrd.vacu   MET/Conf12/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf13/IPolQgrd.vacu   MET/Conf13/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf14/IPolQgrd.vacu   MET/Conf14/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf15/IPolQgrd.vacu   MET/Conf15/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf16/IPolQgrd.vacu   MET/Conf16/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf17/IPolQgrd.vacu   MET/Conf17/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf19/IPolQgrd.vacu   MET/Conf19/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  MET/Conf20/IPolQgrd.vacu   MET/Conf20/IPolQgrd.solv   MET/vMETDi.top  1.0
+  ipolq  VAL/Conf1/IPolQgrd.vacu   VAL/Conf1/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf2/IPolQgrd.vacu   VAL/Conf2/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf3/IPolQgrd.vacu   VAL/Conf3/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf4/IPolQgrd.vacu   VAL/Conf4/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf5/IPolQgrd.vacu   VAL/Conf5/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf6/IPolQgrd.vacu   VAL/Conf6/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf7/IPolQgrd.vacu   VAL/Conf7/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf8/IPolQgrd.vacu   VAL/Conf8/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf9/IPolQgrd.vacu   VAL/Conf9/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf11/IPolQgrd.vacu   VAL/Conf11/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf13/IPolQgrd.vacu   VAL/Conf13/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf14/IPolQgrd.vacu   VAL/Conf14/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf15/IPolQgrd.vacu   VAL/Conf15/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf16/IPolQgrd.vacu   VAL/Conf16/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf17/IPolQgrd.vacu   VAL/Conf17/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf18/IPolQgrd.vacu   VAL/Conf18/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf19/IPolQgrd.vacu   VAL/Conf19/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  VAL/Conf20/IPolQgrd.vacu   VAL/Conf20/IPolQgrd.solv   VAL/vVALDi.top  1.0
+  ipolq  ASN/Conf1/IPolQgrd.vacu   ASN/Conf1/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf2/IPolQgrd.vacu   ASN/Conf2/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf3/IPolQgrd.vacu   ASN/Conf3/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf4/IPolQgrd.vacu   ASN/Conf4/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf5/IPolQgrd.vacu   ASN/Conf5/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf6/IPolQgrd.vacu   ASN/Conf6/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf7/IPolQgrd.vacu   ASN/Conf7/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf8/IPolQgrd.vacu   ASN/Conf8/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf9/IPolQgrd.vacu   ASN/Conf9/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf10/IPolQgrd.vacu   ASN/Conf10/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf11/IPolQgrd.vacu   ASN/Conf11/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf12/IPolQgrd.vacu   ASN/Conf12/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf13/IPolQgrd.vacu   ASN/Conf13/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf14/IPolQgrd.vacu   ASN/Conf14/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf15/IPolQgrd.vacu   ASN/Conf15/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf16/IPolQgrd.vacu   ASN/Conf16/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf17/IPolQgrd.vacu   ASN/Conf17/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf18/IPolQgrd.vacu   ASN/Conf18/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf19/IPolQgrd.vacu   ASN/Conf19/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  ASN/Conf20/IPolQgrd.vacu   ASN/Conf20/IPolQgrd.solv   ASN/vASNDi.top  1.0
+  ipolq  GLH/Conf1/IPolQgrd.vacu   GLH/Conf1/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf2/IPolQgrd.vacu   GLH/Conf2/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf4/IPolQgrd.vacu   GLH/Conf4/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf5/IPolQgrd.vacu   GLH/Conf5/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf6/IPolQgrd.vacu   GLH/Conf6/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf7/IPolQgrd.vacu   GLH/Conf7/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf8/IPolQgrd.vacu   GLH/Conf8/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf9/IPolQgrd.vacu   GLH/Conf9/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf10/IPolQgrd.vacu   GLH/Conf10/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf11/IPolQgrd.vacu   GLH/Conf11/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf12/IPolQgrd.vacu   GLH/Conf12/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf13/IPolQgrd.vacu   GLH/Conf13/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf16/IPolQgrd.vacu   GLH/Conf16/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf17/IPolQgrd.vacu   GLH/Conf17/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf18/IPolQgrd.vacu   GLH/Conf18/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf19/IPolQgrd.vacu   GLH/Conf19/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  GLH/Conf20/IPolQgrd.vacu   GLH/Conf20/IPolQgrd.solv   GLH/vGLHDi.top  1.0
+  ipolq  HID/Conf1/IPolQgrd.vacu   HID/Conf1/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf2/IPolQgrd.vacu   HID/Conf2/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf3/IPolQgrd.vacu   HID/Conf3/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf4/IPolQgrd.vacu   HID/Conf4/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf5/IPolQgrd.vacu   HID/Conf5/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf6/IPolQgrd.vacu   HID/Conf6/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf7/IPolQgrd.vacu   HID/Conf7/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf8/IPolQgrd.vacu   HID/Conf8/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf9/IPolQgrd.vacu   HID/Conf9/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf10/IPolQgrd.vacu   HID/Conf10/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf11/IPolQgrd.vacu   HID/Conf11/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf12/IPolQgrd.vacu   HID/Conf12/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf14/IPolQgrd.vacu   HID/Conf14/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf15/IPolQgrd.vacu   HID/Conf15/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf16/IPolQgrd.vacu   HID/Conf16/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf17/IPolQgrd.vacu   HID/Conf17/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf18/IPolQgrd.vacu   HID/Conf18/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf19/IPolQgrd.vacu   HID/Conf19/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  HID/Conf20/IPolQgrd.vacu   HID/Conf20/IPolQgrd.solv   HID/vHIDDi.top  1.0
+  ipolq  LEU/Conf1/IPolQgrd.vacu   LEU/Conf1/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf2/IPolQgrd.vacu   LEU/Conf2/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf3/IPolQgrd.vacu   LEU/Conf3/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf4/IPolQgrd.vacu   LEU/Conf4/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf5/IPolQgrd.vacu   LEU/Conf5/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf6/IPolQgrd.vacu   LEU/Conf6/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf7/IPolQgrd.vacu   LEU/Conf7/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf8/IPolQgrd.vacu   LEU/Conf8/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf9/IPolQgrd.vacu   LEU/Conf9/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf10/IPolQgrd.vacu   LEU/Conf10/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf11/IPolQgrd.vacu   LEU/Conf11/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf12/IPolQgrd.vacu   LEU/Conf12/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf13/IPolQgrd.vacu   LEU/Conf13/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf14/IPolQgrd.vacu   LEU/Conf14/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf15/IPolQgrd.vacu   LEU/Conf15/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf16/IPolQgrd.vacu   LEU/Conf16/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf17/IPolQgrd.vacu   LEU/Conf17/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf18/IPolQgrd.vacu   LEU/Conf18/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf19/IPolQgrd.vacu   LEU/Conf19/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  LEU/Conf20/IPolQgrd.vacu   LEU/Conf20/IPolQgrd.solv   LEU/vLEUDi.top  1.0
+  ipolq  PHE/Conf1/IPolQgrd.vacu   PHE/Conf1/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf2/IPolQgrd.vacu   PHE/Conf2/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf3/IPolQgrd.vacu   PHE/Conf3/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf4/IPolQgrd.vacu   PHE/Conf4/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf5/IPolQgrd.vacu   PHE/Conf5/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf6/IPolQgrd.vacu   PHE/Conf6/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf7/IPolQgrd.vacu   PHE/Conf7/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf8/IPolQgrd.vacu   PHE/Conf8/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf9/IPolQgrd.vacu   PHE/Conf9/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf10/IPolQgrd.vacu   PHE/Conf10/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf11/IPolQgrd.vacu   PHE/Conf11/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf12/IPolQgrd.vacu   PHE/Conf12/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf13/IPolQgrd.vacu   PHE/Conf13/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf14/IPolQgrd.vacu   PHE/Conf14/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf15/IPolQgrd.vacu   PHE/Conf15/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf16/IPolQgrd.vacu   PHE/Conf16/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf17/IPolQgrd.vacu   PHE/Conf17/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf18/IPolQgrd.vacu   PHE/Conf18/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  PHE/Conf20/IPolQgrd.vacu   PHE/Conf20/IPolQgrd.solv   PHE/vPHEDi.top  1.0
+  ipolq  THR/Conf2/IPolQgrd.vacu   THR/Conf2/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf3/IPolQgrd.vacu   THR/Conf3/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf5/IPolQgrd.vacu   THR/Conf5/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf7/IPolQgrd.vacu   THR/Conf7/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf8/IPolQgrd.vacu   THR/Conf8/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf9/IPolQgrd.vacu   THR/Conf9/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf10/IPolQgrd.vacu   THR/Conf10/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf11/IPolQgrd.vacu   THR/Conf11/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf12/IPolQgrd.vacu   THR/Conf12/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf13/IPolQgrd.vacu   THR/Conf13/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf14/IPolQgrd.vacu   THR/Conf14/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf15/IPolQgrd.vacu   THR/Conf15/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf16/IPolQgrd.vacu   THR/Conf16/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf17/IPolQgrd.vacu   THR/Conf17/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf18/IPolQgrd.vacu   THR/Conf18/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf19/IPolQgrd.vacu   THR/Conf19/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  ipolq  THR/Conf20/IPolQgrd.vacu   THR/Conf20/IPolQgrd.solv   THR/vTHRDi.top  1.0
+  pnrg          0.0
+  flim          0.39
+  nfpt          3750
+
+  % Constraints on blocking group equivalent atoms
+  equalq       '!(:ACE,NME,ARG,LYS,PRO,HIP,ASP,GLU) & @O'
+  equalq       ':ARG,LYS,HIP & @O'
+  equalq       ':ASP,GLU & @O'
+  equalq       '!(:ACE,NME,ARG,LYS,PRO,HIP,ASP,GLU) & @N'
+  equalq       ':ARG,LYS,HIP & @N'
+  equalq       ':ASP,GLU & @N'
+  equalq       '!(:ACE,NME,ARG,LYS,PRO,HIP,ASP,GLU) & @C'
+  equalq       ':ARG,LYS,HIP & @C'
+  equalq       ':ASP,GLU & @C'
+  equalq       '!(:ACE,NME,ARG,LYS,PRO,HIP,ASP,GLU) & @H'
+  equalq       ':ARG,LYS,HIP & @H'
+  equalq       ':ASP,GLU & @H'
+  equalq      ':ACE & @HH31,HH32,HH33'
+  equalq      ':ACE & @CH3'
+  equalq      ':ACE & @C'
+  equalq      ':ACE & @O'
+  equalq      ':NME & @HH31,HH32,HH33'
+  equalq      ':NME & @CH3'
+  equalq      ':NME & @N'
+  equalq      ':NME & @H'
+  equalq      ':MTB & @HB1,HB2,HB3'
+
+  % Constraints on amino acid equivalent atoms
+  equalq      ':ALA & @HB1,HB2,HB3'
+  equalq      ':ARG & @HB2,HB3'
+  equalq      ':ARG & @HG2,HG3'
+  equalq      ':ARG & @HD2,HD3'
+  equalq      ':ARG & @NH1,NH2'
+  equalq      ':ARG & @HH11,HH12,HH21,HH22'
+  equalq      ':ASH & @HB2,HB3'
+  equalq      ':ASN & @HB2,HB3'
+  equalq      ':ASP & @HB2,HB3'
+  equalq      ':ASP & @OD1,OD2'
+  equalq      ':CYS & @HB2,HB3'
+  equalq      ':CYX & @HB2,HB3'
+  equalq      ':GLH & @HB2,HB3'
+  equalq      ':GLH & @HG2,HG3'
+  equalq      ':GLN & @HB2,HB3'
+  equalq      ':GLN & @HG2,HG3'
+  equalq      ':GLU & @HB2,HB3'
+  equalq      ':GLU & @HG2,HG3'
+  equalq      ':GLU & @OE1,OE2'
+  equalq      ':GLY & @HA2,HA3'
+  equalq      ':HID & @HB2,HB3'
+  equalq      ':HIE & @HB2,HB3'
+  equalq      ':HIP & @HB2,HB3'
+  equalq      ':ILE & @HG12,HG13'
+  equalq      ':ILE & @HG21,HG22,HG23'
+  equalq      ':ILE & @HD11,HD12,HD13'
+  equalq      ':LEU & @HB2,HB3'
+  equalq      ':LEU & @HD11,HD12,HD13,HD21,HD22,HD23'
+  equalq      ':LYS & @HB2,HB3'
+  equalq      ':LYS & @HG2,HG3'
+  equalq      ':LYS & @HD2,HD3'
+  equalq      ':LYS & @HE2,HE3'
+  equalq      ':LYS & @HZ1,HZ2,HZ3'
+  equalq      ':MET & @HB2,HB3'
+  equalq      ':MET & @HG2,HG3'
+  equalq      ':MET & @HE1,HE2,HE3'
+  equalq      ':PHE & @HB2,HB3'
+  equalq      ':PHE & @HD1,HD2'
+  equalq      ':PHE & @HE1,HE2'
+  equalq      ':PHE & @CD1,CD2'
+  equalq      ':PHE & @CE1,CE2'
+  equalq      ':PRO & @HB2,HB3'
+  equalq      ':PRO & @HG2,HG3'
+  equalq      ':PRO & @HD2,HD3'
+  equalq      ':SER & @HB2,HB3'
+  equalq      ':THR & @HG21,HG22,HG23'
+  equalq      ':TRP & @HB2,HB3'
+  equalq      ':TYR & @HB2,HB3'
+  equalq      ':TYR & @HD1,HD2'
+  equalq      ':TYR & @HE1,HE2'
+  equalq      ':TYR & @CD1,CD2'
+  equalq      ':TYR & @CE1,CE2'
+  equalq      ':VAL & @HG11,HG12,HG13,HG21,HG22,HG23'
+  equalq      ':LYN & @HB2,HB3'
+  equalq      ':LYN & @HG2,HG3'
+  equalq      ':LYN & @HD2,HD3'
+  equalq      ':LYN & @HE2,HE3'
+  equalq      ':LYN & @HZ2,HZ3'
+  equalq      ':LEU & @CD1,CD2'
+  equalq      ':VAL & @CG1,CG2'
+
+  % Restraints on blocking group buried atoms
+  minq        ':NME & @CH3'
+  minq        ':ACE & @CH3'
+  minq        '@CB'
+  minq        ':ARG,GLH,GLN,GLU,LYS,LYN,PRO & @CG'
+  minq        ':ILE & @CG1,CG2,CD1'
+  minq        ':LEU & @CG,CD1,CD2'
+  minq        ':VAL & @CG1,CG2'
+  minq        ':THR & @CG2'
+  minq        ':MET & @CG,CE'
+  minq        ':LYS,LYN & @CD'
+  minqwt       1.0e-2
+  tetherwt     0.5e-2
+
+  % Blocking groups forced to be neutral; amino acids implicitly forced to
+  % take on the net charge of their dipeptides
+  sumq         ':NME'  0.0
+  sumq         ':ACE'  0.0
+  sumq         ':MTB'  0.0
+
+  % This will take a good chunk of memory
+  MaxMemory   20GB
+
+  % Output file extensions
+  CFExtension   pdb
+  hist          hist.dat
+&end

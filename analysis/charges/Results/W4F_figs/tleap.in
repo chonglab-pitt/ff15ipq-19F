@@ -1,0 +1,5 @@
+source leaprc.protein.ff15ipq
+TRP = sequence { TRP }
+saveAmberParm TRP TRP.top TRP.crd
+savepdb TRP TRP.pdb
+quit

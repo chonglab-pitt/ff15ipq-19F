@@ -1,0 +1,351 @@
+<++>-----------------------------------------------------------------------<++>
+<++> mdgx: A molecular dynamics engine in the AMBER suite of programs      <++>
+<++>                                                                       <++>
+<++> Written by David S. Cerutti, Case Group (2009)                        <++>
+<++>-----------------------------------------------------------------------<++>
+
+Run on Thu Jun 10 12:49:57 2021
+<++>-----------------------------------------------------------------------<++>
+
+INPUT LINE TEXT:
+
+mdgx -i FIT_V00_GEN2.in -O 
+
+
+INPUT FILE TEXT:
+
+
+&files
+  -parm /ihome/crc/build/amber/amber18_x64/amber18/dat/leap/parm/parm15ipq_10.3.dat
+  -fmod ../19F_FF15IPQ_V00.frcmod
+  -d 19F_FF15IPQ_FIT_V00_GEN2.frcmod
+  -o FIT_V00_GEN2.out
+&end
+
+&param
+
+  System    W4F/W4F_V.top     W4F/concat_coords.cdf    W4F/energies.dat
+  System    W5F/W5F_V.top     W5F/concat_coords.cdf    W5F/energies.dat
+  ...
+  ...
+  System    F4F/F4F_V.top     F4F/concat_coords.cdf    F4F/energies.dat
+  System    FTF/FTF_V.top     FTF/concat_coords.cdf    FTF/energies.dat
+
+  ParmOutput    frcmod
+  eunits        hartree,
+  accrep        report_gen2.m
+  elimsig       1,
+  esigtol       4,
+  verbose       1,
+
+  % Bonded fitting input
+  fitb          3C CA
+  fitb          3C F
+  FitBondEq     1,
+  brst          0.0002,
+
+  % Angle fitting input
+  fita          CB CA F
+  fita          CN CA F
+  fita          C  CA F
+  fita          3C CA CA
+  fita          CA 3C F
+  fita          F  3C F
+  FitAnglEq     1,
+  arst          0.0002,
+  arstcpl       1.0,
+
+  % Torsion fitting input
+  fith          F  3C CA CA
+  hrst          0.0002,
+&end
+
+
+<++>-----------------------------------------------------------------------<++>
+
+<++>-----------------------------------------------------------------------<++>
+
+(1.) Energies of each system, according to the fitted parameters.  Units on 
+     errors are kcal/mol.  The original model's energies are compared to 
+     target energies after applying an offset to make the average of each set 
+     of energies for any given system equal (see Section 3).
+
+                      RMS Error         Correlation    Fitted   Fitted   Model
+      System        Orig    Fitted    Orig    Fitted   Terms    Energy   Diff.
+ ----------------  -------  -------  -------  -------  ------  -------  -------
+ W4F/W4F_V.top      3.6642   1.3823   0.9817   0.9954       2     0.08    3.362
+ W5F/W5F_V.top      1.6004   1.5561   0.9726   0.9726       0     0.37    0.374
+ W6F/W6F_V.top      1.5986   1.5699   0.9710   0.9710       0     0.30    0.302
+ W7F/W7F_V.top      1.5402   1.4545   0.9732   0.9748       2     0.34    0.361
+ Y3F/Y3F_V.top      1.1620   1.1458   0.9705   0.9706       2     0.18    0.179
+ YDF/YDF_V.top      1.3254   1.2928   0.9761   0.9762       2     0.29    0.278
+ F4F/F4F_V.top      1.1647   1.1492   0.9747   0.9747       0     0.19    0.190
+ FTF/FTF_V.top      1.8952   1.1531   0.9208   0.9681      11     0.78    1.453
+
+% Outliers among all of the fitting data were computed at   4.00 sigma.
+% The data points should be scrutinized, because they were not fitted
+% well by the final model.
+% Eliminating these data points may yield a better result.
+
+ Data point coordinates                                        E(mm)-E(qm)
+ ------------------------------------------------------------  -----------
+ W5F/concat_coords.cdf, Frame 4                                    -7.3195
+ W5F/concat_coords.cdf, Frame 104                                  11.9309
+ W5F/concat_coords.cdf, Frame 231                                  -7.3441
+ W5F/concat_coords.cdf, Frame 369                                  -7.1129
+ W5F/concat_coords.cdf, Frame 534                                  -7.9869
+ W5F/concat_coords.cdf, Frame 662                                   7.8645
+ W5F/concat_coords.cdf, Frame 753                                  -6.9514
+ W5F/concat_coords.cdf, Frame 765                                  -7.4482
+ W5F/concat_coords.cdf, Frame 876                                  -7.3441
+ W6F/concat_coords.cdf, Frame 123                                  10.6485
+ W6F/concat_coords.cdf, Frame 269                                  -7.1263
+ W6F/concat_coords.cdf, Frame 425                                  -7.0602
+ W6F/concat_coords.cdf, Frame 560                                  -6.7501
+ W6F/concat_coords.cdf, Frame 595                                  -7.4943
+ W6F/concat_coords.cdf, Frame 609                                  -7.1263
+ W6F/concat_coords.cdf, Frame 665                                   7.7437
+ W7F/concat_coords.cdf, Frame 84                                    8.1200
+ W7F/concat_coords.cdf, Frame 208                                  -6.8706
+ W7F/concat_coords.cdf, Frame 645                                   5.9545
+ W7F/concat_coords.cdf, Frame 912                                  -7.4178
+ Y3F/concat_coords.cdf, Frame 218                                  -8.8331
+ YDF/concat_coords.cdf, Frame 690                                  -7.1721
+ F4F/concat_coords.cdf, Frame 301                                  -5.4781
+ F4F/concat_coords.cdf, Frame 458                                   5.1223
+ F4F/concat_coords.cdf, Frame 687                                  -8.7379
+ F4F/concat_coords.cdf, Frame 788                                   5.1223
+ FTF/concat_coords.cdf, Frame 33                                   -9.2286
+ FTF/concat_coords.cdf, Frame 407                                  -8.2956
+ FTF/concat_coords.cdf, Frame 650                                  -8.4711
+<++>-----------------------------------------------------------------------<++>
+
+<++>-----------------------------------------------------------------------<++>
+
+(2.) Parameter sampling.  Bonds and angles are binned over 18 intervals based 
+     on deviations, positive or negative, from the ideal bond length.  Each 
+     interval represents 0.028 Angstrom or 0.023 radian deviation for bonds or 
+     angles, respectively.  Dihedrals and impropers are binned at 10-degree 
+     intervals, ranging from zero to 180 (the range of the arccosine 
+     function).
+
+ Sampling histogram key:  (zero)   . : = e o U O 0 @ X ( > ten)
+
+ Bond sampling:
+                             Bins in Angstroms
+                                                  Fitted  Original
+  Term  Amber Types   Count  -0.25   +0    0.25   K / Eq   K / Eq 
+  ----  -----------  ------- ------------------  -------- --------
+  BOND  3C CA           1000          X:           317.11   317.00
+                                                     1.51     1.51
+  BOND  3C F            3000         :X            367.00   367.00
+                                                     1.38     1.38
+
+ Angle sampling:
+                              Bins in Degrees 
+                                                  Fitted  Original
+  Term  Amber Types   Count  -15     +0      15   K / Eq   K / Eq 
+  ----  -----------  ------- ------------------  -------- --------
+  ANGL  CB CA F         1000        XX   .XX        66.58    70.00
+                                                   165.60   121.00
+  ANGL  CN CA F         1000        :X=             69.37    70.00
+                                                    87.78   121.00
+  ANGL  C  CA F         3000         XX             70.09    70.00
+                                                   126.37   121.00
+  ANGL  3C CA CA        2000         eXU.           70.15    70.00
+                                                   119.13   119.70
+  ANGL  CA 3C F         3000                        29.83     0.00
+                                                    44.22     0.00
+  ANGL  F  3C F         3000       =XX              78.10    77.00
+                                                   124.01   109.10
+
+ Torsion term sampling:
+                              Bins in Radians 
+  Term  Amber Types   Count  -PI     +0      PI   Fitted  Original
+  ----  -----------  ------- ------------------  -------- --------
+  DIHE  F  3C CA CA     6000 XXXXXXXXXXXXXXXXXX     11.69     0.00
+
+<++>-----------------------------------------------------------------------<++>
+
+<++>-----------------------------------------------------------------------<++>
+
+(3.) Warnings concerning parameter sampling and the fitted values of new 
+     parameters.
+
+ Bond parameter warnings (1):
+  - Bond 3C CA has lopsided sampling (  0.02% below,  99.39% above
+    the optimized equilibrium value of    1.5100).
+
+ Angle parameter warnings (11):
+  - Angle CB CA F  has lopsided sampling (100.00% below,   0.00% above
+    the optimized equilibrium value of  165.6019).
+  - Angle CB CA F  has poor sampling within 0.05 radians of its optimized
+    equilbrium value ( 165.6019).
+  - Angle CN CA F  has lopsided sampling (  0.00% below, 100.00% above
+    the optimized equilibrium value of   87.7792).
+  - Angle CN CA F  has poor sampling within 0.05 radians of its optimized
+    equilbrium value (  87.7792).
+  - Angle C  CA F  has lopsided sampling (100.00% below,   0.00% above
+    the optimized equilibrium value of  126.3678).
+  - Angle C  CA F  has poor sampling within 0.05 radians of its optimized
+    equilbrium value ( 126.3678).
+  - Angle 3C CA CA has lopsided sampling (  1.81% below,  85.48% above
+    the optimized equilibrium value of  119.1260).
+  - Angle CA 3C F  has lopsided sampling (  0.00% below, 100.00% above
+    the optimized equilibrium value of   44.2165).
+  - Angle CA 3C F  has poor sampling within 0.05 radians of its optimized
+    equilbrium value (  44.2165).
+  - Angle F  3C F  has lopsided sampling (100.00% below,   0.00% above
+    the optimized equilibrium value of  124.0107).
+  - Angle F  3C F  has poor sampling within 0.05 radians of its optimized
+    equilbrium value ( 124.0107).
+
+<++>-----------------------------------------------------------------------<++>
+
+<++>-----------------------------------------------------------------------<++>
+
+(4.) Energy adjustment constants.  These constants are included to bring the 
+     overall energy of quantum mechanical and molecular mechanical 
+     calculations into general agreement so that the fitted parameters can 
+     address the energy differences between multiple states of each system. 
+     Gross differences between quantum and molecular mechanics are first 
+     eliminated by subtracting off the average energy of all states for each 
+     system; these parameters are then included to "mop up."
+
+      System      Adjustment         System      Adjustment
+ ---------------- ----------    ---------------- ----------
+ W4F/W4F_V.top       -3.3376    W5F/W5F_V.top        0.3735    
+ W6F/W6F_V.top        0.3017    W7F/W7F_V.top       -1.8880    
+ Y3F/Y3F_V.top       -2.7107    YDF/YDF_V.top       -5.4836    
+ F4F/F4F_V.top        0.1895    FTF/FTF_V.top     -221.6879    
+
+<++>-----------------------------------------------------------------------<++>
+
+<++>-----------------------------------------------------------------------<++>
+
+(5.) Fitting matrix analysis.  This is a check against features of the fitting 
+     set that might create a poorly conditioned matrix.
+
+ - No columns with zero data detected
+ - 28 highly correlated column pairs detected, corresponding to parameters:
+
+     First term,        Second term,     Fitted   Fitted      Pearson
+   Type    Atoms      Type    Atoms      value 1  value 2   Correlation
+   ---- -----------   ---- -----------   -------- --------  -----------
+   BOND 3C CA         BOND 3C F            158.56   183.50   0.99997156
+   BOND 3C CA           158.56   183.50   0.99996728
+   BOND 3C CA         ANGL 3C CA CA        158.56    36.83   0.99999120
+   BOND 3C CA         ANGL CA 3C F         158.56   -42.64   0.99997676
+   BOND 3C CA           158.56    72.47   0.99997762
+   BOND 3C CA           158.56    89.87   0.99993593
+   BOND 3C F            158.56   183.50   0.99995561
+     158.56   183.50   0.99996054
+     158.56    33.32   0.99998481
+   ANGL CA 3C F         158.56   -42.64   0.99994925
+     158.56    72.47   0.99994741
+   ANGL F  3C F         158.56   -11.76   0.99991361
+   BOND 3C F            183.50   183.50   0.99999635
+   BOND 3C F          ANGL 3C CA CA        183.50    36.83   0.99996927
+   BOND 3C F            183.50    33.32   0.99996710
+   BOND 3C F          ANGL CA 3C F         183.50   -42.64   0.99999906
+   BOND 3C F            183.50    72.47   0.99999882
+   ANGL 3C CA CA        183.50    36.83   0.99996771
+     183.50    33.32   0.99996707
+   ANGL CA 3C F         183.50   -42.64   0.99999707
+     183.50    72.47   0.99999652
+   ANGL 3C CA CA      ANGL CA 3C F          36.83   -42.64   0.99997292
+   ANGL 3C CA CA         36.83    72.47   0.99997241
+   ANGL 3C CA CA         36.83    89.87   0.99990043
+   ANGL CA 3C F          33.32   -42.64   0.99996308
+      33.32    72.47   0.99996309
+   ANGL CA 3C F         -42.64    72.47   0.99999992
+      72.47    89.87   0.99990155
+<++>-----------------------------------------------------------------------<++>
+
+<++>-----------------------------------------------------------------------<++>
+
+(6.) Energy contributions of each fitted parameter.  All parameters that 
+     contribute to each system are printed, this time with respect to the 
+     amount of energy that they contribute to the molecular mechanical 
+     system.
+
+ System: W4F/W4F_V.top
+                      Energy    Std. Dev.
+   ANGL CB CA F        -3.7042     1.5830
+ System: W5F/W5F_V.top
+                      Energy    Std. Dev.
+ System: W6F/W6F_V.top
+                      Energy    Std. Dev.
+ System: W7F/W7F_V.top
+                      Energy    Std. Dev.
+   ANGL CN CA F         4.9093     0.8218
+ System: Y3F/Y3F_V.top
+                      Energy    Std. Dev.
+   ANGL C  CA F         0.6702     0.1353
+ System: YDF/YDF_V.top
+                      Energy    Std. Dev.
+   ANGL C  CA F         1.3505     0.2722
+ System: F4F/F4F_V.top
+                      Energy    Std. Dev.
+ System: FTF/FTF_V.top
+                      Energy    Std. Dev.
+   ANGL CA 3C F      -561.0222   113.0214
+   DIHE F  3C CA CA    72.6870    14.7001
+   BOND 3C F           21.5969     4.3508
+   BOND 3C CA           7.3140     1.4744
+   ANGL 3C CA CA        3.2506     0.6553
+   ANGL F  3C F        -1.1112     0.2247
+
+
+<++>-----------------------------------------------------------------------<++>
+
+<++>-----------------------------------------------------------------------<++>
+
+(7.) Context of each parameter.  Instances of each parameter found in the 
+     fitting conformations are enumerated below.
+
+ [ Parameter ] [ Atom types ]                   Sampling Histogram
+  Residue (Atom Names)                   Count  MIN     +0     MAX  Warnings
+ --------------------------------------- -----  ------------------  --------
+ BOND 3C CA      
+  FTF (CZ   CF  )                         1000           X:       
+
+ BOND 3C F       
+  FTF (CF   F1C )                         1000          .X        
+  FTF (CF   F2C )                         1000          .X        
+  FTF (CF   F3C )                         1000          .X        
+
+ ANGL CB CA F    
+  W4F (F4W  CE3  CD2 )                    1000         XX   .XX   
+
+ ANGL CN CA F    
+  W7F (CE2  CZ2  F7W )                    1000         :X=        
+
+ ANGL C  CA F    
+  Y3F (F3Y  CE1  CZ  )                    1000          X         
+  YDF (F3Y  CE1  CZ  )                    1000          XX        
+  YDF (CZ   CE2  F5Y )                    1000          XX        
+
+ ANGL 3C CA CA   
+  FTF (CF   CZ   CE2 )                    1000          eXU.      
+  FTF (CE1  CZ   CF  )                    1000          eXU.      
+
+ ANGL CA 3C F    
+  FTF (CZ   CF   F1C )                    1000                    
+  FTF (CZ   CF   F2C )                    1000                    
+  FTF (CZ   CF   F3C )                    1000                    
+
+ ANGL F  3C F    
+  FTF (F2C  CF   F3C )                    1000        =XX         
+  FTF (F1C  CF   F2C )                    1000        =XX         
+  FTF (F1C  CF   F3C )                    1000        =XX         
+
+ DIHE F  3C CA CA
+  FTF (CE1  CZ   CF   F1C )               1000  XXXXXXXXXXXXXXXXXX
+  FTF (CE1  CZ   CF   F2C )               1000  XXXXXXXXXXXXXXXXXX
+  FTF (CE1  CZ   CF   F3C )               1000  XXXXXXXXXXXXXXXXXX
+  FTF (F3C  CF   CZ   CE2 )               1000  XXXXXXXXXXXXXXXXXX
+  FTF (F2C  CF   CZ   CE2 )               1000  XXXXXXXXXXXXXXXXXX
+  FTF (F1C  CF   CZ   CE2 )               1000  XXXXXXXXXXXXXXXXXX
+<++>-----------------------------------------------------------------------<++>
+

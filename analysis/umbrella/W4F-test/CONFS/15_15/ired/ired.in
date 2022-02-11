@@ -1,0 +1,14 @@
+parm ../../../W4F_tet_dry.prmtop
+trajin ../prod.nc
+# define C-F vector
+vector CF @36 ired @37
+#vector v1 @51 ired @52
+# Define IRED matrix using all previous IRED vectors
+matrix ired name matired order 2
+# Diagonalize IRED matrix
+diagmatrix matired vecs 1 out ired.vec name ired.vec
+# Perform IRED analysis
+ired relax NHdist 1.35 freq 600.0 tstep 2.75 tcorr 275.0 out v0.out noefile noe order 2 modes ired.vec
+#ired tstep 1.0 tcorr 100.0 out v0.out order 2 modes ired.vec noefile noe
+run
+quit

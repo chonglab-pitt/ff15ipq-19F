@@ -1,0 +1,111 @@
+
+CPPTRAJ: Trajectory Analysis. V4.14.0 (AmberTools V19.11) MPI
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Running on 8 processes.
+| Date/time: 10/20/21 21:18:59
+| Available memory: 166.273 GB
+
+INPUT: Reading input from '1us_noion/cpp_c0c1.in'
+  [parm ../3k0n_wt_dry_noion.prmtop]
+	Reading '../3k0n_wt_dry_noion.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+  [trajin 06_prod_dry.nc 1 last 10]
+	Reading '06_prod_dry.nc' as Amber NetCDF
+  [trajin 07_prod_dry.nc 1 last 10]
+	Reading '07_prod_dry.nc' as Amber NetCDF
+  [trajin 08_prod_dry.nc 1 last 10]
+	Reading '08_prod_dry.nc' as Amber NetCDF
+  [reference 3k0n_wt_solv.pdb :* [REF]]
+	Reading '3k0n_wt_solv.pdb' as PDB
+	Read CRYST1 info from PDB: a=69.199 b=69.199 c=69.199 alpha=109.47 beta=109.47 gamma=109.47
+Warning: Low precision truncated octahedron angles detected (109.47 vs 109.471).
+Warning:   If desired, the 'box' command can be used during processing
+Warning:   to set higher-precision angles.
+Warning: PDB line length is short (67 chars, expected 80).
+Warning: PDB 3k0n_wt_solv.pdb: Reading frame 9, got 2133 atoms, expected 2503.
+Warning: Only using frames 1-8
+Warning: Reference has 8 frames, only reading frame 1
+	Read CRYST1 info from PDB: a=69.199 b=69.199 c=69.199 alpha=109.47 beta=109.47 gamma=109.47
+	Stripped ref parm: 2503 atoms, 165 res, box: Trunc. Oct., 1 mol
+	Setting active reference for distance-based masks: '3k0n_wt_solv.pdb'
+  [multidihedral dihtype chi1:N:CA:CB:CG dihtype chi2:CA:CB:CG:CD1 resrange 121-121 out 1us_noion/dihedral_chi1_2_trp121.dat]
+    MULTIDIHEDRAL: Calculating chi1 chi2 dihedrals for residues in range 121-121
+	Output to dihedral_chi1_2_trp121.dat
+	Output range is -180 to 180 degrees.
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: 3k0n_wt_dry_noion.prmtop, 2503 atoms, 165 res, box: Trunc. Oct., 1 mol
+
+INPUT TRAJECTORIES (3 total):
+ 0: '06_prod_dry.nc' is a NetCDF AMBER trajectory with coordinates, time, box, Parm 3k0n_wt_dry_noion.prmtop (Trunc. Oct. box) (reading 20000 of 200000)
+ 1: '07_prod_dry.nc' is a NetCDF AMBER trajectory with coordinates, time, box, Parm 3k0n_wt_dry_noion.prmtop (Trunc. Oct. box) (reading 40000 of 400000)
+ 2: '08_prod_dry.nc' is a NetCDF AMBER trajectory with coordinates, time, box, Parm 3k0n_wt_dry_noion.prmtop (Trunc. Oct. box) (reading 40000 of 400000)
+  Coordinate processing will occur on 100000 frames.
+
+REFERENCE FRAMES (1 total):
+    0: [REF]:1
+	Active reference frame for distance-based masks is '[REF]:1'
+
+PARALLEL INFO:
+  Process 0 will handle 12500 frames.
+  Process 1 will handle 12500 frames.
+  Process 2 will handle 12500 frames.
+  Process 3 will handle 12500 frames.
+  Process 4 will handle 12500 frames.
+  Process 5 will handle 12500 frames.
+  Process 6 will handle 12500 frames.
+  Process 7 will handle 12500 frames.
+.....................................................
+ACTION SETUP FOR PARM '3k0n_wt_dry_noion.prmtop' (1 actions):
+  0: [multidihedral dihtype chi1:N:CA:CB:CG dihtype chi2:CA:CB:CG:CD1 resrange 121-121 out 1us_noion/dihedral_chi1_2_trp121.dat]
+	ResRange=[121-121] chi1 chi2, 2 dihedrals.
+
+BEGIN PARALLEL TRAJECTORY PROCESSING:
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+TIME: Rank 0 throughput= 11.7363 frames / second.
+TIME: Rank 1 throughput= 12.2206 frames / second.
+TIME: Rank 2 throughput= 13.5199 frames / second.
+TIME: Rank 3 throughput= 13.6362 frames / second.
+TIME: Rank 4 throughput= 13.1166 frames / second.
+TIME: Rank 5 throughput= 12.3607 frames / second.
+TIME: Rank 6 throughput= 12.2677 frames / second.
+TIME: Rank 7 throughput= 12.2497 frames / second.
+TIME: Avg. throughput= 93.8902 frames / second.
+
+ACTION OUTPUT:
+Warning: Analysis does not currently use multiple MPI processes.
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (2 total):
+	MDIH_00002[chi1]:121 "chi1:121" (double, torsion), size is 100000 (800.000 kB)
+	MDIH_00002[chi2]:121 "chi2:121" (double, torsion), size is 100000 (800.000 kB)
+    Total data set memory usage is at least 1.600 MB
+
+DATAFILES (1 total):
+  dihedral_chi1_2_trp121.dat (Standard Data File):  chi1:121 chi2:121
+
+RUN TIMING:
+TIME:		Init               : 0.0006 s (  0.00%)
+TIME:		Trajectory Process : 1065.0744 s ( 99.95%)
+TIME:		Data Set Sync      : 0.0015 s (  0.00%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.5002 s (  0.05%)
+TIME:		Other              : 0.0002 s (  0.00%)
+TIME:	Run Total 1065.5770 s
+---------- RUN END ---------------------------------------------------
+TIME: Total execution time: 1095.4651 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+Daniel R. Roe and Thomas E. Cheatham, III, "Parallelization of CPPTRAJ enables
+  large scale analysis of molecular dynamics trajectory data". J. Comp.
+  Chem., 2018, DOI: 10.1002/jcc25382.
+

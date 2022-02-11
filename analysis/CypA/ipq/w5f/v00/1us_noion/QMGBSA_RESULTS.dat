@@ -1,0 +1,53 @@
+| Run on Thu Nov 11 15:31:51 2021
+|
+|Input file:
+|--------------------------------------------------------------
+|    Input file for running PB and GB 
+| &general 
+|    startframe=200000, endframe=1000000, interval=2000 
+|    keep_files=0, verbose=1, netcdf=1 
+| / 
+| &gb 
+|    ifqnt=1, qm_residues='121', qm_theory='PM3'
+|    igb=5, saltcon=0.0 
+| /
+|--------------------------------------------------------------
+|MMPBSA.py Version=14.0
+|Complex topology file:           3k0n_w5f_vac.prmtop
+|Initial mdcrd(s):                ../../06_prod_dry.nc
+|                                 ../../07_prod_dry.nc
+|                                 ../../08_prod_dry.nc
+|
+|Calculations performed using 401.0 complex frames.
+|
+|Generalized Born ESURF calculated using 'LCPO' surface areas
+|
+|All units are reported in kcal/mole.
+|QM/MM: Residues 121 are treated with the Quantum Hamiltonian PM3
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+GENERALIZED BORN:
+
+Complex:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+BOND                       505.3720               18.9273              0.9452
+ANGLE                     1411.4105               28.0155              1.3990
+DIHED                    -1090.7599               15.4294              0.7705
+VDWAALS                  -1280.2353               16.1614              0.8071
+EEL                     -15945.0103               85.8937              4.2893
+1-4 VDW                    603.8799               10.9011              0.5444
+1-4 EEL                  11533.6333               39.1016              1.9526
+EGB                      -1955.1516               70.2920              3.5102
+ESURF                       56.6890                1.2506              0.0625
+ESCF                         6.4380                7.6346              0.3813
+
+G gas                    -4261.7099               85.5600              4.2727
+G solv                   -1898.4626               69.6657              3.4789
+
+TOTAL                    -6153.7345               35.1583              1.7557
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------

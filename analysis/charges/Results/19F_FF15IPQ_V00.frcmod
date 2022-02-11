@@ -1,0 +1,30 @@
+FRCMOD Parameters for 8 19F residues: 4F/5F/6F/7F-Trp, 3F-Tyr, Di-F-Tyr, 4F-Phe, Tri-F-Phe
+MASS
+
+BOND
+3C-CA  317.00   1.510       same as CM-CT, penalty score=  4.9
+3C-F   367.00   1.380       same as  F-CT, penalty score=  0.0
+
+ANGLE
+CB-CA-F    70.000     121.000   same as F -CA-CA, penalty score=  3.5
+CN-CA-F    70.000     121.000   same as F -CA-CA, penalty score=  3.2
+C -CA-F    70.000     121.000   same as F -CA-CA, penalty score=  ??? 
+3C-CA-CA   70.000     119.700   same as CM-CM-CT, penalty score= 11.1
+CA-3C-F     0.000       0.000   ATTN, need revision
+F -3C-F    77.000     109.100   same as F -CT-F , penalty score=  0.0
+
+DIHE
+F -3C-CA-CA   1    0.000         0.000           2.000      same as X -CD-CT-X , penalty score=354.5
+
+IMPROPER
+CA-CB-CA-F          1.1          180.0         2.0          Using the default value
+CA-CA-CA-F          1.1          180.0         2.0          Using the default value
+CA-CN-CA-F          1.1          180.0         2.0          Using the default value
+3C-CA-CA-CA         1.1          180.0         2.0          Using the default value
+
+NONBON
+
+
+
+
+

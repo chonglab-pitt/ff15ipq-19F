@@ -1,0 +1,6 @@
+parm w4f/4FCypAV2Q.pdb
+trajin w4f/4FCypAV2Q.pdb
+multidihedral phi psi resrange 121-121 out phipsi_cypa_w4f.dat
+multidihedral dihtype chi1:N:CA:CB:CG dihtype chi2:CA:CB:CG:CD1 resrange 121-121 out chi1chi2_cypa_w4f.dat
+run
+quit

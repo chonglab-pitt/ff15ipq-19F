@@ -1,0 +1,87 @@
+           NT      SC     CT
+ASH      9.66    3.71   1.95
+CYM     10.28    8.14   1.91
+GLH      9.58    4.15   2.16
+LYN      9.16   10.67   2.15
+
+Arginine supported from pH 2.03 to 12.10
+NARG    <9.00
+nnarg        9.00-12.10
+nnarn                 >12.10
+ARG     <12.10
+arn          >12.10
+ncarg   <2.03
+CARG         2.03-12.10
+carn                  >12.10
+
+Lysine supported from pH 2.15-10.67
+NLYS    <9.16
+nnlys        9.16-10.67
+nnlyn                 >10.67
+LYS     <10.67
+LYN          >10.67
+nclys   <2.15
+CLYS         2.15-10.67
+CLYN                  >10.67
+nlyn    N/A
+
+Histidine supported from pH 1.70-????
+NHIP    <6.04
+NHIS         6.04-9.09
+nhim                 >9.09
+HIP     <6.04
+HIS          6.04-????
+him                  >????
+nchip   <1.70
+CHIP         1.70-6.04
+CHIS                  6.04-????
+CHIM                          >????
+
+Aspartic acid supported from pH 1.95 to 9.66
+NASH    <3.71
+NASP         3.71-9.66
+nnasp                >9.66
+ASH     <3.71
+ASP         >3.71
+ncash   <1.95
+CASH         1.95-3.71
+CASP                 >3.71
+
+Cysteine supported from pH 1.91 to 10.28
+NCYS     <8.14
+NCYM          8.14-10.28
+nncym                  >10.28
+CYS     <8.14
+CYM         >8.14
+nccys   <1.91
+CCYS         1.91-8.14
+CCYM                 >8.14
+
+Glutamic acid supported from pH 2.16 to 9.58
+NGLH    <4.15
+NGLU         4.15-9.58
+nnglu                >9.58
+GLH     <4.15
+GLU         >4.15
+ncglh   <2.16
+CGLH         2.16-4.15
+CGLU                 >4.15
+
+CLYN                    genconf
+NASH                    genconf
+CASH                    genconf
+NCYM                    genconf
+CCYM                    genconf
+NGLH                    genconf
+CGLH                    genconf
+
+CCYX                    genconf
+NCYX                    genconf
+NHE                     complete
+
+Fit CYXCYX,CYM with ACE,NME,backbone loacked
+Fit CYXMTB with ACE,CYX,NME locked
+Fit NHE with ACE,ALA locked
+
+Fit N-terminal including NASH,NCYM,NCYX,NGLH with ACE,NME locked
+Fit C-terminal inclusigd CASH,CCYM,CCYX,CGLH,CLYN with ACE,NME locked

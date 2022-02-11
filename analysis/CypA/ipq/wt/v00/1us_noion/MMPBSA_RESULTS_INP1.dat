@@ -1,0 +1,54 @@
+| Run on Mon Nov 15 16:17:49 2021
+|
+|Input file:
+|--------------------------------------------------------------
+|    Input file for running PB and GB 
+| &general 
+|    startframe=200000, endframe=1000000, interval=2000 
+|    keep_files=0, verbose=1, netcdf=1 
+| / 
+| &pb 
+|    inp=1 
+|    istrng=0.0, radiopt=0 
+| / 
+| &decomp 
+|   idecomp=1, print_res='120-122' 
+|   dec_verbose=1, 
+| /
+|--------------------------------------------------------------
+|MMPBSA.py Version=14.0
+|Complex topology file:           3k0n_wt_vac.prmtop
+|Initial mdcrd(s):                ../../06_prod_dry.nc
+|                                 ../../07_prod_dry.nc
+|                                 ../../08_prod_dry.nc
+|
+|Calculations performed using 401.0 complex frames.
+|Poisson Boltzmann calculations performed using internal PBSA solver in sander.
+|
+|All units are reported in kcal/mole.
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+POISSON BOLTZMANN:
+
+Complex:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+BOND                       510.2878               19.9170              0.9946
+ANGLE                     1426.4001               26.6070              1.3287
+DIHED                    -1099.1981               18.6795              0.9328
+VDWAALS                  -1278.0764               16.8041              0.8392
+EEL                     -16110.7281               95.8025              4.7841
+1-4 VDW                    608.3847               10.4404              0.5214
+1-4 EEL                  11785.8028               38.6110              1.9281
+EPB                      -1963.3144               79.5834              3.9742
+ENPOLAR                     40.5353                0.7280              0.0364
+
+G gas                    -4157.1271               95.6498              4.7765
+G solv                   -1922.7792               79.1534              3.9527
+
+TOTAL                    -6079.9063               38.8489              1.9400
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------

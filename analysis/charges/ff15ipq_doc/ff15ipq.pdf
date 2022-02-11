@@ -1,0 +1,2041 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<< /F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 5 0 R /F5 8 0 R >>
+endobj
+2 0 obj
+<< /BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font >>
+endobj
+3 0 obj
+<< /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font >>
+endobj
+4 0 obj
+<< /BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font >>
+endobj
+5 0 obj
+<< /BaseFont /Symbol /Encoding /SymbolEncoding /Name /F4 /Subtype /Type1 /Type /Font >>
+endobj
+6 0 obj
+<< /Contents 23 0 R /MediaBox [ 0 0 792 612 ] /Parent 22 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+7 0 obj
+<< /Contents 24 0 R /MediaBox [ 0 0 792 612 ] /Parent 22 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+8 0 obj
+<< /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F5 /Subtype /Type1 /Type /Font >>
+endobj
+9 0 obj
+<< /Contents 25 0 R /MediaBox [ 0 0 792 612 ] /Parent 22 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+10 0 obj
+<< /Contents 26 0 R /MediaBox [ 0 0 792 612 ] /Parent 22 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+11 0 obj
+<< /Contents 27 0 R /MediaBox [ 0 0 792 612 ] /Parent 22 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+12 0 obj
+<< /Outlines 14 0 R /PageLabels 28 0 R /PageMode /UseNone /Pages 22 0 R /Type /Catalog >>
+endobj
+13 0 obj
+<< /Author () /CreationDate (D:20150323141107+05'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
+  /Title (Amber ff15ipq) >>
+endobj
+14 0 obj
+<< /Count 8 /First 15 0 R /Last 16 0 R /Type /Outlines >>
+endobj
+15 0 obj
+<< /Dest [ 6 0 R /XYZ 62.69291 469.1339 0 ] /Next 16 0 R /Parent 14 0 R /Title (ff14ipq) >>
+endobj
+16 0 obj
+<< /Count 5 /Dest [ 6 0 R /XYZ 62.69291 316.1339 0 ] /First 17 0 R /Last 21 0 R /Parent 14 0 R /Prev 15 0 R 
+  /Title (ff15ipq) >>
+endobj
+17 0 obj
+<< /Dest [ 6 0 R /XYZ 62.69291 187.1339 0 ] /Next 18 0 R /Parent 16 0 R /Title (Iteration 1) >>
+endobj
+18 0 obj
+<< /Dest [ 7 0 R /XYZ 62.69291 535.1339 0 ] /Next 19 0 R /Parent 16 0 R /Prev 17 0 R /Title (Iteration 2) >>
+endobj
+19 0 obj
+<< /Dest [ 7 0 R /XYZ 62.69291 427.1339 0 ] /Next 20 0 R /Parent 16 0 R /Prev 18 0 R /Title (Iteration 3) >>
+endobj
+20 0 obj
+<< /Dest [ 7 0 R /XYZ 62.69291 319.1339 0 ] /Next 21 0 R /Parent 16 0 R /Prev 19 0 R /Title (Iteration 4) >>
+endobj
+21 0 obj
+<< /Dest [ 7 0 R /XYZ 62.69291 211.1339 0 ] /Parent 16 0 R /Prev 20 0 R /Title (Progress) >>
+endobj
+22 0 obj
+<< /Count 5 /Kids [ 6 0 R 7 0 R 9 0 R 10 0 R 11 0 R ] /Type /Pages >>
+endobj
+23 0 obj
+<< /Length 5801 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 511.1339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL 266.0771 0 Td (Amber ff15ipq) Tj T* -266.0771 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 481.1339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL 242.0396 0 Td (Torsion Parameter Fitting) Tj T* -242.0396 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 448.1339 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (ff14ipq) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 418.1339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.472462 Tw (The torsion parameters of the Amber ff14ipq force field were fit by matching the relative molecular mechanical energies of a set of ~62,000) Tj T* 0 Tw (conformations of di-, tri-, and tetrapeptides to their relative quantum mechanical energies calculated at the MP2/cc-pvTZ level.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 376.1339 cm
+q
+BT 1 0 0 1 0 26 Tm 3.127304 Tw 12 TL /F1 10 Tf 0 0 0 rg (The fitting set included dipeptide conformations \() Tj /F3 10 Tf 0 0 0 rg (ACE-XXX-NME) Tj /F1 10 Tf 0 0 0 rg (\), many of which were obtained from the Simmerling group. These included) Tj T* 0 Tw .069723 Tw (conformations with backbone ) Tj /F4 10 Tf 12 TL (f) Tj /F1 10 Tf 12 TL ( and ) Tj /F4 10 Tf 12 TL (y) Tj /F1 10 Tf 12 TL ( angles corresponding to alpha helix and beta sheet secondary structures, as well as comprehensive sampling of) Tj T* 0 Tw /F4 10 Tf 12 TL (f) Tj /F1 10 Tf 12 TL ( and ) Tj /F4 10 Tf 12 TL (y) Tj /F1 10 Tf 12 TL ( at 20\260 intervals. In addition, conformations sampling the ) Tj /F4 10 Tf 12 TL (c) Tj /F1 10 Tf 12 TL (1 and ) Tj /F4 10 Tf 12 TL (c) Tj /F1 10 Tf 12 TL (2 side chain dihedrals at 20\260 intervals were used.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 346.1339 cm
+q
+BT 1 0 0 1 0 14 Tm .176181 Tw 12 TL /F1 10 Tf 0 0 0 rg (The set also included tripeptide conformations \() Tj /F3 10 Tf 0 0 0 rg (ACE-{GLY,ALA,SER}-XXX-NME ) Tj /F1 10 Tf 0 0 0 rg (or ) Tj /F3 10 Tf 0 0 0 rg (ACE-XXX-{GLY,ALA,SER}-NME) Tj /F1 10 Tf 0 0 0 rg (\); these sampled the backbone) Tj T* 0 Tw /F4 10 Tf 12 TL (f) Tj /F1 10 Tf 12 TL ( and ) Tj /F4 10 Tf 12 TL (y) Tj /F1 10 Tf 12 TL ( at 15\260 intervals.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 328.1339 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Finally the set included tripeptide conformations \() Tj /F3 10 Tf 0 0 0 rg (ACE-ALA-ALA-ALA-NME ) Tj /F1 10 Tf 0 0 0 rg (and ) Tj /F3 10 Tf 0 0 0 rg (ACE-GLY-GYL-GLY-NME) Tj /F1 10 Tf 0 0 0 rg (\), sampling ) Tj /F4 10 Tf 12 TL (f) Tj /F1 10 Tf 12 TL ( and ) Tj /F4 10 Tf 12 TL (y) Tj /F1 10 Tf 12 TL ( at 10\260 intervals.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 295.1339 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (ff15ipq) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 253.1339 cm
+q
+BT 1 0 0 1 0 26 Tm 2.92519 Tw 12 TL /F1 10 Tf 0 0 0 rg (For ff15ipq, which includes updates to the charges and Lennard-Jones radii, an initial set of torsions has been fit using the same ~62000) Tj T* 0 Tw .551422 Tw (conformations used for ff14ipq. To these were added an additional ~1500 conformations of the ) Tj /F3 10 Tf 0 0 0 rg (ACE-ALA-PRO-ALA-NME ) Tj /F1 10 Tf 0 0 0 rg (tetrapeptide obtained from) Tj T* 0 Tw (Dave Cerutti.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 199.1339 cm
+q
+BT 1 0 0 1 0 38 Tm .018507 Tw 12 TL /F1 10 Tf 0 0 0 rg (Refinement of the torsion parameters will be carried out using an iterative cycle: conformations will be generated using version ) Tj /F3 10 Tf 0 0 0 rg (i ) Tj /F1 10 Tf 0 0 0 rg (of the force field, and) Tj T* 0 Tw 1.121151 Tw (the quantum mechanical energies of these conformations incorporated into the fitting of version ) Tj /F3 10 Tf 0 0 0 rg (i+1) Tj /F1 10 Tf 0 0 0 rg (. If version ) Tj /F3 10 Tf 0 0 0 rg (i ) Tj /F1 10 Tf 0 0 0 rg (of favors conformations that are) Tj T* 0 Tw 1.00279 Tw (unfavorable according to the quantum model, this will be reflected in version ) Tj /F3 10 Tf 0 0 0 rg (i+1) Tj /F1 10 Tf 0 0 0 rg (. Currently my plan is to run ~30000 conformations, split into four) Tj T* 0 Tw (iterations:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 169.1339 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Iteration 1) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 157.1339 cm
+Q
+q
+1 0 0 1 62.69291 157.1339 cm
+Q
+q
+1 0 0 1 62.69291 133.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .290675 Tw (Dipeptides: 23 systems including all side chain protonation states; 250 conformations each, except for CYM and LYN which are new additions to) Tj T* 0 Tw (the fitting set and will include 1000 conformations) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 127.1339 cm
+Q
+q
+1 0 0 1 62.69291 115.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Tetrapeptides: ALAALAALA, GLYGLYGLY, and ALAPROALA; 250 conformations each) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 109.1339 cm
+Q
+q
+1 0 0 1 62.69291 97.13386 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Di-dipeptide: CYX-CYX 1000 conformations) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 91.13386 cm
+Q
+q
+1 0 0 1 62.69291 79.13386 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Total: 9000 conformations) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 79.13386 cm
+Q
+ 
+endstream
+endobj
+24 0 obj
+<< /Length 5879 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 517.1339 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Iteration 2) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 505.1339 cm
+Q
+q
+1 0 0 1 62.69291 505.1339 cm
+Q
+q
+1 0 0 1 62.69291 493.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Tripeptides: 51 systems of form GLYXXX and XXXGLY including all side chain protonation states; 100-125 conformations each) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 487.1339 cm
+Q
+q
+1 0 0 1 62.69291 475.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Tetrapeptides: ALAALAALA, GLYGLYGLY, and ALAPROALA; 250 conformations each) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 469.1339 cm
+Q
+q
+1 0 0 1 62.69291 457.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Di-dipeptide: CYX-CYX, 250 conformations) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 451.1339 cm
+Q
+q
+1 0 0 1 62.69291 439.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Total: 6100-7275 conformations) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 439.1339 cm
+Q
+q
+1 0 0 1 62.69291 409.1339 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Iteration 3) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 397.1339 cm
+Q
+q
+1 0 0 1 62.69291 397.1339 cm
+Q
+q
+1 0 0 1 62.69291 385.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Tripeptides: 51 systems of form ALAXXX and XXXALA including all side chain protonation states; 100-125 conformations each) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 379.1339 cm
+Q
+q
+1 0 0 1 62.69291 367.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Tetrapeptides: ALAALAALA, GLYGLYGLY, and ALAPROALA; 250 conformations each) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 361.1339 cm
+Q
+q
+1 0 0 1 62.69291 349.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Di-dipeptide: CYX-CYX, 250 conformations) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 343.1339 cm
+Q
+q
+1 0 0 1 62.69291 331.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Total: 6100-7275 conformations) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 331.1339 cm
+Q
+q
+1 0 0 1 62.69291 301.1339 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Iteration 4) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 289.1339 cm
+Q
+q
+1 0 0 1 62.69291 289.1339 cm
+Q
+q
+1 0 0 1 62.69291 277.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Tripeptides: 51 systems of form SERXXX and XXXSER including all side chain protonation states; 100-125 conformations each) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 271.1339 cm
+Q
+q
+1 0 0 1 62.69291 259.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Tetrapeptides: ALAALAALA, GLYGLYGLY, and ALAPROALA; 250 conformations each) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 253.1339 cm
+Q
+q
+1 0 0 1 62.69291 241.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Di-dipeptide: CYX-CYX 250 conformations) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 235.1339 cm
+Q
+q
+1 0 0 1 62.69291 223.1339 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Total: 6100-7275 conformations) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 223.1339 cm
+Q
+q
+1 0 0 1 62.69291 193.1339 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Progress) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 139.1339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 38 Tm /F1 10 Tf 12 TL 1.070616 Tw (A table of the completed and planned calculations follows. ALA, GLY, and SER, which are included in tripeptides and therefore present in a much) Tj T* 0 Tw .430967 Tw (larger number of systems, are listed separately. Systems that were part of the fitting set of ff14ipq are listed in upper case, while new systems added) Tj T* 0 Tw .095161 Tw (for ff15ipq are listed in lower case The first iteration of calculations is underway; systems in italics are planned as part of this iteration, while systems in) Tj T* 0 Tw (bold are complete.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 139.1339 cm
+Q
+ 
+endstream
+endobj
+25 0 obj
+<< /Length 4795 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 529.1339 cm
+Q
+q
+1 0 0 1 62.69291 205.1339 cm
+1 1 1 rg
+n 0 324 666.6142 -18 re f*
+.878431 .878431 .878431 rg
+n 0 306 666.6142 -102 re f*
+1 1 1 rg
+n 0 204 666.6142 -102 re f*
+.878431 .878431 .878431 rg
+n 0 102 666.6142 -102 re f*
+.960784 .960784 .862745 rg
+n 0 324 666.6142 -18 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 309 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 33.74803 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 6.594016 0 Td (RES) Tj T* -6.594016 0 Td ET
+Q
+Q
+q
+1 0 0 1 51.74803 309 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 86.0315 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 29.12075 0 Td (SOLO) Tj T* -29.12075 0 Td ET
+Q
+Q
+q
+1 0 0 1 149.7795 309 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 138.315 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 58.87748 0 Td (PRE) Tj T* -58.87748 0 Td ET
+Q
+Q
+q
+1 0 0 1 300.0945 309 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 138.315 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 55.54248 0 Td (POST) Tj T* -55.54248 0 Td ET
+Q
+Q
+q
+1 0 0 1 450.4094 309 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 86.0315 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 17.73075 0 Td (PRE/POST) Tj T* -17.73075 0 Td ET
+Q
+Q
+q
+1 0 0 1 548.4409 309 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 112.1732 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 23.86161 0 Td (RESTRAINED) Tj T* -23.86161 0 Td ET
+Q
+Q
+0 0 0 rg
+q
+1 0 0 1 6 291 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51.74803 279 cm
+q
+BT 1 0 0 1 0 14 Tm 12 TL /F1 10 Tf 0 0 0 rg (ALAALA) Tj T* /F2 10 Tf (ALAALAALA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 149.7795 207 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 86 Tm /F1 10 Tf 12 TL (ALAARG alaash alaasn) Tj T* (ALAASP alacym ALACYS) Tj T* (alaglh ALAGLN ALAGLU) Tj T* (ALAGLY alahid ALAHIE alahip) Tj T* (ALAILE ALALEU alalyn) Tj T* (ALALYS ALAMET ALAPHE) Tj T* (ALAPRO ALASER ALATHR) Tj T* (ALATRP ALATYR ALAVAL) Tj T* ET
+Q
+Q
+q
+1 0 0 1 300.0945 219 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 74 Tm /F1 10 Tf 12 TL (ARGALA ashala ASNALA) Tj T* (ASPALA cymala cysala glhala) Tj T* (GLNALA GLUALA GLYALA) Tj T* (hidala hieala hipala ileala) Tj T* (leuala lynala lysala metala) Tj T* (pheala proala serala thrala) Tj T* (trpala tyrala valala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 450.4094 291 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (alaproala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 189 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51.74803 177 cm
+q
+BT 1 0 0 1 0 14 Tm 12 TL /F1 10 Tf 0 0 0 rg (GLYGLY) Tj T* /F2 10 Tf (GLYGLYGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 149.7795 105 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 86 Tm /F1 10 Tf 12 TL (GLYALA GLYARG glyash) Tj T* (GLYASN GLYASP glycym) Tj T* (GLYCYS glyglh GLYGLN) Tj T* (GLYGLU glyhid GLYHIE glyhip) Tj T* (GLYILE GLYLEU glylyn) Tj T* (GLYLYS GLYMET GLYPHE) Tj T* (GLYPRO GLYSER GLYTHR) Tj T* (GLYTRP GLYTYR GLYVAL) Tj T* ET
+Q
+Q
+q
+1 0 0 1 300.0945 105 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 86 Tm /F1 10 Tf 12 TL (ALAGLY ARGGLY ashgly) Tj T* (ASNGLY aspgly cymgly) Tj T* (CYSGLY glhgly GLNGLY) Tj T* (GLUGLY hidgly HIEGLY hipgly) Tj T* (ILEGLY LEUGLY lyngly lysgly) Tj T* (metgly phegly PROGLY) Tj T* (SERGLY thrgly TRPGLY) Tj T* (TYRGLY valgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 87 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SER) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51.74803 87 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F5 10 Tf 0 0 0 rg (ser ) Tj /F1 10 Tf (serser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 149.7795 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 86 Tm /F1 10 Tf 12 TL (SERALA SERARG serash) Tj T* (SERASN SERASP sercym) Tj T* (sercys serglh SERGLN) Tj T* (SERGLU SERGLY serhid) Tj T* (SERHIE serhip SERILE) Tj T* (SERLEU serlyn serlys) Tj T* (SERMET SERPHE SERPRO) Tj T* (serthr sertrp SERTYR serval) Tj T* ET
+Q
+Q
+q
+1 0 0 1 300.0945 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 74 Tm /F1 10 Tf 12 TL (ALASER ARGSER ashser) Tj T* (ASNSER ASPSER cymser) Tj T* (CYSSER glhser GLNSER) Tj T* (gluser GLYSER hidser hieser) Tj T* (hipser ileser leuser lynser) Tj T* (lysser metser pheser proser) Tj T* (thrser trpser tyrser valser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 548.4409 63 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (SER_ALPHA) Tj T* (SER_BACKBONE) Tj T* (SER_BETA) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+0 0 0 RG
+.25 w
+n 0 306 m 666.6142 306 l S
+n 0 204 m 666.6142 204 l S
+n 0 102 m 666.6142 102 l S
+n 45.74803 0 m 45.74803 324 l S
+n 143.7795 0 m 143.7795 324 l S
+n 294.0945 0 m 294.0945 324 l S
+n 444.4094 0 m 444.4094 324 l S
+n 542.4409 0 m 542.4409 324 l S
+n 0 324 m 666.6142 324 l S
+n 0 0 m 666.6142 0 l S
+n 0 0 m 0 324 l S
+n 666.6142 0 m 666.6142 324 l S
+Q
+Q
+q
+1 0 0 1 62.69291 205.1339 cm
+Q
+q
+1 0 0 1 62.69291 205.1339 cm
+Q
+ 
+endstream
+endobj
+26 0 obj
+<< /Length 9808 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 529.1339 cm
+Q
+q
+1 0 0 1 62.69291 79.13386 cm
+1 1 1 rg
+n 0 450 666.6142 -18 re f*
+.878431 .878431 .878431 rg
+n 0 432 666.6142 -30 re f*
+1 1 1 rg
+n 0 402 666.6142 -42 re f*
+.878431 .878431 .878431 rg
+n 0 360 666.6142 -42 re f*
+1 1 1 rg
+n 0 318 666.6142 -42 re f*
+.878431 .878431 .878431 rg
+n 0 276 666.6142 -18 re f*
+1 1 1 rg
+n 0 258 666.6142 -42 re f*
+.878431 .878431 .878431 rg
+n 0 216 666.6142 -42 re f*
+1 1 1 rg
+n 0 174 666.6142 -30 re f*
+.878431 .878431 .878431 rg
+n 0 144 666.6142 -30 re f*
+1 1 1 rg
+n 0 114 666.6142 -30 re f*
+.878431 .878431 .878431 rg
+n 0 84 666.6142 -42 re f*
+1 1 1 rg
+n 0 42 666.6142 -42 re f*
+.960784 .960784 .862745 rg
+n 0 450 666.6142 -18 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 435 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 37.64148 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 8.54074 0 Td (RES) Tj T* -8.54074 0 Td ET
+Q
+Q
+q
+1 0 0 1 55.64148 435 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 66.00804 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 19.10902 0 Td (SOLO) Tj T* -19.10902 0 Td ET
+Q
+Q
+q
+1 0 0 1 133.6495 435 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 122.7412 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 51.92058 0 Td (ALA) Tj T* -51.92058 0 Td ET
+Q
+Q
+q
+1 0 0 1 268.3907 435 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 122.7412 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 51.36558 0 Td (GLY) Tj T* -51.36558 0 Td ET
+Q
+Q
+q
+1 0 0 1 403.1318 435 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 122.7412 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 51.09058 0 Td (SER) Tj T* -51.09058 0 Td ET
+Q
+Q
+q
+1 0 0 1 537.873 435 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 122.7412 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 29.14558 0 Td (RESTRAINED) Tj T* -29.14558 0 Td ET
+Q
+Q
+0 0 0 rg
+q
+1 0 0 1 6 417 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ARG) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 417 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (ARG) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 417 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALAARG ARGALA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 417 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYARG ARGGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 417 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERARG ARGSER) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 405 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL (ARG_ALPHA) Tj T* (ARG_BACKBONE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 387 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ASH) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 387 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (ash) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 387 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (alaash ashala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 387 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (glyash ashgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 387 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (serash ashser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 363 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (ASH_ALPHA) Tj T* (ASH_BACKBONE) Tj T* (ASH_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 345 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ASN) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 345 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (asn) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 345 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (alaasn ASNALA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 345 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYASN ASNGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 345 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERASN ASNSER) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 321 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (ASN_ALPHA) Tj T* (ASN_BACKBONE) Tj T* (ASN_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 303 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ASP) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 303 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (asp) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 303 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALAASP ASPALA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 303 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (glyasp aspgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 303 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (serasp ASPSER) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 279 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (ASP_ALPHA) Tj T* (ASP_BACKBONE) Tj T* (ASP_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 261 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (CYM) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 261 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (cym) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 261 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (alacym cymala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 261 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (glycym cymgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 261 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (sercym cymser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 243 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (CYS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 243 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (cys) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 243 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALACYS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 243 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYCYS CYSGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 243 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (sercys CYSSER) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 219 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (CYS_ALPHA) Tj T* (CYS_BACKBONE) Tj T* (CYS_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 201 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (CYX) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 201 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F5 10 Tf 12 TL (cyxcyx) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 177 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (CYX_ALPHA_CHI) Tj T* (CYX_ALPHA_DISULF) Tj T* (CYX_CHI CYX_DISULF) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 159 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLH) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 159 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (GLH) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 159 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (alaglh glhala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 159 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (glyglh glhgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 159 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (serglh glhser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 147 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL (GLH_ALPHA) Tj T* (GLH_BACKBONE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 129 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLN) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 129 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (GLN) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 129 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALAGLN GLNALA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 129 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYGLN glngly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 129 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERGLN GLNSER) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 117 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL (GLN_ALPHA) Tj T* (GLN_BACKBONE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 99 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLU) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 99 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F5 10 Tf 12 TL (GLU) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 99 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALAGLU GLUALA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 99 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYGLU GLUGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 99 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERGLU gluser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 87 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL (GLU_ALPHA) Tj T* (GLU_BACKBONE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 69 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (HID) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 69 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (hid) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 69 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (alahid hidala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 69 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (glyhid hidgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 69 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (serhid hidser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 45 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (HID_ALPHA) Tj T* (HID_BACKBONE) Tj T* (HID_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 27 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (HIE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 27 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (hie) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 27 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALAHIE hieala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 27 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYHIE HIEGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 27 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERHIE hieser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (HIE_ALPHA) Tj T* (HIE_BACKBONE) Tj T* (HIE_BETA) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+0 0 0 RG
+.25 w
+n 0 0 m 666.6142 0 l S
+n 0 432 m 666.6142 432 l S
+n 0 402 m 666.6142 402 l S
+n 0 360 m 666.6142 360 l S
+n 0 318 m 666.6142 318 l S
+n 0 276 m 666.6142 276 l S
+n 0 258 m 666.6142 258 l S
+n 0 216 m 666.6142 216 l S
+n 0 174 m 666.6142 174 l S
+n 0 144 m 666.6142 144 l S
+n 0 114 m 666.6142 114 l S
+n 0 84 m 666.6142 84 l S
+n 0 42 m 666.6142 42 l S
+n 49.64148 0 m 49.64148 450 l S
+n 127.6495 0 m 127.6495 450 l S
+n 262.3907 0 m 262.3907 450 l S
+n 397.1318 0 m 397.1318 450 l S
+n 531.873 0 m 531.873 450 l S
+n 0 450 m 666.6142 450 l S
+n 0 0 m 0 450 l S
+n 666.6142 0 m 666.6142 450 l S
+Q
+Q
+ 
+endstream
+endobj
+27 0 obj
+<< /Length 8756 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 115.1339 cm
+1 1 1 rg
+n 0 420 666.6142 -42 re f*
+.878431 .878431 .878431 rg
+n 0 378 666.6142 -42 re f*
+1 1 1 rg
+n 0 336 666.6142 -42 re f*
+.878431 .878431 .878431 rg
+n 0 294 666.6142 -18 re f*
+1 1 1 rg
+n 0 276 666.6142 -30 re f*
+.878431 .878431 .878431 rg
+n 0 246 666.6142 -30 re f*
+1 1 1 rg
+n 0 216 666.6142 -18 re f*
+.878431 .878431 .878431 rg
+n 0 198 666.6142 -30 re f*
+1 1 1 rg
+n 0 168 666.6142 -42 re f*
+.878431 .878431 .878431 rg
+n 0 126 666.6142 -42 re f*
+1 1 1 rg
+n 0 84 666.6142 -42 re f*
+.878431 .878431 .878431 rg
+n 0 42 666.6142 -42 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 405 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (HIP) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 405 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (hip) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 405 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (alahip hipala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 405 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (glyhip hipgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 405 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (serhip hipser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 381 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (HIP_ALPHA) Tj T* (HIP_BACKBONE) Tj T* (HIP_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 363 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ILE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 363 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F5 10 Tf 12 TL (ile) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 363 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALAILE ileala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 363 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYILE ILEGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 363 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERILE ileser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 339 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (ILE_ALPHA) Tj T* (ILE_BACKBONE) Tj T* (ILE_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 321 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (LEU) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 321 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F5 10 Tf 12 TL (leu) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 321 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALALEU leuala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 321 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYLEU LEUGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 321 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERLEU leuser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 297 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (LEU_ALPHA) Tj T* (LEU_BACKBONE) Tj T* (LEU_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 279 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (LYN) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 279 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F5 10 Tf 12 TL (lyn) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 279 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (alalyn lynala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 279 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (glylyn lyngly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 279 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (serlyn lynser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 261 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (LYS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 261 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (LYS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 261 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALALYS lysala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 261 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYLYS lysgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 261 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (serlys lysser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 249 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL (LYS_ALPHA) Tj T* (LYS_BACKBONE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 231 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (MET) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 231 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F5 10 Tf 12 TL (MET) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 231 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALAMET metala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 231 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYMET metgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 231 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERMET metser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 219 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL (MET_ALPHA) Tj T* (MET_BACKBONE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 201 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (PHE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 201 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F5 10 Tf 12 TL (phe) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 201 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALAPHE pheala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 201 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYPHE phegly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 201 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERPHE pheser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 201 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (PHE_BACKBONE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 183 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (PRO) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 183 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F5 10 Tf 12 TL (pro) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 171 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL (ALAPRO proala) Tj T* (ALAPROALA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 183 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYPRO PROGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 183 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERPRO proser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 153 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (THR) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 153 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F5 10 Tf 12 TL (thr) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 153 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALATHR thrala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 153 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYTHR thrgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 153 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (serthr thrser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 129 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (THR_ALPHA) Tj T* (THR_BACKBONE) Tj T* (THR_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 111 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (TRP) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 111 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (trp) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 111 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALATRP trpala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 111 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYTRP TRPGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 111 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (sertrp trpser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 87 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (TRP_ALPHA) Tj T* (TRP_BACKBONE) Tj T* (TRP_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 69 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (TYR) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 69 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (tyr) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 69 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALATYR tyrala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 69 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYTYR TYRGLY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 69 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (SERTYR tyrser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 45 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (TYR_ALPHA) Tj T* (TYR_BACKBONE) Tj T* (TYR_BETA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 27 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (VAL) Tj T* ET
+Q
+Q
+q
+1 0 0 1 55.64148 27 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (val) Tj T* ET
+Q
+Q
+q
+1 0 0 1 133.6495 27 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ALAVAL valala) Tj T* ET
+Q
+Q
+q
+1 0 0 1 268.3907 27 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GLYVAL valgly) Tj T* ET
+Q
+Q
+q
+1 0 0 1 403.1318 27 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (serval valser) Tj T* ET
+Q
+Q
+q
+1 0 0 1 537.873 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL (VAL_ALPHA) Tj T* (VAL_BACKBONE) Tj T* (VAL_BETA) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+0 0 0 RG
+.25 w
+n 0 420 m 666.6142 420 l S
+n 0 378 m 666.6142 378 l S
+n 0 336 m 666.6142 336 l S
+n 0 294 m 666.6142 294 l S
+n 0 276 m 666.6142 276 l S
+n 0 246 m 666.6142 246 l S
+n 0 216 m 666.6142 216 l S
+n 0 198 m 666.6142 198 l S
+n 0 168 m 666.6142 168 l S
+n 0 126 m 666.6142 126 l S
+n 0 84 m 666.6142 84 l S
+n 0 42 m 666.6142 42 l S
+n 49.64148 0 m 49.64148 420 l S
+n 127.6495 0 m 127.6495 420 l S
+n 262.3907 0 m 262.3907 420 l S
+n 397.1318 0 m 397.1318 420 l S
+n 531.873 0 m 531.873 420 l S
+n 0 0 m 0 420 l S
+n 666.6142 0 m 666.6142 420 l S
+n 0 0 m 666.6142 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 115.1339 cm
+Q
+ 
+endstream
+endobj
+28 0 obj
+<< /Nums [ 0 29 0 R 1 30 0 R 2 31 0 R 3 32 0 R 4 33 0 R ] >>
+endobj
+29 0 obj
+<< /S /D /St 1 >>
+endobj
+30 0 obj
+<< /S /D /St 2 >>
+endobj
+31 0 obj
+<< /S /D /St 3 >>
+endobj
+32 0 obj
+<< /S /D /St 4 >>
+endobj
+33 0 obj
+<< /S /D /St 5 >>
+endobj
+xref
+0 34
+0000000000 65535 f
+0000000075 00000 n
+0000000149 00000 n
+0000000259 00000 n
+0000000374 00000 n
+0000000482 00000 n
+0000000588 00000 n
+0000000787 00000 n
+0000000986 00000 n
+0000001104 00000 n
+0000001303 00000 n
+0000001503 00000 n
+0000001703 00000 n
+0000001812 00000 n
+0000002036 00000 n
+0000002113 00000 n
+0000002224 00000 n
+0000002375 00000 n
+0000002490 00000 n
+0000002618 00000 n
+0000002746 00000 n
+0000002874 00000 n
+0000002986 00000 n
+0000003075 00000 n
+0000008933 00000 n
+0000014869 00000 n
+0000019721 00000 n
+0000029586 00000 n
+0000038399 00000 n
+0000038479 00000 n
+0000038516 00000 n
+0000038553 00000 n
+0000038590 00000 n
+0000038627 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com)
+ [(h\335\(^\213]h\004\315\274r{\265\252\254h) (h\335\(^\213]h\004\315\274r{\265\252\254h)]
+ /Info 13 0 R /Root 12 0 R /Size 34 >>
+startxref
+38664
+%%EOF

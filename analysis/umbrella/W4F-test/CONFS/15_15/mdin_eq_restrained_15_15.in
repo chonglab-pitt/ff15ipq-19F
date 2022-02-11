@@ -1,0 +1,43 @@
+200 ps NPT equilbration
+Langevin thermostat, MC barostat, and restraints
+&cntrl
+  irest     = 1,
+  ntx       = 5,
+  ig        = -1,
+  dt        = 0.002,
+  nstlim    = 100000,
+  nscm      = 500,
+  ntr       = 0,
+  nmropt    = 1,
+  ntb       = 2,
+  ntp       = 1,
+  barostat  = 2,
+  pres0     = 1.0,
+  mcbarint  = 100,
+  comp      = 44.6,
+  taup      = 1.0,
+  ntt       = 3,
+  temp0     = 298.0,
+  gamma_ln  = 1.0,
+  ntf       = 2,
+  ntc       = 2,
+  cut       = 10.0,
+  ntpr      = 500,
+  ntxo      = 2,
+  ntwr      = 100000,
+  ioutfm    = 1,
+  iwrap     = 1,
+&end
+&wt
+  type      = 'REST',
+  value1    = 1.0,
+&end
+&wt
+  type      = 'DUMPFREQ',
+  istep1    = 500,
+&end
+&wt
+  type      = 'END',
+&end
+DISANG      = equil_15_15.disang
+DUMPAVE     = eq_restrained_15_15.dat

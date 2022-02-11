@@ -1,0 +1,3565 @@
+Warning: When compiling code please add the following flags to nvcc:
+         -gencode arch=compute_35,code=[compute_35,sm_35] \
+         -gencode arch=compute_61,code=[compute_61,sm_61] 
+         -gencode arch=compute_70,code=[compute_70,sm_70] 
++ NJOB=0
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/005_005
++ let NJOB+=1
++ cd CONFS/005_005
++ '[' 1 -eq 24 ']'
++ cd ../
++ for PSI in '{005..175..10}'
++ gen_window W4F 005 5,7,9,29 005 7,9,29,31
++ mkdir -p CONFS/005_015
++ tet=W4F
++ phi=005
++ phi_iat=5,7,9,29
++ psi=005
++ psi_iat=7,9,29,31
++ force=8.0
++ PMEMD=/ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd
++ phi_r1=-175
++ phi_r4=185
++ psi_r1=-175
++ psi_r4=185
++ printf 'start creation disang and restrained equil / prod files\n'
++ let NJOB+=1
++ cd CONFS/005_015
++ '[' 2 -eq 24 ']'
++ cd ../
++ gen_window W4F 005 5,7,9,29 015 7,9,29,31
++ for PSI in '{005..175..10}'
++ tet=W4F
++ mkdir -p CONFS/005_025
++ phi=005
++ phi_iat=5,7,9,29
++ psi=015
++ psi_iat=7,9,29,31
++ force=8.0
++ PMEMD=/ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd
++ phi_r1=-175
++ phi_r4=185
++ psi_r1=-167
++ psi_r4=193
++ printf 'start creation disang and restrained equil / prod files\n'
++ let NJOB+=1
++ cd CONFS/005_025
++ '[' 3 -eq 24 ']'
++ cd ../
++ gen_window W4F 005 5,7,9,29 025 7,9,29,31
++ for PSI in '{005..175..10}'
++ tet=W4F
++ mkdir -p CONFS/005_035
++ phi=005
++ phi_iat=5,7,9,29
++ psi=025
++ psi_iat=7,9,29,31
++ force=8.0
++ PMEMD=/ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd
++ phi_r1=-175
++ phi_r4=185
++ psi_r1=-159
++ psi_r4=201
++ printf 'start creation disang and restrained equil / prod files\n'
++ let NJOB+=1
++ cd CONFS/005_035
++ '[' 4 -eq 24 ']'
++ cd ../
++ gen_window W4F 005 5,7,9,29 035 7,9,29,31
++ for PSI in '{005..175..10}'
++ tet=W4F
++ mkdir -p CONFS/005_045
++ phi=005
++ phi_iat=5,7,9,29
++ psi=035
++ psi_iat=7,9,29,31
++ force=8.0
++ PMEMD=/ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd
++ phi_r1=-175
++ phi_r4=185
++ psi_r1=-151
++ psi_r4=209
++ printf 'start creation disang and restrained equil / prod files\n'
++ let NJOB+=1
++ cd CONFS/005_045
++ '[' 5 -eq 24 ']'
++ cd ../
++ gen_window W4F 005 5,7,9,29 045 7,9,29,31
++ for PSI in '{005..175..10}'
++ tet=W4F
++ mkdir -p CONFS/005_055
++ phi=005
++ phi_iat=5,7,9,29
++ psi=045
++ psi_iat=7,9,29,31
++ force=8.0
++ PMEMD=/ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd
++ phi_r1=-175
++ phi_r4=185
++ psi_r1=-143
++ psi_r4=217
++ printf 'start creation disang and restrained equil / prod files\n'
++ printf 'dihedral restraint 1 = 005\n'
++ printf 'dihedral restraint 1 = 005\n'
++ printf 'dihedral restraint 1 = 005\n'
++ printf 'dihedral restraint 1 = 005\n'
++ printf 'dihedral restraint 1 = 005\n'
++ printf 'dihedral restraint 2 = 005\n'
++ printf 'dihedral restraint 2 = 025\n'
++ printf 'dihedral restraint 2 = 015\n'
++ printf 'dihedral restraint 2 = 035\n'
++ printf 'dihedral restraint 2 = 045\n'
++ echo '&rst'
++ echo '&rst'
++ echo '&rst'
++ echo '&rst'
++ echo '&rst'
++ echo '  iat=5,7,9,29,'
++ let NJOB+=1
++ cd CONFS/005_055
++ '[' 6 -eq 24 ']'
++ echo '  iat=5,7,9,29,'
++ echo '  iat=5,7,9,29,'
++ gen_window W4F 005 5,7,9,29 055 7,9,29,31
++ cd ../
++ tet=W4F
++ for PSI in '{005..175..10}'
++ echo '  ifvari=1,'
++ phi=005
++ mkdir -p CONFS/005_065
++ phi_iat=5,7,9,29
++ echo '  nstep1=0,'
++ psi=055
++ psi_iat=7,9,29,31
++ force=8.0
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ PMEMD=/ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd
++ phi_r1=-175
++ phi_r4=185
++ psi_r1=-135
++ echo '  rk2=8.0, rk3=8.0,'
++ psi_r4=225
++ printf 'start creation disang and restrained equil / prod files\n'
++ echo '  nstep2=50000,'
++ printf 'dihedral restraint 1 = 005\n'
++ printf 'dihedral restraint 2 = 055\n'
++ echo '  r1a=-175, r2a=005, r3a=005, r4a=185,'
++ echo '&rst'
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo '&end'
++ echo '&rst'
++ echo '  iat=7,9,29,31,'
++ echo '  ifvari=1,'
++ echo '  nstep1=500001,'
+mkdir: cannot create directory ‘CONFS’+ echo '  r1=0, r2=180, r3=180, r4=360,'
+: Permission denied
++ let NJOB+=1
++ cd CONFS/005_065
++ echo '  rk2=8.0, rk3=8.0,'
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_065: No such file or directory
++ cd ../
++ echo '  nstep2=100000,'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/005_075
++ echo '  r1a=-159, r2a=025, r3a=025, r4a=201,'
++ echo '  iat=5,7,9,29,'
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo '  ifvari=1,'
++ echo '&end'
++ echo '  nstep1=0,'
++ echo '&rst'
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ echo '  rk2=8.0, rk3=8.0,'
++ echo ' iat=5,7,9,29,'
++ echo '  nstep2=50000,'
++ echo ' r1=-175, r2=005, r3=005, r4=185,'
++ echo '  r1a=-175, r2a=005, r3a=005, r4a=185,'
++ echo ' rk2=8.0, rk3=8.0,'
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo '&end'
++ echo '&end'
+mkdir: cannot create directory ‘CONFS’+ echo '&rst'
++ echo '&rst'
+: Permission denied
++ echo '  iat=7,9,29,31,'
++ echo ' iat=7,9,29,31,'
++ let NJOB+=1
++ cd CONFS/005_075
++ echo '  ifvari=1,'
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_075: No such file or directory
++ echo ' r1=-159, r2=025, r3=025, r4=201,'
++ cd ../
++ echo '  nstep1=500001,'
++ for PSI in '{005..175..10}'
++ echo ' rk2=8.0, rk3=8.0'
++ mkdir -p CONFS/005_085
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ echo '&end'
++ echo '  rk2=8.0, rk3=8.0,'
+mkdir: cannot create directory ‘CONFS’+ echo '200 ps NPT equilbration'
++ echo '  nstep2=100000,'
+: Permission denied
++ echo '  r1a=-135, r2a=055, r3a=055, r4a=225,'
++ echo 'Langevin thermostat, MC barostat, and restraints'
++ let NJOB+=1
++ cd CONFS/005_085
++ echo '  rk2a=8.0, rk3a=8.0,'
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_085: No such file or directory
++ echo '&cntrl'
++ cd ../
++ echo '&end'
++ echo '  iat=5,7,9,29,'
++ echo '  ifvari=1,'
++ echo '  iat=5,7,9,29,'
++ echo '  ifvari=1,'
++ for PSI in '{005..175..10}'
++ echo '  irest     = 1,'
++ echo '&rst'
++ echo '  ifvari=1,'
++ mkdir -p CONFS/005_095
++ echo '  ifvari=1,'
++ echo '  nstep1=0,'
++ echo '  ntx       = 5,'
++ echo '  nstep1=0,'
+mkdir: cannot create directory ‘CONFS’+ echo ' iat=5,7,9,29,'
++ echo '  nstep1=0,'
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ echo '  ig        = -1,'
+: Permission denied
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ echo ' r1=-175, r2=005, r3=005, r4=185,'
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ echo '  rk2=8.0, rk3=8.0,'
++ let NJOB+=1
++ cd CONFS/005_095
++ echo '  dt        = 0.002,'
++ echo '  rk2=8.0, rk3=8.0,'
++ echo ' rk2=8.0, rk3=8.0,'
++ '[' 10 -eq 24 ']'
++ echo '  nstep1=0,'
++ echo '  rk2=8.0, rk3=8.0,'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_095: No such file or directory
++ echo '  nstep2=50000,'
++ echo '  nstlim    = 100000,'
++ cd ../
++ echo '  nstep2=50000,'
++ echo '&end'
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ echo '  nstep2=50000,'
++ for PSI in '{005..175..10}'
++ echo '  r1a=-175, r2a=005, r3a=005, r4a=185,'
++ echo '  nscm      = 500,'
++ echo '  r1a=-175, r2a=005, r3a=005, r4a=185,'
++ echo '&rst'
++ mkdir -p CONFS/005_105
++ echo '  ntr       = 0,'
++ echo '  rk2=8.0, rk3=8.0,'
++ echo '  r1a=-175, r2a=005, r3a=005, r4a=185,'
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo '  nmropt    = 1,'
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo ' iat=7,9,29,31,'
+mkdir: cannot create directory ‘CONFS’+ echo '  nstep2=50000,'
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo '&end'
++ echo '  ntb       = 2,'
++ echo '&end'
++ echo ' r1=-135, r2=055, r3=055, r4=225,'
+: Permission denied
++ echo '  r1a=-175, r2a=005, r3a=005, r4a=185,'
++ echo '&end'
++ echo '&rst'
++ echo '  ntp       = 1,'
++ echo '&rst'
++ let NJOB+=1
++ cd CONFS/005_105
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo '&rst'
++ echo '  iat=7,9,29,31,'
++ '[' 11 -eq 24 ']'
++ echo '  barostat  = 2,'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_105: No such file or directory
++ echo '  iat=7,9,29,31,'
++ echo '&end'
++ cd ../
++ echo '  iat=7,9,29,31,'
++ echo '  ifvari=1,'
++ echo '  pres0     = 1.0,'
++ for PSI in '{005..175..10}'
++ echo '  ifvari=1,'
++ echo '&rst'
++ echo '  ifvari=1,'
++ mkdir -p CONFS/005_115
++ echo '  nstep1=500001,'
++ echo ' rk2=8.0, rk3=8.0'
++ echo '  mcbarint  = 100,'
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ echo '  nstep1=500001,'
++ echo '  iat=7,9,29,31,'
++ echo '  nstep1=500001,'
+mkdir: cannot create directory ‘CONFS’+ echo '&end'
++ echo '  comp      = 44.6,'
++ echo '  rk2=8.0, rk3=8.0,'
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ echo '  ifvari=1,'
+: Permission denied
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ echo '200 ps NPT equilbration'
++ echo '  taup      = 1.0,'
++ echo '  nstep2=100000,'
++ echo '  rk2=8.0, rk3=8.0,'
++ let NJOB+=1
++ echo '  nstep1=500001,'
++ cd CONFS/005_115
++ echo '  rk2=8.0, rk3=8.0,'
++ echo '  ntt       = 3,'
++ '[' 12 -eq 24 ']'
++ echo '  r1a=-143, r2a=045, r3a=045, r4a=217,'
++ echo '  nstep2=100000,'
++ echo 'Langevin thermostat, MC barostat, and restraints'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_115: No such file or directory
++ echo '  r1=0, r2=180, r3=180, r4=360,'
++ cd ../
++ echo '  nstep2=100000,'
++ echo '  temp0     = 298.0,'
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo '  r1a=-175, r2a=005, r3a=005, r4a=185,'
++ echo '&cntrl'
++ for PSI in '{005..175..10}'
++ echo '  rk2=8.0, rk3=8.0,'
++ echo '  r1a=-167, r2a=015, r3a=015, r4a=193,'
++ echo '  gamma_ln  = 1.0,'
++ echo '&end'
++ mkdir -p CONFS/005_125
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo '  irest     = 1,'
++ echo '  nstep2=100000,'
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo '  ntf       = 2,'
++ echo '&rst'
++ echo '&end'
+mkdir: cannot create directory ‘CONFS’+ echo '  ntx       = 5,'
++ echo '  r1a=-151, r2a=035, r3a=035, r4a=209,'
++ echo '&end'
++ echo '  ntc       = 2,'
+: Permission denied
++ echo ' iat=5,7,9,29,'
++ echo '&rst'
++ echo '  ig        = -1,'
++ echo '  rk2a=8.0, rk3a=8.0,'
++ echo '&rst'
++ let NJOB+=1
++ echo '  cut       = 10.0,'
++ cd CONFS/005_125
++ echo ' r1=-175, r2=005, r3=005, r4=185,'
++ echo '  dt        = 0.002,'
++ echo ' iat=5,7,9,29,'
++ '[' 13 -eq 24 ']'
++ echo '&end'
++ echo ' iat=5,7,9,29,'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_125: No such file or directory
++ echo '  ntpr      = 500,'
++ echo ' rk2=8.0, rk3=8.0,'
++ echo '  nstlim    = 100000,'
++ cd ../
++ echo ' r1=-175, r2=005, r3=005, r4=185,'
++ echo '&rst'
++ echo ' r1=-175, r2=005, r3=005, r4=185,'
++ for PSI in '{005..175..10}'
++ echo '  ntxo      = 2,'
++ echo '&end'
++ echo '  nscm      = 500,'
++ echo ' rk2=8.0, rk3=8.0,'
++ mkdir -p CONFS/005_135
++ echo ' iat=5,7,9,29,'
++ echo '&end'
++ echo ' rk2=8.0, rk3=8.0,'
++ echo '  ntwr      = 100000,'
++ echo '&rst'
++ echo '  ntr       = 0,'
+mkdir: cannot create directory ‘CONFS’+ echo ' r1=-175, r2=005, r3=005, r4=185,'
++ echo '&rst'
++ echo '&end'
++ echo '  ioutfm    = 1,'
++ echo ' iat=7,9,29,31,'
+: Permission denied
++ echo '  nmropt    = 1,'
++ echo ' rk2=8.0, rk3=8.0,'
++ echo ' iat=7,9,29,31,'
++ echo '&rst'
++ echo '  iwrap     = 1,'
++ let NJOB+=1
++ echo ' r1=-143, r2=045, r3=045, r4=217,'
++ cd CONFS/005_135
++ echo '  ntb       = 2,'
++ echo '&end'
++ '[' 14 -eq 24 ']'
++ echo ' r1=-175, r2=005, r3=005, r4=185,'
++ echo ' iat=7,9,29,31,'
++ echo '&end'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_135: No such file or directory
++ echo ' rk2=8.0, rk3=8.0'
++ cd ../
++ echo '  ntp       = 1,'
++ echo '&rst'
++ echo ' rk2=8.0, rk3=8.0'
++ echo ' r1=-167, r2=015, r3=015, r4=193,'
++ echo '&wt'
++ for PSI in '{005..175..10}'
++ echo '&end'
++ echo '  barostat  = 2,'
++ echo ' iat=7,9,29,31,'
++ echo '&end'
++ mkdir -p CONFS/005_145
++ echo ' rk2=8.0, rk3=8.0'
++ echo '  type      = '\''REST'\'','
++ echo '200 ps NPT equilbration'
++ echo '  pres0     = 1.0,'
++ echo ' r1=-151, r2=035, r3=035, r4=209,'
++ echo '&end'
+mkdir: cannot create directory ‘CONFS’+ echo '  value1    = 1.0,'
++ echo '200 ps NPT equilbration'
++ echo '  mcbarint  = 100,'
++ echo 'Langevin thermostat, MC barostat, and restraints'
+: Permission denied
++ echo ' rk2=8.0, rk3=8.0'
++ echo '200 ps NPT equilbration'
++ echo '&end'
++ echo '  comp      = 44.6,'
++ echo 'Langevin thermostat, MC barostat, and restraints'
++ echo 'Langevin thermostat, MC barostat, and restraints'
++ echo '&cntrl'
++ let NJOB+=1
++ cd CONFS/005_145
++ echo '&end'
++ echo '&wt'
++ echo '  taup      = 1.0,'
++ echo '&cntrl'
++ echo '&cntrl'
++ '[' 15 -eq 24 ']'
++ echo '  irest     = 1,'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_145: No such file or directory
++ echo '200 ps NPT equilbration'
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '  ntt       = 3,'
++ cd ../
++ echo '  irest     = 1,'
++ echo '  irest     = 1,'
++ echo '  ntx       = 5,'
++ for PSI in '{005..175..10}'
++ echo 'Langevin thermostat, MC barostat, and restraints'
++ echo '  istep1    = 500,'
++ echo '  temp0     = 298.0,'
++ echo '  ntx       = 5,'
++ mkdir -p CONFS/005_155
++ echo '  ntx       = 5,'
++ echo '  ig        = -1,'
++ echo '  ig        = -1,'
++ echo '&cntrl'
++ echo '&end'
++ echo '  gamma_ln  = 1.0,'
++ echo '  ig        = -1,'
+mkdir: cannot create directory ‘CONFS’+ echo '  dt        = 0.002,'
++ echo '  dt        = 0.002,'
++ echo '  irest     = 1,'
++ echo '&wt'
++ echo '  ntf       = 2,'
+: Permission denied
++ echo '  dt        = 0.002,'
++ echo '  nstlim    = 100000,'
++ echo '  nstlim    = 100000,'
++ echo '  ntx       = 5,'
++ echo '  type      = '\''END'\'','
++ echo '  ntc       = 2,'
++ let NJOB+=1
++ cd CONFS/005_155
++ echo '  nstlim    = 100000,'
++ echo '  nscm      = 500,'
++ echo '  nscm      = 500,'
++ echo '  ig        = -1,'
++ '[' 16 -eq 24 ']'
++ echo '&end'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_155: No such file or directory
++ echo '  cut       = 10.0,'
++ echo '  nscm      = 500,'
++ echo '  ntr       = 0,'
++ cd ../
++ echo '  ntr       = 0,'
++ echo '  nmropt    = 1,'
++ echo '  dt        = 0.002,'
++ echo 'DISANG      = equil_005_025.disang'
++ echo '  ntpr      = 500,'
++ for PSI in '{005..175..10}'
++ echo '  ntr       = 0,'
++ echo '  nmropt    = 1,'
++ echo '  ntb       = 2,'
++ echo '  nstlim    = 100000,'
++ mkdir -p CONFS/005_165
++ echo 'DUMPAVE     = eq_restrained_005_025.dat'
++ echo '  ntxo      = 2,'
++ echo '  nmropt    = 1,'
++ echo '  ntb       = 2,'
++ echo '  ntp       = 1,'
++ echo '  nscm      = 500,'
++ echo '2 ns NPT production'
++ echo '  ntwr      = 100000,'
+mkdir: cannot create directory ‘CONFS’+ echo '  ntb       = 2,'
++ echo '  ntp       = 1,'
++ echo '  barostat  = 2,'
++ echo '  ntr       = 0,'
+: Permission denied
++ echo '  ioutfm    = 1,'
++ echo 'Langevin thermostat, MC barostat, and restraints'
++ echo '  ntp       = 1,'
++ echo '  barostat  = 2,'
++ echo '  pres0     = 1.0,'
++ echo '  nmropt    = 1,'
++ let NJOB+=1
++ cd CONFS/005_165
++ echo '  iwrap     = 1,'
++ echo '&cntrl'
++ echo '  barostat  = 2,'
++ echo '  pres0     = 1.0,'
++ '[' 17 -eq 24 ']'
++ echo '  mcbarint  = 100,'
++ echo '  mcbarint  = 100,'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_165: No such file or directory
++ echo '  ntb       = 2,'
++ echo '&end'
++ echo '  irest     = 1,'
++ cd ../
++ echo '  pres0     = 1.0,'
++ echo '  comp      = 44.6,'
++ echo '  comp      = 44.6,'
++ echo '  ntp       = 1,'
++ for PSI in '{005..175..10}'
++ echo '&wt'
++ echo '  ntx       = 5,'
++ echo '  mcbarint  = 100,'
++ echo '  taup      = 1.0,'
++ mkdir -p CONFS/005_175
++ echo '  taup      = 1.0,'
++ echo '  barostat  = 2,'
++ echo '  type      = '\''REST'\'','
++ echo '  ig        = -1,'
++ echo '  comp      = 44.6,'
++ echo '  ntt       = 3,'
+mkdir: cannot create directory ‘CONFS’+ echo '  ntt       = 3,'
++ echo '  pres0     = 1.0,'
++ echo '  value1    = 1.0,'
++ echo '  dt        = 0.002,'
++ echo '  taup      = 1.0,'
+: Permission denied
++ echo '  temp0     = 298.0,'
++ echo '  temp0     = 298.0,'
++ echo '  mcbarint  = 100,'
++ echo '  gamma_ln  = 1.0,'
++ echo '&end'
++ echo '  nstlim    = 1000000,'
++ echo '  ntt       = 3,'
++ echo '&wt'
++ let NJOB+=1
++ cd CONFS/005_175
++ echo '  gamma_ln  = 1.0,'
++ echo '  comp      = 44.6,'
++ echo '  ntf       = 2,'
++ echo '  temp0     = 298.0,'
++ '[' 18 -eq 24 ']'
++ echo '  nscm      = 500,'
++ echo '  type      = '\''DUMPFREQ'\'','
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/005_175: No such file or directory
++ echo '  ntf       = 2,'
++ echo '  taup      = 1.0,'
++ cd ../
++ echo '  ntc       = 2,'
++ echo '  gamma_ln  = 1.0,'
++ echo '  ntr       = 0,'
++ echo '  istep1    = 500,'
++ for PHI in '{005..175..10}'
++ echo '  ntc       = 2,'
++ echo '  ntt       = 3,'
++ echo '  cut       = 10.0,'
++ echo '  ntf       = 2,'
++ for PSI in '{005..175..10}'
++ echo '  nmropt    = 1,'
++ echo '&end'
++ echo '  cut       = 10.0,'
++ echo '  temp0     = 298.0,'
++ mkdir -p CONFS/015_005
++ echo '  ntpr      = 500,'
++ echo '  ntc       = 2,'
++ echo '  ntb       = 2,'
++ echo '&wt'
+mkdir: cannot create directory ‘CONFS’+ echo '  ntpr      = 500,'
++ echo '  gamma_ln  = 1.0,'
++ echo '  ntxo      = 2,'
++ echo '  cut       = 10.0,'
++ echo '  ntp       = 1,'
++ echo '  type      = '\''END'\'','
+: Permission denied
++ echo '  ntxo      = 2,'
++ echo '  ntf       = 2,'
++ echo '  ntwr      = 100000,'
++ echo '  ntpr      = 500,'
++ echo '  barostat  = 2,'
++ echo '&end'
++ let NJOB+=1
++ cd CONFS/015_005
++ echo '  ntwr      = 100000,'
++ echo '  ntc       = 2,'
++ echo '  ioutfm    = 1,'
++ echo '  ntxo      = 2,'
++ '[' 19 -eq 24 ']'
++ echo 'DISANG      = equil_005_055.disang'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_005: No such file or directory
++ echo '  pres0     = 1.0,'
++ echo '  ioutfm    = 1,'
++ echo '  cut       = 10.0,'
++ cd ../
++ echo '  iwrap     = 1,'
++ echo '  ntwr      = 100000,'
++ echo 'DUMPAVE     = eq_restrained_005_055.dat'
++ echo '  mcbarint  = 100,'
++ for PSI in '{005..175..10}'
++ echo '  iwrap     = 1,'
++ echo '  ntpr      = 500,'
++ echo '&end'
++ echo '  ioutfm    = 1,'
++ mkdir -p CONFS/015_015
++ echo '2 ns NPT production'
++ echo '  comp      = 44.6,'
++ echo '&end'
++ echo '  ntxo      = 2,'
++ echo '&wt'
++ echo '  iwrap     = 1,'
+mkdir: cannot create directory ‘CONFS’+ echo '  taup      = 1.0,'
++ echo '&wt'
++ echo '  ntwr      = 100000,'
++ echo 'Langevin thermostat, MC barostat, and restraints'
++ echo '  type      = '\''REST'\'','
++ echo '  ioutfm    = 1,'
+: Permission denied
++ echo '&end'
++ echo '  ntt       = 3,'
++ echo '  type      = '\''REST'\'','
++ echo '&wt'
++ echo '&cntrl'
++ echo '  value1    = 1.0,'
++ let NJOB+=1
++ echo '  iwrap     = 1,'
++ cd CONFS/015_015
++ echo '  temp0     = 298.0,'
++ echo '  value1    = 1.0,'
++ echo '  type      = '\''REST'\'','
++ '[' 20 -eq 24 ']'
++ echo '  irest     = 1,'
++ echo '&end'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_015: No such file or directory
++ echo '&end'
++ cd ../
++ echo '  gamma_ln  = 1.0,'
++ echo '&end'
++ echo '  value1    = 1.0,'
++ echo '  ntx       = 5,'
++ echo '&wt'
++ for PSI in '{005..175..10}'
++ echo '  ig        = -1,'
++ echo '&wt'
++ echo '  ntf       = 2,'
++ echo '&wt'
++ echo '&end'
++ mkdir -p CONFS/015_025
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '  dt        = 0.002,'
++ echo '  type      = '\''REST'\'','
++ echo '  ntc       = 2,'
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '&wt'
++ echo '  istep1    = 500,'
++ echo '  cut       = 10.0,'
++ echo '  nstlim    = 1000000,'
+mkdir: cannot create directory ‘CONFS’+ echo '  value1    = 1.0,'
++ echo '  istep1    = 500,'
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '&end'
+: Permission denied
++ echo '  ntpr      = 100,'
++ echo '  nscm      = 500,'
++ echo '&end'
++ echo '&end'
++ echo '  ntr       = 0,'
++ echo '  istep1    = 500,'
++ echo '&wt'
++ let NJOB+=1
++ cd CONFS/015_025
++ echo '  ntxo      = 2,'
++ echo '&wt'
++ echo '&wt'
++ echo '  nmropt    = 1,'
++ echo '  ntwr      = 500000,'
++ '[' 21 -eq 24 ']'
++ echo '&end'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_025: No such file or directory
++ echo '  type      = '\''END'\'','
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '  ntb       = 2,'
++ echo '  type      = '\''END'\'','
++ cd ../
++ echo '  ioutfm    = 1,'
++ echo '&wt'
++ echo '&end'
++ echo '  istep1    = 500,'
++ for PSI in '{005..175..10}'
++ echo '  ntp       = 1,'
++ echo '&end'
++ echo '  ntwx      = 100,'
++ echo '  type      = '\''END'\'','
++ echo 'DISANG      = equil_005_005.disang'
++ mkdir -p CONFS/015_035
++ echo '&end'
++ echo '  barostat  = 2,'
++ echo 'DISANG      = equil_005_045.disang'
++ echo '  iwrap     = 1,'
++ echo '&end'
++ echo 'DUMPAVE     = eq_restrained_005_005.dat'
++ echo '&wt'
+mkdir: cannot create directory ‘CONFS’+ echo '  pres0     = 1.0,'
++ echo 'DUMPAVE     = eq_restrained_005_045.dat'
++ echo '&end'
++ echo 'DISANG      = equil_005_015.disang'
++ echo '2 ns NPT production'
+: Permission denied
++ echo '  type      = '\''END'\'','
++ echo '  mcbarint  = 100,'
++ echo '2 ns NPT production'
++ echo '&wt'
++ echo 'DUMPAVE     = eq_restrained_005_015.dat'
++ let NJOB+=1
++ cd CONFS/015_035
++ echo 'Langevin thermostat, MC barostat, and restraints'
++ echo '&end'
++ echo '  comp      = 44.6,'
++ echo 'Langevin thermostat, MC barostat, and restraints'
++ '[' 22 -eq 24 ']'
++ echo '  type      = '\''REST'\'','
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_035: No such file or directory
++ echo '2 ns NPT production'
++ echo '&cntrl'
++ echo '  taup      = 1.0,'
++ echo 'DISANG      = equil_005_035.disang'
++ cd ../
++ echo '&cntrl'
++ echo '  value1    = 1.0,'
++ echo 'Langevin thermostat, MC barostat, and restraints'
++ echo '  irest     = 1,'
++ echo '  ntt       = 3,'
++ for PSI in '{005..175..10}'
++ echo 'DUMPAVE     = eq_restrained_005_035.dat'
++ echo '  irest     = 1,'
++ echo '&end'
++ echo '&cntrl'
++ mkdir -p CONFS/015_045
++ echo '  ntx       = 5,'
++ echo '  temp0     = 298.0,'
++ echo '2 ns NPT production'
++ echo '  ntx       = 5,'
++ echo '&wt'
++ echo '  irest     = 1,'
++ echo '  ig        = -1,'
+mkdir: cannot create directory ‘CONFS’+ echo '  gamma_ln  = 1.0,'
++ echo 'Langevin thermostat, MC barostat, and restraints'
++ echo '  ig        = -1,'
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '  ntx       = 5,'
+: Permission denied
++ echo '  dt        = 0.002,'
++ echo '  ntf       = 2,'
++ echo '&cntrl'
++ echo '  dt        = 0.002,'
++ echo '  istep1    = 100,'
++ echo '  ig        = -1,'
++ let NJOB+=1
++ cd CONFS/015_045
++ echo '  nstlim    = 1000000,'
++ echo '  ntc       = 2,'
++ echo '  irest     = 1,'
++ echo '  nstlim    = 1000000,'
++ '[' 23 -eq 24 ']'
++ echo '  ntx       = 5,'
++ echo '&end'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_045: No such file or directory
++ echo '  dt        = 0.002,'
++ echo '  nscm      = 500,'
++ echo '  cut       = 10.0,'
++ cd ../
++ echo '  nscm      = 500,'
++ echo '  ig        = -1,'
++ echo '&wt'
++ echo '  nstlim    = 1000000,'
++ for PSI in '{005..175..10}'
++ echo '  ntr       = 0,'
++ echo '  ntpr      = 100,'
++ echo '  ntr       = 0,'
++ echo '  dt        = 0.002,'
++ mkdir -p CONFS/015_055
++ echo '  type      = '\''END'\'','
++ echo '  nscm      = 500,'
++ echo '  nmropt    = 1,'
++ echo '  ntxo      = 2,'
++ echo '  nmropt    = 1,'
++ echo '  nstlim    = 1000000,'
++ echo '  ntb       = 2,'
+mkdir: cannot create directory ‘CONFS’+ echo '&end'
++ echo '  ntr       = 0,'
++ echo '  ntwr      = 500000,'
++ echo '  ntb       = 2,'
++ echo '  nscm      = 500,'
+: Permission denied
++ echo '  ntp       = 1,'
++ echo 'DISANG      = prod_005_025.disang'
++ echo '  nmropt    = 1,'
++ echo '  ioutfm    = 1,'
++ echo '  ntp       = 1,'
++ let NJOB+=1
++ echo '  ntr       = 0,'
++ cd CONFS/015_055
++ echo '  barostat  = 2,'
++ echo 'DUMPAVE     = dihedral_005_025.dat'
++ echo '  ntb       = 2,'
++ echo '  ntwx      = 100,'
++ '[' 24 -eq 24 ']'
++ echo '  barostat  = 2,'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_055: No such file or directory
++ echo '  nmropt    = 1,'
++ echo '  pres0     = 1.0,'
++ printf 'done creation disang and restrained equil / prod files\n'
++ NJOB=0
++ echo '  ntp       = 1,'
++ echo '  iwrap     = 1,'
++ echo '  pres0     = 1.0,'
++ echo '  ntb       = 2,'
++ wait
++ '[' -e ./W4F_tet_eq_restrained_005_025.out ']'
++ echo '  mcbarint  = 100,'
++ echo '  barostat  = 2,'
++ echo '&end'
++ echo '  mcbarint  = 100,'
++ printf 'start restrained equil\n'
++ echo '  ntp       = 1,'
++ echo '  comp      = 44.6,'
++ echo '  pres0     = 1.0,'
++ echo '&wt'
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_eq_restrained_005_025.in -o W4F_tet_eq_restrained_005_025.out -p ../../W4F_tet.prmtop -c ../../04_eq2.rst -r W4F_tet_eq_restrained_005_025.rst -inf 05_eq3.nfo
++ echo '  comp      = 44.6,'
++ echo '  barostat  = 2,'
++ echo '  taup      = 1.0,'
++ echo '  mcbarint  = 100,'
++ echo '  type      = '\''REST'\'','
++ echo '  taup      = 1.0,'
++ echo '  pres0     = 1.0,'
++ echo '  ntt       = 3,'
++ echo '  comp      = 44.6,'
++ echo '  value1    = 1.0,'
++ echo '  ntt       = 3,'
++ echo '  mcbarint  = 100,'
++ echo '&end'
++ echo '  temp0     = 298.0,'
++ echo '  taup      = 1.0,'
++ echo '  temp0     = 298.0,'
++ echo '  comp      = 44.6,'
++ echo '&wt'
++ echo '  gamma_ln  = 1.0,'
++ echo '  ntt       = 3,'
++ echo '  gamma_ln  = 1.0,'
++ echo '  taup      = 1.0,'
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '  ntf       = 2,'
++ echo '  temp0     = 298.0,'
++ echo '  ntf       = 2,'
++ echo '  ntt       = 3,'
++ echo '  istep1    = 100,'
++ echo '  ntc       = 2,'
++ echo '  gamma_ln  = 1.0,'
++ echo '  ntc       = 2,'
++ echo '  temp0     = 298.0,'
++ echo '&end'
++ echo '  cut       = 10.0,'
++ echo '  ntf       = 2,'
++ echo '  cut       = 10.0,'
++ echo '  gamma_ln  = 1.0,'
++ echo '&wt'
++ echo '  ntpr      = 100,'
++ echo '  ntc       = 2,'
++ echo '  ntpr      = 100,'
++ echo '  ntf       = 2,'
++ echo '  type      = '\''END'\'','
++ echo '  ntxo      = 2,'
++ echo '  cut       = 10.0,'
++ echo '  ntxo      = 2,'
++ echo '  ntc       = 2,'
++ echo '&end'
++ echo '  ntwr      = 500000,'
++ echo '  ntpr      = 100,'
++ echo '  ntwr      = 500000,'
++ echo '  cut       = 10.0,'
++ echo 'DISANG      = prod_005_055.disang'
++ echo '  ioutfm    = 1,'
++ echo '  ntpr      = 100,'
++ echo '  ntxo      = 2,'
++ echo '  ioutfm    = 1,'
++ echo 'DUMPAVE     = dihedral_005_055.dat'
++ echo '  ntwx      = 100,'
++ echo '  ntxo      = 2,'
++ echo '  ntwr      = 500000,'
++ printf 'done creation disang and restrained equil / prod files\n'
++ echo '  ntwx      = 100,'
++ echo '  iwrap     = 1,'
++ echo '  ntwr      = 500000,'
++ '[' -e ./W4F_tet_eq_restrained_005_055.out ']'
++ echo '  ioutfm    = 1,'
++ echo '  ioutfm    = 1,'
++ echo '  iwrap     = 1,'
++ echo '&end'
++ echo '  ntwx      = 100,'
++ printf 'start restrained equil\n'
++ echo '  ntwx      = 100,'
++ echo '&end'
++ echo '&wt'
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_eq_restrained_005_055.in -o W4F_tet_eq_restrained_005_055.out -p ../../W4F_tet.prmtop -c ../../04_eq2.rst -r W4F_tet_eq_restrained_005_055.rst -inf 05_eq3.nfo
++ echo '  iwrap     = 1,'
++ echo '  iwrap     = 1,'
++ echo '&wt'
++ echo '  type      = '\''REST'\'','
++ echo '&end'
++ echo '&end'
++ echo '  type      = '\''REST'\'','
++ echo '  value1    = 1.0,'
++ echo '&wt'
++ echo '&wt'
++ echo '  value1    = 1.0,'
++ echo '&end'
++ echo '  type      = '\''REST'\'','
++ echo '  type      = '\''REST'\'','
++ echo '&end'
++ echo '&wt'
++ echo '  value1    = 1.0,'
++ echo '  value1    = 1.0,'
++ echo '&wt'
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '&end'
++ echo '&end'
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '  istep1    = 100,'
++ echo '&wt'
++ echo '&wt'
++ echo '  istep1    = 100,'
++ echo '&end'
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '  type      = '\''DUMPFREQ'\'','
++ echo '&end'
++ echo '&wt'
++ echo '  istep1    = 100,'
++ echo '  istep1    = 100,'
++ echo '&wt'
++ echo '  type      = '\''END'\'','
++ echo '&end'
++ echo '&end'
++ echo '  type      = '\''END'\'','
++ echo '&end'
++ echo '&wt'
++ echo '&wt'
++ echo '&end'
++ echo 'DISANG      = prod_005_005.disang'
++ echo '  type      = '\''END'\'','
++ echo '  type      = '\''END'\'','
++ echo 'DISANG      = prod_005_045.disang'
++ echo 'DUMPAVE     = dihedral_005_005.dat'
++ echo '&end'
++ echo '&end'
++ echo 'DUMPAVE     = dihedral_005_045.dat'
++ printf 'done creation disang and restrained equil / prod files\n'
++ echo 'DISANG      = prod_005_035.disang'
++ echo 'DISANG      = prod_005_015.disang'
++ '[' -e ./W4F_tet_eq_restrained_005_005.out ']'
++ printf 'done creation disang and restrained equil / prod files\n'
++ printf 'start restrained equil\n'
++ echo 'DUMPAVE     = dihedral_005_035.dat'
++ echo 'DUMPAVE     = dihedral_005_015.dat'
++ '[' -e ./W4F_tet_eq_restrained_005_045.out ']'
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_eq_restrained_005_005.in -o W4F_tet_eq_restrained_005_005.out -p ../../W4F_tet.prmtop -c ../../04_eq2.rst -r W4F_tet_eq_restrained_005_005.rst -inf 05_eq3.nfo
++ printf 'start restrained equil\n'
++ printf 'done creation disang and restrained equil / prod files\n'
++ printf 'done creation disang and restrained equil / prod files\n'
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_eq_restrained_005_045.in -o W4F_tet_eq_restrained_005_045.out -p ../../W4F_tet.prmtop -c ../../04_eq2.rst -r W4F_tet_eq_restrained_005_045.rst -inf 05_eq3.nfo
++ '[' -e ./W4F_tet_eq_restrained_005_035.out ']'
++ '[' -e ./W4F_tet_eq_restrained_005_015.out ']'
++ printf 'start restrained equil\n'
++ printf 'start restrained equil\n'
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_eq_restrained_005_035.in -o W4F_tet_eq_restrained_005_035.out -p ../../W4F_tet.prmtop -c ../../04_eq2.rst -r W4F_tet_eq_restrained_005_035.rst -inf 05_eq3.nfo
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_eq_restrained_005_015.in -o W4F_tet_eq_restrained_005_015.out -p ../../W4F_tet.prmtop -c ../../04_eq2.rst -r W4F_tet_eq_restrained_005_015.rst -inf 05_eq3.nfo
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Unit    9 Error on OPEN: ../../04_eq2.rst                                                                                                                                                                                                                                                
+PMEMD Terminated Abnormally!
+  Unit    9 Error on OPEN: ../../04_eq2.rst                                                                                                                                                                                                                                                
+PMEMD Terminated Abnormally!
+
+  Unit    9 Error on OPEN: ../../04_eq2.rst                                                                                                                                                                                                                                                
+PMEMD Terminated Abnormally!
++ printf 'done restrained equil\n'
++ printf 'done restrained equil\n'
++ printf 'done restrained equil\n'
++ printf 'done restrained equil\n'
++ '[' -e ./W4F_tet_prod_005_055.out ']'
++ printf 'done restrained equil\n'
++ '[' -e ./W4F_tet_prod_005_045.out ']'
++ '[' -e ./W4F_tet_prod_005_035.out ']'
++ '[' -e ./W4F_tet_prod_005_025.out ']'
++ printf 'start restrained prod\n'
++ '[' -e ./W4F_tet_prod_005_015.out ']'
++ printf 'start restrained prod\n'
++ printf 'start restrained prod\n'
++ printf 'start restrained prod\n'
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_prod_005_055.in -o W4F_tet_prod_005_055.out -p ../../W4F_tet.prmtop -c W4F_tet_eq_restrained_005_055.rst -r W4F_tet_prod_005_055.rst -inf 06_prod.nfo -x prod.nc
++ printf 'start restrained prod\n'
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_prod_005_045.in -o W4F_tet_prod_005_045.out -p ../../W4F_tet.prmtop -c W4F_tet_eq_restrained_005_045.rst -r W4F_tet_prod_005_045.rst -inf 06_prod.nfo -x prod.nc
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_prod_005_035.in -o W4F_tet_prod_005_035.out -p ../../W4F_tet.prmtop -c W4F_tet_eq_restrained_005_035.rst -r W4F_tet_prod_005_035.rst -inf 06_prod.nfo -x prod.nc
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_prod_005_025.in -o W4F_tet_prod_005_025.out -p ../../W4F_tet.prmtop -c W4F_tet_eq_restrained_005_025.rst -r W4F_tet_prod_005_025.rst -inf 06_prod.nfo -x prod.nc
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_prod_005_015.in -o W4F_tet_prod_005_015.out -p ../../W4F_tet.prmtop -c W4F_tet_eq_restrained_005_015.rst -r W4F_tet_prod_005_015.rst -inf 06_prod.nfo -x prod.nc
+
+  Unit    9 Error on OPEN: W4F_tet_eq_restrained_005_055.rst                                                                                                                                                                                                                               
+PMEMD Terminated Abnormally!
+
+   Unit    9 Error on OPEN: W4F_tet_                                                                                                                                                                                                                                                                                        Unit    9 Error on OPEN: W4F_tet_eq_restrained_005_015.rst                                                                                                                                                                                                                               
+PMEMD Terminated Abnormally!
+  Unit    9 Error on OPEN: W4F_tet_eq_restrained_005_025.rst                                                                                                                                                                                                                               
+PMEMD Terminated Abnormally!
++ printf 'done restrained prod\n'
++ printf 'done restrained prod\n'
++ echo 'trajin prod.nc'
++ echo 'parm ../../W4F_tet.prmtop'
++ printf 'done restrained prod\n'
++ echo 'parm ../../W4F_tet.prmtop'
+
+                    + echo 'parm ../../W4F_tet.prmtop'
++ echo 'trajin prod.nc'
++ echo 'trajin prod.nc'
++ echo 'trajout prod-dry.nc'
+  Unit    9 Error on OPEN: W4F_tet_eq_restrained_005_045.rst                                                                                                                                                                                                                               
++ echo 'strip :WAT'
+PMEMD Terminated Abnormally!
++ echo 'strip :WAT'
++ echo go
++ echo 'trajout prod-dry.nc'
++ printf 'done restrained prod\n'
++ echo 'trajout prod-dry.nc'
++ echo quit
++ echo 'parm ../../W4F_tet.prmtop'
++ echo go
++ echo go
++ cpptraj -i cpptraj.in
++ echo 'trajin prod.nc'
++ echo quit
++ echo quit
++ echo 'strip :WAT'
++ cpptraj -i cpptraj.in
++ cpptraj -i cpptraj.in
++ echo 'trajout prod-dry.nc'
++ echo go
++ echo quit
++ cpptraj -i cpptraj.in
++ echo 'trajin prod.nc'
++ echo 'strip :WAT'
++ echo 'trajout prod-dry.nc'
++ echo go
++ echo quit
++ cpptraj -i cpptraj.in
+Error: '../../W4F_tet.prmtop': No such file or directory
+Error: Could not open topology '../../W4F_tet.prmtop'
+	1 errors encountered reading input.
+Error: Error(s) occurred during execution.
+Error: '../../W4F_tet.prmtop': No such file or directory
+Error: Could not open topology '../../W4F_tet.prmtop'
+Error: '../../W4F_tet.prmtop': No such file or directory
+Error: Could not open topology '../../W4F_tet.prmtop'
+Error: '../../W4F_tet.prmtop': No such file or directory
+Error: Could not open topology '../../W4F_tet.prmtop'
+Error: '../../W4F_tet.prmtop': No such file or directory
+Error: Could not open topology '../../W4F_tet.prmtop'
+	1 errors encountered reading input.
++ '[' -f prod-dry.nc ']'
+	1 errors encountered reading input.
+	1 errors encountered reading input.
+	1 errors encountered reading input.
+Error: Error(s) occurred during execution.
+Error: Error(s) occurred during execution.
+Error: Error(s) occurred during execution.
+Error: Error(s) occurred during execution.
++ '[' -f prod-dry.nc ']'
++ '[' -f prod-dry.nc ']'
++ '[' -f prod-dry.nc ']'
++ '[' -f prod-dry.nc ']'
++ printf 'done restrained equil\n'
++ '[' -e ./W4F_tet_prod_005_005.out ']'
++ printf 'start restrained prod\n'
++ /ihome/crc/build/amber/amber18_x64/amber18/bin/pmemd -O -i mdin_prod_005_005.in -o W4F_tet_prod_005_005.out -p ../../W4F_tet.prmtop -c W4F_tet_eq_restrained_005_005.rst -r W4F_tet_prod_005_005.rst -inf 06_prod.nfo -x prod.nc
+PMEMD Terminated Abnormally!
++ printf 'done restrained prod\n'
++ echo 'parm ../../W4F_tet.prmtop'
++ echo 'trajin prod.nc'
++ echo 'strip :WAT'
++ echo 'trajout prod-dry.nc'
++ echo go
++ echo quit
++ cpptraj -i cpptraj.in
++ '[' -f prod-dry.nc ']'
++ rm prod.nc
++ mv prod-dry.nc prod.nc
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_065
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_075
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_085
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_095
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_105
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_115
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_125
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_135
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_145
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_155
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_165
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/015_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/015_175
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/015_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_005
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_015
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_025
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_035
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_045
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_055
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_065
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_075
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_085
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_095
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_105
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_115
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_115: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_125
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_135
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_145
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_155
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_165
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/025_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/025_175
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/025_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_005
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_015
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_025
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_035
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_045
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_055
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_065
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_075
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_085
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_095
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_105
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_115
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_125
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_135
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_145
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_155
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_165
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/035_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/035_175
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/035_175: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_005
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_015
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_025
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_035
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_045
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_055
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_065
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_075
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_085
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_095
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_105
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_115
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_125
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_135
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_145
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_155
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_165
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/045_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/045_175
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/045_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_005
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_015
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_025
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_035
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_045
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_055
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_055: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_065
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_075
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_085
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_095
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_105
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_115
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_125
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_135
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_145
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_155
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_165
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/055_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/055_175
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/055_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_005
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_015
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_025
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_035
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_045
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_055
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_065
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_075
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_085
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_095
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_105
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_115
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_115: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_125
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_135
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_145
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_155
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_165
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/065_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/065_175
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/065_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_005
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_015
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_025
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_035
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_045
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_055
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_065
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_075
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_085
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_095
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_105
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_115
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_125
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_135
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_145
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_155
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_165
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/075_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/075_175
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/075_175: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_005
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_015
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_025
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_035
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_045
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_055
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_065
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_075
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_085
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_095
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_105
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_115
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_125
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_135
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_145
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_155
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_165
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/085_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/085_175
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/085_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_005
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_015
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_025
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_035
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_045
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_055
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_055: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_065
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_075
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_085
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_095
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_105
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_115
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_125
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_135
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_145
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_155
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_165
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/095_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/095_175
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/095_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_005
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_015
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_025
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_035
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_045
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_055
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_065
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_075
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_085
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_095
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_105
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_115
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_115: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_125
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_135
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_145
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_155
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_165
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/105_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/105_175
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/105_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_005
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_015
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_025
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_035
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_045
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_055
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_065
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_075
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_085
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_095
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_105
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_115
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_125
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_135
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_145
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_155
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_165
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/115_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/115_175
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/115_175: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_005
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_015
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_025
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_035
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_045
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_055
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_065
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_075
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_085
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_095
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_105
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_115
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_125
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_135
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_145
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_155
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_165
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/125_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/125_175
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/125_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_005
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_015
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_025
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_035
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_045
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_055
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_055: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_065
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_075
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_085
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_095
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_105
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_115
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_125
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_135
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_145
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_155
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_165
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/135_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/135_175
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/135_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_005
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_015
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_025
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_035
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_045
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_055
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_065
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_075
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_085
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_095
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_105
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_115
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_115: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_125
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_135
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_145
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_155
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_165
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/145_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/145_175
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/145_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_005
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_015
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_025
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_035
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_045
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_055
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_065
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_075
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_085
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_095
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_105
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_115
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_125
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_135
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_145
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_155
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_165
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/155_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/155_175
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/155_175: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_005
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_015
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_025
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_035
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_045
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_055
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_055: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_065
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_075
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_085
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_095
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_105
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_115
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_125
++ '[' 13 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_135
++ '[' 14 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_145
++ '[' 15 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_155
++ '[' 16 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_165
++ '[' 17 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/165_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/165_175
++ '[' 18 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/165_175: No such file or directory
++ cd ../
++ for PHI in '{005..175..10}'
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_005
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_005
++ '[' 19 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_005: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_015
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_015
++ '[' 20 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_015: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_025
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_025
++ '[' 21 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_025: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_035
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_035
++ '[' 22 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_035: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_045
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_045
++ '[' 23 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_045: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_055
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_055
++ '[' 24 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_055: No such file or directory
++ NJOB=0
++ wait
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_065
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_065
++ '[' 1 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_065: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_075
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_075
++ '[' 2 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_075: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_085
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_085
++ '[' 3 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_085: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_095
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_095
++ '[' 4 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_095: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_105
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_105
++ '[' 5 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_105: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_115
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_115
++ '[' 6 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_115: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_125
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_125
++ '[' 7 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_125: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_135
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_135
++ '[' 8 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_135: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_145
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_145
++ '[' 9 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_145: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_155
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_155
++ '[' 10 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_155: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_165
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_165
++ '[' 11 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_165: No such file or directory
++ cd ../
++ for PSI in '{005..175..10}'
++ mkdir -p CONFS/175_175
+mkdir: cannot create directory ‘CONFS’: Permission denied
++ let NJOB+=1
++ cd CONFS/175_175
++ '[' 12 -eq 24 ']'
+/var/spool/slurmd/job3468502/slurm_script: line 25: cd: CONFS/175_175: No such file or directory
++ cd ../
++ [[ 0 != 0 ]]
++ crc-job-stats.py

@@ -1,0 +1,56 @@
+
+&files
+  -parm /ihome/crc/build/amber/amber18_x64/amber18/dat/leap/parm/parm15ipq_10.3.dat
+  -fmod ../19F_FF15IPQ_V00_ADJ.frcmod
+  -d 19F_FF15IPQ_FIT_V00_GEN2.frcmod
+  -o FIT_V00_GEN2.out
+&end
+
+&param
+
+  System    W4F/W4F_V.top     W4F/concat_coords.cdf    W4F/energies.dat
+  System    W4F/W4F_V.top     W4F/concat_coords_gen2.cdf    W4F/energies_gen2.dat
+  System    W5F/W5F_V.top     W5F/concat_coords.cdf    W5F/energies.dat
+  System    W5F/W5F_V.top     W5F/concat_coords_gen2.cdf    W5F/energies_gen2.dat
+  System    W6F/W6F_V.top     W6F/concat_coords.cdf    W6F/energies.dat
+  System    W6F/W6F_V.top     W6F/concat_coords_gen2.cdf    W6F/energies_gen2.dat
+  System    W7F/W7F_V.top     W7F/concat_coords.cdf    W7F/energies.dat
+  System    W7F/W7F_V.top     W7F/concat_coords_gen2.cdf    W7F/energies_gen2.dat
+  System    Y3F/Y3F_V.top     Y3F/concat_coords.cdf    Y3F/energies.dat
+  System    Y3F/Y3F_V.top     Y3F/concat_coords_gen2.cdf    Y3F/energies_gen2.dat
+  System    YDF/YDF_V.top     YDF/concat_coords.cdf    YDF/energies.dat
+  System    YDF/YDF_V.top     YDF/concat_coords_gen2.cdf    YDF/energies_gen2.dat
+  System    F4F/F4F_V.top     F4F/concat_coords.cdf    F4F/energies.dat
+  System    F4F/F4F_V.top     F4F/concat_coords_gen2.cdf    F4F/energies_gen2.dat
+  System    FTF/FTF_V.top     FTF/concat_coords.cdf    FTF/energies.dat
+  System    FTF/FTF_V.top     FTF/concat_coords_gen2.cdf    FTF/energies_gen2.dat
+
+  ParmOutput    frcmod
+  eunits        hartree,
+  accrep        report_gen2.m
+  elimsig       1,
+  esigtol       3,
+  verbose       1,
+
+  % Bonded fitting input
+  fitb          3C CA
+  fitb          3C F
+  FitBondEq     1,
+  brst          0.0002,
+
+  % Angle fitting input
+  fita          CB CA F
+  fita          CN CA F
+  fita          C  CA F
+  fita          3C CA CA
+  fita          CA 3C F
+  fita          F  3C F
+  FitAnglEq     1,
+  arst          0.0002,
+  arstcpl       10,
+
+  % Torsion fitting input
+  fith          F  3C CA CA
+  hrst          0.0002,
+&end
+

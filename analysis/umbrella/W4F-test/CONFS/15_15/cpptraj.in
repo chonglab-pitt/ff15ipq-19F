@@ -1,0 +1,5 @@
+parm ../../W4F_tet_dry.prmtop
+trajin prod-im.nc
+rms RMS mass out RMS.dat
+go
+quit

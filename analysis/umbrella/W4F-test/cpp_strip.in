@@ -1,0 +1,5 @@
+parm W4F_tet.prmtop
+trajin W4F_tet.inpcrd
+strip :WAT parmout W4F_tet_dry.prmtop
+run
+quit

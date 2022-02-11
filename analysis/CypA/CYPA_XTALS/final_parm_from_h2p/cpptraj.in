@@ -1,0 +1,6 @@
+parm 3k0n_cypa_leap.pdb
+trajin 3k0n_cypa_leap.pdb
+reference ml_wt_cypa_leap.pdb :* [19F]
+rms rms_fit :1-165@CA,C,O,N mass ref [19F]
+rms rms_nofit nofit :121&!@H= out rms.dat mass ref [19F]
+run

@@ -1,0 +1,7 @@
+parm ../../W4F_tet.prmtop
+trajin prod.nc
+autoimage
+strip :WAT
+trajout prod-dry.nc
+go
+quit

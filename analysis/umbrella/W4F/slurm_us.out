@@ -1,0 +1,198 @@
+start creation disang and restrained equil / prod files
+start creation disang and restrained equil / prod files
+start creation disang and restrained equil / prod files
+start creation disang and restrained equil / prod files
+start creation disang and restrained equil / prod files
+dihedral restraint 1 = 005
+dihedral restraint 1 = 005
+dihedral restraint 1 = 005
+dihedral restraint 1 = 005
+dihedral restraint 1 = 005
+dihedral restraint 2 = 005
+dihedral restraint 2 = 025
+dihedral restraint 2 = 015
+dihedral restraint 2 = 035
+dihedral restraint 2 = 045
+start creation disang and restrained equil / prod files
+dihedral restraint 1 = 005
+dihedral restraint 2 = 055
+done creation disang and restrained equil / prod files
+start restrained equil
+done creation disang and restrained equil / prod files
+start restrained equil
+done creation disang and restrained equil / prod files
+done creation disang and restrained equil / prod files
+start restrained equil
+start restrained equil
+done creation disang and restrained equil / prod files
+done creation disang and restrained equil / prod files
+start restrained equil
+start restrained equil
+done restrained equil
+done restrained equil
+done restrained equil
+done restrained equil
+done restrained equil
+start restrained prod
+start restrained prod
+start restrained prod
+start restrained prod
+start restrained prod
+done restrained prod
+done restrained prod
+done restrained prod
+done restrained prod
+done restrained prod
+
+CPPTRAJ: Trajectory Analysis. V4.14.0 (AmberTools V19.11)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 07/01/21 11:31:06
+| Available memory: 247.674 GB
+
+INPUT: Reading input from 'cpptraj.in'
+  [parm ../../W4F_tet.prmtop]
+TIME: Total execution time: 0.0075 seconds.
+
+
+CPPTRAJ: Trajectory Analysis. V4.14.0 (AmberTools V19.11)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 07/01/21 11:31:06
+| Available memory: 247.674 GB
+
+INPUT: Reading input from 'cpptraj.in'
+  [parm ../../W4F_tet.prmtop]
+TIME: Total execution time: 0.0125 seconds.
+
+
+CPPTRAJ: Trajectory Analysis. V4.14.0 (AmberTools V19.11)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 07/01/21 11:31:06
+| Available memory: 247.674 GB
+
+INPUT: Reading input from 'cpptraj.in'
+  [parm ../../W4F_tet.prmtop]
+TIME: Total execution time: 0.0135 seconds.
+
+
+CPPTRAJ: Trajectory Analysis. V4.14.0 (AmberTools V19.11)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 07/01/21 11:31:06
+| Available memory: 247.674 GB
+
+INPUT: Reading input from 'cpptraj.in'
+  [parm ../../W4F_tet.prmtop]
+TIME: Total execution time: 0.0141 seconds.
+
+
+CPPTRAJ: Trajectory Analysis. V4.14.0 (AmberTools V19.11)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 07/01/21 11:31:06
+| Available memory: 247.674 GB
+
+INPUT: Reading input from 'cpptraj.in'
+  [parm ../../W4F_tet.prmtop]
+TIME: Total execution time: 0.0146 seconds.
+
+done restrained equil
+start restrained prod
+done restrained prod
+
+CPPTRAJ: Trajectory Analysis. V4.14.0 (AmberTools V19.11)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 07/01/21 11:59:13
+| Available memory: 247.465 GB
+
+INPUT: Reading input from 'cpptraj.in'
+  [parm ../../W4F_tet.prmtop]
+	Reading '../../W4F_tet.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+  [trajin prod.nc]
+	Reading 'prod.nc' as Amber NetCDF
+  [strip :WAT]
+    STRIP: Stripping atoms in mask [:WAT]
+  [trajout prod-dry.nc]
+	Writing 'prod-dry.nc' as Amber NetCDF
+  [go]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: W4F_tet.prmtop, 3461 atoms, 1140 res, box: Trunc. Oct., 1136 mol, 1135 solvent
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'prod.nc' is a NetCDF AMBER trajectory with coordinates, time, box, Parm W4F_tet.prmtop (Trunc. Oct. box) (reading 35 of 35)
+  Coordinate processing will occur on 35 frames.
+
+OUTPUT TRAJECTORIES (1 total):
+  'prod-dry.nc' (35 frames) is a NetCDF AMBER trajectory
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'W4F_tet.prmtop' (1 actions):
+  0: [strip :WAT]
+	Stripping 3405 atoms.
+	Stripped topology: 56 atoms, 5 res, box: Trunc. Oct., 1 mol
+.....................................................
+ACTIVE OUTPUT TRAJECTORIES (1):
+  prod-dry.nc (coordinates, time, box)
+----- prod.nc (1-35, 1) -----
+ 0% 12% 21% 32% 41% 50% 62% 71% 82% 91% 100% Complete.
+
+Read 35 frames and processed 35 frames.
+TIME: Avg. throughput= 1456.8158 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.07%)
+TIME:		Trajectory Process : 0.0240 s ( 97.18%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0000 s (  0.01%)
+TIME:		Other              : 0.0007 s (  0.03%)
+TIME:	Run Total 0.0247 s
+---------- RUN END ---------------------------------------------------
+  [quit]
+TIME: Total execution time: 0.1749 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+
+============================================================================
+                               JOB STATISTICS                              
+============================================================================
+      SubmitTime: 2021-06-29T16:56:53
+         EndTime: 2021-07-07T11:30:51
+         RunTime: 00:28:26
+           JobId: 3468502
+            TRES: cpu=24,mem=16G,node=1,billing=19
+       Partition: smp
+        NodeList: smp-n184
+         Command: /bgfs/lchong/dty7/19F_ff15ipq/umbrella/IPQ/W4F/W4F_RUN_US.slurm
+          StdOut: /bgfs/lchong/dty7/19F_ff15ipq/umbrella/IPQ/W4F/slurm_us.out
+More information:
+    - `sacct -M smp -j 3468502 -S 2021-06-29T16:56:53 -E 2021-07-07T11:30:51`
+   Print control:
+    - List of all possible fields: `sacct --helpformat`
+    - Add `--format=<field1,field2,etc>` with fields of interest
+============================================================================

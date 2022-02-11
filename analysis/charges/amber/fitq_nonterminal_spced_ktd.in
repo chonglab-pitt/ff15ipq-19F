@@ -1,0 +1,105 @@
+&fitq
+  ipolq  ALA/ALA/0001/6.4_ipolq/grid_output.vacu   ALA/ALA/0001/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0002/6.4_ipolq/grid_output.vacu   ALA/ALA/0002/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0003/6.4_ipolq/grid_output.vacu   ALA/ALA/0003/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0004/6.4_ipolq/grid_output.vacu   ALA/ALA/0004/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0005/6.4_ipolq/grid_output.vacu   ALA/ALA/0005/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0006/6.4_ipolq/grid_output.vacu   ALA/ALA/0006/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+#  ipolq  ALA/ALA/0007/6.4_ipolq/grid_output.vacu   ALA/ALA/0007/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0008/6.4_ipolq/grid_output.vacu   ALA/ALA/0008/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0009/6.4_ipolq/grid_output.vacu   ALA/ALA/0009/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0010/6.4_ipolq/grid_output.vacu   ALA/ALA/0010/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0011/6.4_ipolq/grid_output.vacu   ALA/ALA/0011/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0012/6.4_ipolq/grid_output.vacu   ALA/ALA/0012/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0013/6.4_ipolq/grid_output.vacu   ALA/ALA/0013/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0014/6.4_ipolq/grid_output.vacu   ALA/ALA/0014/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0015/6.4_ipolq/grid_output.vacu   ALA/ALA/0015/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0016/6.4_ipolq/grid_output.vacu   ALA/ALA/0016/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0017/6.4_ipolq/grid_output.vacu   ALA/ALA/0017/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0018/6.4_ipolq/grid_output.vacu   ALA/ALA/0018/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0019/6.4_ipolq/grid_output.vacu   ALA/ALA/0019/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  ALA/ALA/0020/6.4_ipolq/grid_output.vacu   ALA/ALA/0020/6.4_ipolq/grid_output.solv   ALA/ALA/1_leap/ALA_solute.prm   1.0
+  ipolq  GLY/GLY/0001/6.4_ipolq/grid_output.vacu   GLY/GLY/0001/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0002/6.4_ipolq/grid_output.vacu   GLY/GLY/0002/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0003/6.4_ipolq/grid_output.vacu   GLY/GLY/0003/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0004/6.4_ipolq/grid_output.vacu   GLY/GLY/0004/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0005/6.4_ipolq/grid_output.vacu   GLY/GLY/0005/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0006/6.4_ipolq/grid_output.vacu   GLY/GLY/0006/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0007/6.4_ipolq/grid_output.vacu   GLY/GLY/0007/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0008/6.4_ipolq/grid_output.vacu   GLY/GLY/0008/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0009/6.4_ipolq/grid_output.vacu   GLY/GLY/0009/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0010/6.4_ipolq/grid_output.vacu   GLY/GLY/0010/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0011/6.4_ipolq/grid_output.vacu   GLY/GLY/0011/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0012/6.4_ipolq/grid_output.vacu   GLY/GLY/0012/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0013/6.4_ipolq/grid_output.vacu   GLY/GLY/0013/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0014/6.4_ipolq/grid_output.vacu   GLY/GLY/0014/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0015/6.4_ipolq/grid_output.vacu   GLY/GLY/0015/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0016/6.4_ipolq/grid_output.vacu   GLY/GLY/0016/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0017/6.4_ipolq/grid_output.vacu   GLY/GLY/0017/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0018/6.4_ipolq/grid_output.vacu   GLY/GLY/0018/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0019/6.4_ipolq/grid_output.vacu   GLY/GLY/0019/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  GLY/GLY/0020/6.4_ipolq/grid_output.vacu   GLY/GLY/0020/6.4_ipolq/grid_output.solv   GLY/GLY/1_leap/GLY_solute.prm   1.0
+  ipolq  LYS/LYS/0001/6.4_ipolq/grid_output.vacu   LYS/LYS/0001/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+#  ipolq  LYS/LYS/0002/6.4_ipolq/grid_output.vacu   LYS/LYS/0002/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0003/6.4_ipolq/grid_output.vacu   LYS/LYS/0003/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0004/6.4_ipolq/grid_output.vacu   LYS/LYS/0004/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0005/6.4_ipolq/grid_output.vacu   LYS/LYS/0005/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0006/6.4_ipolq/grid_output.vacu   LYS/LYS/0006/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0007/6.4_ipolq/grid_output.vacu   LYS/LYS/0007/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0008/6.4_ipolq/grid_output.vacu   LYS/LYS/0008/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0009/6.4_ipolq/grid_output.vacu   LYS/LYS/0009/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0010/6.4_ipolq/grid_output.vacu   LYS/LYS/0010/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+#  ipolq  LYS/LYS/0011/6.4_ipolq/grid_output.vacu   LYS/LYS/0011/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0012/6.4_ipolq/grid_output.vacu   LYS/LYS/0012/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0013/6.4_ipolq/grid_output.vacu   LYS/LYS/0013/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0014/6.4_ipolq/grid_output.vacu   LYS/LYS/0014/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+#  ipolq  LYS/LYS/0015/6.4_ipolq/grid_output.vacu   LYS/LYS/0015/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0016/6.4_ipolq/grid_output.vacu   LYS/LYS/0016/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0017/6.4_ipolq/grid_output.vacu   LYS/LYS/0017/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0018/6.4_ipolq/grid_output.vacu   LYS/LYS/0018/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+  ipolq  LYS/LYS/0019/6.4_ipolq/grid_output.vacu   LYS/LYS/0019/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+#  ipolq  LYS/LYS/0020/6.4_ipolq/grid_output.vacu   LYS/LYS/0020/6.4_ipolq/grid_output.solv   LYS/LYS/1_leap/LYS_solute.prm   1.0
+
+  % Fit parameters
+  pnrg   0.0
+  flim   0.39
+  nfpt   3750
+
+  % Constraints on equivalent atoms
+  equalq  ':ACE & @HH31,HH32,HH33'
+  equalq  ':ACE & @CH3'
+  equalq  ':ACE & @C'
+  equalq  ':ACE & @O'
+  equalq  ':NME & @HH31,HH32,HH33'
+  equalq  ':NME & @CH3'
+  equalq  ':NME & @N'
+  equalq  ':NME & @H'
+  equalq  ':ALA & @HB1,HB2,HB3'
+  equalq  ':GLY & @HA2,HA3'
+  equalq  ':LYS & @HB2,HB3'
+  equalq  ':LYS & @HG2,HG3'
+  equalq  ':LYS & @HD2,HD3'
+  equalq  ':LYS & @HE2,HE3'
+  equalq  ':LYS & @HZ1,HZ2,HZ3'
+
+  % Restrain charges on buried atoms
+  minq    ':ACE & @CH3'
+  minq    ':NME & @CH3'
+  minq    '@CB'
+  minq    ':LYS & @CG'
+  minq    ':LYS & @CD'
+  minqwt  1.0e-2
+
+  % Fix blocking groups to be net neutral
+  sumq    ':ACE'  0.0
+  sumq    ':NME'  0.0
+
+  % Tether charges towards their previous values
+  tether    1
+  tetherwt  0.5e-2
+
+  % Calculation settings
+  MaxMemory   6GB
+  verbose   1
+
+&end
