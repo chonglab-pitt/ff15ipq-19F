@@ -1,0 +1,5 @@
+     parm ../3k0n_w6f_dry.prmtop 
+ trajin 08_prod.nc 
+ strip :WAT,Cl- 
+ trajout 08_prod_dry.nc 
+

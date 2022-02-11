@@ -1,0 +1,13 @@
+    Input file for running PB and GB 
+ &general 
+    startframe=200000, endframe=1000000, interval=2000 
+    keep_files=0, verbose=1, netcdf=1 
+ / 
+ &pb 
+    inp=1 
+    istrng=0.0, radiopt=0 
+ / 
+ &decomp 
+   idecomp=1, print_res='120-122' 
+   dec_verbose=1, 
+ /

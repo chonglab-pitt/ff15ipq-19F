@@ -1,0 +1,8 @@
+    Input file for running PB and GB 
+ &general 
+    full_traj=1, interval=2000 
+    keep_files=1, verbose=1 
+ / 
+ &gb 
+    igb=2, saltcon=0.0 
+ /

@@ -1,0 +1,5 @@
+    source leaprc.protein.ff15ipq 
+ pdb = loadpdb ../../3k0n_wt_leap.pdb 
+ set default PBRadii mbondi2 
+ saveamberparm pdb 3k0n_wt_vac.prmtop 3k0n_wt_vac.inpcrd 
+ quit

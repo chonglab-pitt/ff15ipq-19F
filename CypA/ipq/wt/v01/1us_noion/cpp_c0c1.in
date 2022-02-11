@@ -1,0 +1,13 @@
+    parm ../3k0n_wt_dry_noion.prmtop 
+ trajin 06_prod_dry.nc 1 last 1000 
+ trajin 07_prod_dry.nc 1 last 1000 
+ trajin 08_prod_dry.nc 1 last 1000 
+ reference 3k0n_wt_leap.pdb :* [REF] 
+ reference ../../../cypa_xtals/3k0n_cypa_leap.pdb :* [3K0N] 
+ reference ../../../cypa_xtals/3k0o_cypa_leap.pdb :* [3K0O] 
+    rms fit_bb :1-165@CA,C,O,N ref [3K0N] mass 
+ rms phe113_3k0n :113&!@CA,C,O,N,H nofit out 1us_noion/rmsd_phe113_3k0n.dat ref [3K0N] mass time 1 
+ rms fit_bb_3k0o :1-165@CA,C,O,N ref [3K0O] mass 
+ rms phe113_3k0o :113&!@CA,C,O,N,H nofit out 1us_noion/rmsd_phe113_3k0o.dat ref [3K0O] mass time 1 
+  rms rms_3K0N_1-165_SC :1-165 ref [REF] mass     perres    perresmask &!@CA,C,O,N,H     perresout 1us_noion/rmsd_3K0N_1-165_SC_perres.dat     perresavg 1us_noion/rmsd_3K0N_1-165_SC_perres_avg.dat 
+run

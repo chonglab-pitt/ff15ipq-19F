@@ -1,0 +1,4 @@
+parm 3k0n_w4f_solv.prmtop
+trajin 3k0n_w4f_solv.pdb
+strip :WAT,Cl-
+trajout 3k0n_w4f_dry_noion.pdb pdb

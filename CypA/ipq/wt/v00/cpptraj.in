@@ -1,0 +1,7 @@
+parm 3k0n_wt_solv.prmtop
+trajin 08_prod.nc
+autoimage
+strip :WAT,Cl-
+trajout 08_prod_dry.nc
+go
+quit

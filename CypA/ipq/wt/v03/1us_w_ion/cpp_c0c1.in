@@ -1,0 +1,6 @@
+    parm ../3k0n_wt_dry_noion.prmtop 
+ trajin 06_prod_dry.nc 1 last 
+ trajin 07_prod.nc 1 last 
+ trajin 08_prod_dry.nc 1 last 
+ reference 3k0n_wt_w_ion.pdb :* [REF] 
+

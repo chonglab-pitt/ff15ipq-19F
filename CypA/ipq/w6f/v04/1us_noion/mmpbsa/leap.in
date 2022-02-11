@@ -1,0 +1,7 @@
+    source leaprc.protein.ff15ipq 
+ loadoff ../../../../../19F_FF15IPQ_V03_IPQ_ADJ.lib 
+ loadAmberParams ../../../../../19F_FF15IPQ_FIT_V01.frcmod 
+ pdb = loadpdb ../../3k0n_w6f_leap.pdb 
+ set default PBRadii mbondi2 
+ saveamberparm pdb 3k0n_w6f_vac.prmtop 3k0n_w6f_vac.inpcrd 
+ quit

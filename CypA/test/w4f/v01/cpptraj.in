@@ -1,0 +1,7 @@
+parm 3k0n_w4f_solv.prmtop
+trajin 06_prod.nc
+autoimage
+strip :WAT,Cl- parmout 3k0n_w4f_dry.prmtop
+trajout 06_prod-dry.nc
+go
+quit
