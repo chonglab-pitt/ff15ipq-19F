@@ -8,5 +8,5 @@ DT Yang, AM Gronenborn, LT Chong. “Integrating Fluorinated Amino Acids into th
     * using these files, all results should be reproducible
 * not all original files were included due to size limitations
     * raw data is available upon request: please email dty7@pitt.edu
-* TODO: analysis branch for Python scripts used for analysis and figure generation 
+* see analysis for Python scripts used for analysis and figure generation 
 
