@@ -12,4 +12,4 @@ DT Yang, AM Gronenborn, LT Chong. “Integrating Fluorinated Amino Acids into th
     * raw data is available upon request: please email dty7@pitt.edu
 * see analysis for Python scripts used for analysis and figure generation 
 * see final_parameters for the AMBER compatible frcmod (bonded parameters) and leap (ipq charges) files for use with the ff15ipq protein force field
-   * TODO: example tleap.in file 
+   * TODO: add atom types and expanded instructions
