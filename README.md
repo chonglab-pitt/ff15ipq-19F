@@ -1,4 +1,4 @@
-# 19F_ff15ipq manuscript: scripts and input files
+# ff15ipq-19f manuscript: scripts and input files
 
 These files are associated with the following publication:  
 
