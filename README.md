@@ -13,3 +13,4 @@ DT Yang, AM Gronenborn, LT Chong. “Integrating Fluorinated Amino Acids into th
 * see analysis for Python scripts used for analysis and figure generation 
 * see final_parameters for the AMBER compatible frcmod (bonded parameters) and leap (ipq charges) files for use with the ff15ipq protein force field
    * TODO: add atom types and expanded instructions
+* for fluorine relaxation calculations, see https://github.com/darianyang/fluorelax
