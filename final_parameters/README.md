@@ -2,7 +2,7 @@
 
 To use these files for your fluorinated protein, first make sure that the atom names follow AMBER ff15ipq formatting. Then, for the fluorinated variant, update the residue name to the 3-letter-code and the respective fluorine atom name shown below.
 
-![19F_atom_types](../docs/19F_ipq_structures_atom_types.png "19F atom types")
+![19F_atom_types](../docs/19F_ipq_structures_atom_types.pdf "19F atom types")
 
 Use these files with the following tleap input:
 ``` 

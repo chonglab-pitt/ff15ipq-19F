@@ -5,8 +5,7 @@ These files are associated with the following publication:
 DT Yang, AM Gronenborn, LT Chong. “Integrating Fluorinated Amino Acids into the Framework of the AMBER ff15ipq Force Field.” bioRxiv 2022, 475229; doi: https://doi.org/10.1101/2022.01.06.475229
 
 * force field parameters for fluorinated amino acids commonly used with <sup>19</sup>F NMR experiments
-   * TODO: add figure with new residue classes and atom types
-![19f_ipq](docs/19F_ipq_structures.png "19F-IPQ Structures")
+![19f_ipq](docs/19F_ipq_structures.pdf "19F-IPQ Structures")
 * added key files with .py, .sh, .in, .pdb, and .slurm extensions
     * using these files, all results should be reproducible
 * not all original files were included due to size limitations
