@@ -6,11 +6,11 @@ DT Yang, AM Gronenborn, LT Chong. “Integrating Fluorinated Amino Acids into th
 
 * force field parameters for fluorinated amino acids commonly used with <sup>19</sup>F NMR experiments
    * TODO: add figure with new residue classes and atom types
+![19f_ipq](docs/19F_ipq_structures.png "19F-IPQ Structures")
 * added key files with .py, .sh, .in, .pdb, and .slurm extensions
     * using these files, all results should be reproducible
 * not all original files were included due to size limitations
-    * raw data is available upon request: please email dty7@pitt.edu
+    * raw data is available upon reasonable request: please email dty7@pitt.edu
 * see analysis for Python scripts used for analysis and figure generation 
 * see final_parameters for the AMBER compatible frcmod (bonded parameters) and leap (ipq charges) files for use with the ff15ipq protein force field
-   * TODO: add atom types and expanded instructions
 * for fluorine relaxation calculations, see https://github.com/darianyang/fluorelax
