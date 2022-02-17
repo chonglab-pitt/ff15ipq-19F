@@ -94,3 +94,5 @@ ATOM     56 HH33 NME     5      10.675  14.473  -0.890  1.00  0.00
 TER   
 END
 ```
+
+I hope this mini-tutorial is helpful, if you have any questions about these instructions you can contact me at dty7@pitt.edu. 
