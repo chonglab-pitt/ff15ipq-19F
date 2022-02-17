@@ -6,8 +6,7 @@ To use these files for your fluorinated protein, first make sure that the atom n
    <img src="../docs/19F_ipq_structures_atom_types.png" alt="19F_atom_types" width="500">
 </p>
 
-Using your now AMBER formatted coorindate file (e.g. PDB) you can run a variation of following tleap input:
-In this example, the input pdb file is solvated using a 12 <span>&#8491;</span> truncated octahedral SPC/E<sub>b</sub> water box (note that the ff15ipq force field was parametarized in the context of this water model).
+Using your now AMBER formatted coorindate file (e.g. PDB) you can run a variation of the following tleap input:
 ``` 
 source leaprc.protein.ff15ipq
 source leaprc.water.spce
@@ -18,6 +17,8 @@ solvateoct mol SPCBOX 12.0
 saveamberparm mol PDB_solv.prmtop PDB_solv.inpcrd
 quit
 ```
+
+In this example, the input pdb file is solvated using a 12 <span>&#8491;</span> truncated octahedral SPC/E<sub>b</sub> water box (note that the ff15ipq force field was parametarized in the context of this water model).
 
 You now have solvated parameter and coordinate files ready to use for running dynamics!
 
