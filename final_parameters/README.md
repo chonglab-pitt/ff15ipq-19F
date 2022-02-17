@@ -1,6 +1,6 @@
 ### The final set of ff15ipq fluorinated amino acid force field parameter files
 
-To use these files for your fluorinated protein, first make sure that the atom names follow AMBER ff15ipq formatting conventions. Then, for the fluorinated variant, update the residue name to the 3-letter-code and the respective fluorine atom name shown below.
+To use these files for your fluorinated protein, first make sure that the atom names follow AMBER ff15ipq formatting conventions. Then, for the fluorinated variant, update the residue-id to the respective 3-letter-code and fluorine atom naming scheme shown below.
 
 <p align="center">
    <img src="../docs/19F_ipq_structures_atom_types.png" alt="19F_atom_types" width="500">
@@ -21,7 +21,7 @@ quit
 
 You now have solvated parameter and coordinate files ready to use for running dynamics!
 
-If you'd like, you can also use these parameter files to generate a custom peptide, also using tleap, where ${RES} is the three-letter-code from the figure shown above:
+If you'd like, you can also use these parameter files to generate a custom peptide, also using tleap, where ${RES} is the three-letter-code residue-id from the figure shown above:
 ```
 source leaprc.protein.ff15ipq
 source leaprc.water.spce
