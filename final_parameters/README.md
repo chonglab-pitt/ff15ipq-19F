@@ -1,4 +1,4 @@
-### The final set of ff15ipq fluorinated amino acid force field parameter files
+### The ff15ipq fluorinated amino acid force field parameter files
 
 To use these files for your fluorinated protein, first make sure that the atom names follow AMBER ff15ipq formatting conventions. Then, for the fluorinated variant, update the residue-id to the respective 3-letter-code and fluorine atom naming scheme shown below.
 
