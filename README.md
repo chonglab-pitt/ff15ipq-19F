@@ -2,7 +2,7 @@
 
 These files are associated with the following publication:  
 
-DT Yang, AM Gronenborn, LT Chong, “Integrating Fluorinated, Aromatic Amino Acids into the Framework of the AMBER ff15ipq Force Field.” The Journal of Physical Chemistry A, 2022, *in press*; doi: https://doi.org/10.1021/acs.jpca.2c00255
+DT Yang, AM Gronenborn, LT Chong, “Integrating Fluorinated, Aromatic Amino Acids into the Framework of the AMBER ff15ipq Force Field.” J. Phys. Chem. A,  2022, *in press*; https://doi.org/10.1021/acs.jpca.2c00255
 
 * force field parameters for fluorinated amino acids commonly used with <sup>19</sup>F NMR experiments
 <p align="center">
