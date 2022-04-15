@@ -4,7 +4,7 @@
 * This is a test of this functionality.
     * seqres is generating de-novo peptides using the ff15ipq-19F parameters
     * pdb is loading in a pdb file and using the ff15ipq-19F parameters
-* These tests were ran after adding the frcmod/library/cmd files to `$AMBERHOME` manually.
+* These tests were ran after adding the frcmod/library/cmd files to `$AMBERHOME/dat/leap` manually.
 
 ### In tleap:
 ```
