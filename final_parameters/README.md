@@ -2,6 +2,8 @@
 
 To use these files for your fluorinated protein, first make sure that the atom names follow AMBER ff15ipq formatting conventions. Then, for the fluorinated variant, update the residue-id to the respective 3-letter-code and fluorine atom naming scheme shown below.
 
+*The leaprc.fluorine.ff15ipq file is used to source the frcmod and library files in tleap. It will only work once the ff15ipq-19F files are integrated into AMBER (coming soon)*
+
 <p align="center">
    <img src="../docs/19F_ipq_structures_atom_types.png" alt="19F_atom_types" width="500">
 </p>

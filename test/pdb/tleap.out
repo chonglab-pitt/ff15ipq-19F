@@ -1,0 +1,94 @@
+-I: Adding /Users/darian/anaconda3/envs/md19f/dat/leap/prep to search path.
+-I: Adding /Users/darian/anaconda3/envs/md19f/dat/leap/lib to search path.
+-I: Adding /Users/darian/anaconda3/envs/md19f/dat/leap/parm to search path.
+-I: Adding /Users/darian/anaconda3/envs/md19f/dat/leap/cmd to search path.
+-f: Source tleap.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./tleap.in
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.protein.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.protein.ff15ipq done
+Log file: ./leap.log
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+Log file: ./leap.log
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+Loading PDB file: ./3k0n_w7f_leap.pdb
+  total atoms in file: 2503
+1 Cl- ion required to neutralize.
+Adding 1 counter ions to "pdb" using 1A grid
+Grid extends from solute vdw + 2.71  to  8.71
+Resolution:      1.00 Angstrom.
+ (no solvent present)
+Calculating grid charges
+Placed Cl- in pdb at (-17.32, 21.44, 6.58).
+
+Done adding ions.
+Scaling up box by a factor of 1.372357 to meet diagonal cut criterion
+  Solute vdw bounding box:              45.968 39.338 39.847
+  Total bounding box for atom centers:  78.905 78.905 78.905
+      (box expansion for 'iso' is  18.4%)
+  Solvent unit box:                     18.774 18.774 18.774
+  Volume: 255088.582 A^3 (oct)
+  Total mass 136089.894 amu,  Density 0.886 g/cc
+  Added 6551 residues.
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 520 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CGLU	1
+	NMET	1
+	WAT	6551
+  )
+ (no restraints)
+Writing pdb file: w7f_solv.pdb
+   printing CRYST1 record to PDB file with box info
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NMET -> MET
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CGLU -> GLU
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 2; Notes = 0.

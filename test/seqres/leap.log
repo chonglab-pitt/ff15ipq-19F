@@ -1,0 +1,4860 @@
+log started: Fri Apr 15 13:22:51 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff15ipq force field, developmental version
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #       Version 10.3, solvated:
+>> #         Charges fit with H sigma=1.3 and SPC/Eb, backbone charges held equal
+>> #        
+>> #         vdw (LJEDITs removed, H sigma=1.3, ARG side chain TH sigma=1.5)
+>> #         torsions generation 6 (0 ff14ipq, ALAPROALA,
+>> #                                1 dipeptides,
+>> #                                2 XXXGLY & GLYXXX tripeptides,
+>> #                                3 XXXPRO & PROXXX tripeptides)
+>> #                                4 charged tripeptides)
+>> #                                5 more charged tripeptides and termini
+>> #                                6 angle peptides and more termini)
+>> #         Parm cleaned up extensively
+>> #         Torsion phases restored to 0 and 180 degrees
+>> #         Backbone CNA, HNA, NAC, ACN, and ACO angles fit
+>> #         Additional assorted updates to bonded parameters and types
+>> #         The SPC/Eb water model was used to derive partial charges
+>> #           for this force field
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H"  "sp3" }
+>> 	{ "HO"  "H"  "sp3" }
+>> 	{ "HS"  "H"  "sp3" }
+>> 	{ "H1"  "H"  "sp3" }
+>> 	{ "H2"  "H"  "sp3" }
+>> 	{ "H3"  "H"  "sp3" }
+>> 	{ "H4"  "H"  "sp3" }
+>> 	{ "H5"  "H"  "sp3" }
+>> 	{ "HW"  "H"  "sp3" }
+>> 	{ "HC"  "H"  "sp3" }
+>> 	{ "HA"  "H"  "sp3" }
+>> 	{ "HP"  "H"  "sp3" }
+>> 	{ "HZ"  "H"  "sp3" }
+>> 	{ "TH"  "H"  "sp3" }
+>> 	{ "OH"  "O"  "sp3" }
+>> 	{ "OS"  "O"  "sp3" }
+>> 	{ "O"   "O"  "sp2" }
+>> 	{ "OD"  "O"  "sp2" }
+>> 	{ "O2"  "O"  "sp2" }
+>> 	{ "O3"  "O"  "sp2" }
+>> 	{ "OP"  "O"  "sp2" }
+>> 	{ "OW"  "O"  "sp3" }
+>> 	{ "OA"  "O"  "sp3" }
+>> 	{ "CT"  "C"  "sp3" }
+>> 	{ "CX"  "C"  "sp3" }
+>> 	{ "TJ"  "C"  "sp3" }
+>> 	{ "TG"  "C"  "sp3" }
+>> 	{ "TM"  "C"  "sp3" }
+>> 	{ "TP"  "C"  "sp3" }
+>> 	{ "C8"  "C"  "sp3" }
+>> 	{ "2C"  "C"  "sp3" }
+>> 	{ "3C"  "C"  "sp3" }
+>> 	{ "TA"  "C"  "sp3" }
+>> 	{ "CH"  "C"  "sp3" }
+>> 	{ "CS"  "C"  "sp2" }
+>> 	{ "C"   "C"  "sp2" }
+>> 	{ "CO"  "C"  "sp2" }
+>> 	{ "C*"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CB"  "C"  "sp2" }
+>> 	{ "CC"  "C"  "sp2" }
+>> 	{ "CN"  "C"  "sp2" }
+>> 	{ "CM"  "C"  "sp2" }
+>> 	{ "CK"  "C"  "sp2" }
+>> 	{ "CQ"  "C"  "sp2" }
+>> 	{ "CD"  "C"  "sp2" }
+>> 	{ "C5"  "C"  "sp2" }
+>> 	{ "C4"  "C"  "sp2" }
+>> 	{ "CP"  "C"  "sp2" }
+>> 	{ "CI"  "C"  "sp3" }
+>> 	{ "CJ"  "C"  "sp2" }
+>> 	{ "CW"  "C"  "sp2" }
+>> 	{ "CV"  "C"  "sp2" }
+>> 	{ "CR"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CY"  "C"  "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N"  "sp2" }
+>> 	{ "NA"  "N"  "sp2" }
+>> 	{ "N2"  "N"  "sp2" }
+>> 	{ "N*"  "N"  "sp2" }
+>> 	{ "NP"  "N"  "sp2" }
+>> 	{ "NQ"  "N"  "sp2" }
+>> 	{ "NB"  "N"  "sp2" }
+>> 	{ "NC"  "N"  "sp2" }
+>> 	{ "TN"  "N"  "sp2" }
+>> 	{ "NT"  "N"  "sp3" }
+>> 	{ "NY"  "N"  "sp2" }
+>> 	{ "N3"  "N"  "sp3" }
+>> 	{ "NL"  "N"  "sp3" }
+>> 	{ "ND"  "N"  "sp3" }
+>> 	{ "S"   "S"  "sp3" }
+>> 	{ "SH"  "S"  "sp3" }
+>> 	{ "P"   "P"  "sp3" }
+>> 	{ "LP"  ""   "sp3" }
+>> 	{ "EP"  ""   "sp3" }
+>> 	{ "F"   "F"  "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm15ipq = loadamberparams parm15ipq_10.3.dat
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+(UNKNOWN ATOM TYPE: CZ)
+(UNKNOWN ATOM TYPE: CU)
+(UNKNOWN ATOM TYPE: FE)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> #
+>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>> #
+>> loadOff amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: MTB
+Loading: NLE
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading: CALA
+Loading: CARG
+Loading: CASH
+Loading: CASN
+Loading: CASP
+Loading: CCYM
+Loading: CCYS
+Loading: CCYX
+Loading: CGLH
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYN
+Loading: CLYS
+Loading: CMET
+Loading: CNLE
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASH
+Loading: NASN
+Loading: NASP
+Loading: NCYM
+Loading: NCYS
+Loading: NCYX
+Loading: NGLH
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NNLE
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids 
+>> #
+>> addPdbResMap {
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASH" "NASH" } { 1 "ASH" "CASH" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYM" "NCYM" } { 1 "CYM" "CCYM" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLH" "NGLH" } { 1 "GLH" "CGLH" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>                      { 1 "LYN" "CLYN" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "NLE" "NNLE" } { 1 "NLE" "CNLE" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> 
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.fluorine.ff15ipq
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+>> logFile leap.log
+log started: Fri Apr 15 13:22:51 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading ff15ipq fluorinated, aromatic amino acid residues
+>> #       D.T. Yang, A.M Gronenborn, L.T. Chong, Development and Validation 
+>> #       of Fluorinated, Aromatic Amino Acid Parameters for Use with the 
+>> #       AMBER ff15ipq Protein Force Field 
+>> #       J. Phys. Chem. A, 126, 14, 2286-2297 (2022). 
+>> #
+>> # This file contains IPolQ optimized parameters for fluorinated amino acids:
+>> #
+>> # F4F:   4(para)-fluoro-phenylalanine
+>> # FTF:   4(para)-trifluoromethyl-phenylalanine  
+>> # Y3F:   3(meta)-fluoro-tyrosine
+>> # YDF:   3,5(meta)-fluro-tyrosine
+>> # W4F:   4-fluoro-tryptophan 
+>> # W5F:   5-fluoro-tryptophan
+>> # W6F:   6-fluoro-tryptophan
+>> # W7F:   7-fluoro-tryptophan 
+>> #
+>> # To use these residues, load this file into leap, after the Amber-FF, e.g.:
+>> #
+>> # > source leaprc.protein.ff15ipq
+>> # > source leaprc.fluorine.ff15ipq
+>> #
+>> #   Load the fluorinated amino acid parameter set.
+>> #
+>> loadamberparams frcmod.ff15ipq-19F
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+>> #
+>> #   Load the fluorinated amino acid libraries.
+>> #
+>> # load individual residues
+>> loadoff ff15ipq-19F.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+Loading: F4F
+Loading: FTF
+Loading: W4F
+Loading: W5F
+Loading: W6F
+Loading: W7F
+Loading: Y3F
+Loading: YDF
+> 
+> source leaprc.water.spce
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+>> #
+>> #       Load water and ions for SPC/E + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> addAtomTypes {
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>>     { "OW"   "O"   "sp3" }
+>>     { "HW"   "H"   "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = SPC
+>> WAT = SPC
+>> loadAmberParams frcmod.spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+>> loadAmberParams frcmod.ionsjc_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+>> 
+> 
+> W4F = sequence { ACE ALA W4F ALA NME }
+Sequence: ACE
+Sequence: ALA
+Sequence: W4F
+Sequence: ALA
+Sequence: NME
+> check W4F
+Checking 'W4F'....
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.128 angstroms between nonbonded atoms CD2 and H
+-------  .R<W4F 3>.A<CD2 22> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.456 angstroms between nonbonded atoms FE3 and H
+-------  .R<W4F 3>.A<FE3 21> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.475 angstroms between nonbonded atoms FE3 and N
+-------  .R<W4F 3>.A<FE3 21> and .R<ALA 4>.A<N 1>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.874 angstroms between nonbonded atoms CE3 and H
+-------  .R<W4F 3>.A<CE3 20> and .R<ALA 4>.A<H 2>
+Checking parameters for unit 'W4F'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+> savepdb W4F W4F_tet.pdb
+Writing pdb file: W4F_tet.pdb
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
+log started: Fri Apr 15 13:37:27 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff15ipq force field, developmental version
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #       Version 10.3, solvated:
+>> #         Charges fit with H sigma=1.3 and SPC/Eb, backbone charges held equal
+>> #        
+>> #         vdw (LJEDITs removed, H sigma=1.3, ARG side chain TH sigma=1.5)
+>> #         torsions generation 6 (0 ff14ipq, ALAPROALA,
+>> #                                1 dipeptides,
+>> #                                2 XXXGLY & GLYXXX tripeptides,
+>> #                                3 XXXPRO & PROXXX tripeptides)
+>> #                                4 charged tripeptides)
+>> #                                5 more charged tripeptides and termini
+>> #                                6 angle peptides and more termini)
+>> #         Parm cleaned up extensively
+>> #         Torsion phases restored to 0 and 180 degrees
+>> #         Backbone CNA, HNA, NAC, ACN, and ACO angles fit
+>> #         Additional assorted updates to bonded parameters and types
+>> #         The SPC/Eb water model was used to derive partial charges
+>> #           for this force field
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H"  "sp3" }
+>> 	{ "HO"  "H"  "sp3" }
+>> 	{ "HS"  "H"  "sp3" }
+>> 	{ "H1"  "H"  "sp3" }
+>> 	{ "H2"  "H"  "sp3" }
+>> 	{ "H3"  "H"  "sp3" }
+>> 	{ "H4"  "H"  "sp3" }
+>> 	{ "H5"  "H"  "sp3" }
+>> 	{ "HW"  "H"  "sp3" }
+>> 	{ "HC"  "H"  "sp3" }
+>> 	{ "HA"  "H"  "sp3" }
+>> 	{ "HP"  "H"  "sp3" }
+>> 	{ "HZ"  "H"  "sp3" }
+>> 	{ "TH"  "H"  "sp3" }
+>> 	{ "OH"  "O"  "sp3" }
+>> 	{ "OS"  "O"  "sp3" }
+>> 	{ "O"   "O"  "sp2" }
+>> 	{ "OD"  "O"  "sp2" }
+>> 	{ "O2"  "O"  "sp2" }
+>> 	{ "O3"  "O"  "sp2" }
+>> 	{ "OP"  "O"  "sp2" }
+>> 	{ "OW"  "O"  "sp3" }
+>> 	{ "OA"  "O"  "sp3" }
+>> 	{ "CT"  "C"  "sp3" }
+>> 	{ "CX"  "C"  "sp3" }
+>> 	{ "TJ"  "C"  "sp3" }
+>> 	{ "TG"  "C"  "sp3" }
+>> 	{ "TM"  "C"  "sp3" }
+>> 	{ "TP"  "C"  "sp3" }
+>> 	{ "C8"  "C"  "sp3" }
+>> 	{ "2C"  "C"  "sp3" }
+>> 	{ "3C"  "C"  "sp3" }
+>> 	{ "TA"  "C"  "sp3" }
+>> 	{ "CH"  "C"  "sp3" }
+>> 	{ "CS"  "C"  "sp2" }
+>> 	{ "C"   "C"  "sp2" }
+>> 	{ "CO"  "C"  "sp2" }
+>> 	{ "C*"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CB"  "C"  "sp2" }
+>> 	{ "CC"  "C"  "sp2" }
+>> 	{ "CN"  "C"  "sp2" }
+>> 	{ "CM"  "C"  "sp2" }
+>> 	{ "CK"  "C"  "sp2" }
+>> 	{ "CQ"  "C"  "sp2" }
+>> 	{ "CD"  "C"  "sp2" }
+>> 	{ "C5"  "C"  "sp2" }
+>> 	{ "C4"  "C"  "sp2" }
+>> 	{ "CP"  "C"  "sp2" }
+>> 	{ "CI"  "C"  "sp3" }
+>> 	{ "CJ"  "C"  "sp2" }
+>> 	{ "CW"  "C"  "sp2" }
+>> 	{ "CV"  "C"  "sp2" }
+>> 	{ "CR"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CY"  "C"  "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N"  "sp2" }
+>> 	{ "NA"  "N"  "sp2" }
+>> 	{ "N2"  "N"  "sp2" }
+>> 	{ "N*"  "N"  "sp2" }
+>> 	{ "NP"  "N"  "sp2" }
+>> 	{ "NQ"  "N"  "sp2" }
+>> 	{ "NB"  "N"  "sp2" }
+>> 	{ "NC"  "N"  "sp2" }
+>> 	{ "TN"  "N"  "sp2" }
+>> 	{ "NT"  "N"  "sp3" }
+>> 	{ "NY"  "N"  "sp2" }
+>> 	{ "N3"  "N"  "sp3" }
+>> 	{ "NL"  "N"  "sp3" }
+>> 	{ "ND"  "N"  "sp3" }
+>> 	{ "S"   "S"  "sp3" }
+>> 	{ "SH"  "S"  "sp3" }
+>> 	{ "P"   "P"  "sp3" }
+>> 	{ "LP"  ""   "sp3" }
+>> 	{ "EP"  ""   "sp3" }
+>> 	{ "F"   "F"  "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm15ipq = loadamberparams parm15ipq_10.3.dat
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+(UNKNOWN ATOM TYPE: CZ)
+(UNKNOWN ATOM TYPE: CU)
+(UNKNOWN ATOM TYPE: FE)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> #
+>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>> #
+>> loadOff amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: MTB
+Loading: NLE
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading: CALA
+Loading: CARG
+Loading: CASH
+Loading: CASN
+Loading: CASP
+Loading: CCYM
+Loading: CCYS
+Loading: CCYX
+Loading: CGLH
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYN
+Loading: CLYS
+Loading: CMET
+Loading: CNLE
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASH
+Loading: NASN
+Loading: NASP
+Loading: NCYM
+Loading: NCYS
+Loading: NCYX
+Loading: NGLH
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NNLE
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids 
+>> #
+>> addPdbResMap {
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASH" "NASH" } { 1 "ASH" "CASH" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYM" "NCYM" } { 1 "CYM" "CCYM" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLH" "NGLH" } { 1 "GLH" "CGLH" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>                      { 1 "LYN" "CLYN" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "NLE" "NNLE" } { 1 "NLE" "CNLE" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> 
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+>  source leaprc.fluorine.ff15ipq 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+>> logFile leap.log
+log started: Fri Apr 15 13:37:27 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading ff15ipq fluorinated, aromatic amino acid residues
+>> #       D.T. Yang, A.M Gronenborn, L.T. Chong, Development and Validation 
+>> #       of Fluorinated, Aromatic Amino Acid Parameters for Use with the 
+>> #       AMBER ff15ipq Protein Force Field 
+>> #       J. Phys. Chem. A, 126, 14, 2286-2297 (2022). 
+>> #
+>> # This file contains IPolQ optimized parameters for fluorinated amino acids:
+>> #
+>> # F4F:   4(para)-fluoro-phenylalanine
+>> # FTF:   4(para)-trifluoromethyl-phenylalanine  
+>> # Y3F:   3(meta)-fluoro-tyrosine
+>> # YDF:   3,5(meta)-fluro-tyrosine
+>> # W4F:   4-fluoro-tryptophan 
+>> # W5F:   5-fluoro-tryptophan
+>> # W6F:   6-fluoro-tryptophan
+>> # W7F:   7-fluoro-tryptophan 
+>> #
+>> # To use these residues, load this file into leap, after the Amber-FF, e.g.:
+>> #
+>> # > source leaprc.protein.ff15ipq
+>> # > source leaprc.fluorine.ff15ipq
+>> #
+>> #   Load the fluorinated amino acid parameter set.
+>> #
+>> loadamberparams frcmod.ff15ipq-19F
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+>> #
+>> #   Load the fluorinated amino acid libraries.
+>> #
+>> # load individual residues
+>> loadoff ff15ipq-19F.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+Loading: F4F
+Loading: FTF
+Loading: W4F
+Loading: W5F
+Loading: W6F
+Loading: W7F
+Loading: Y3F
+Loading: YDF
+> 
+>  source leaprc.water.spce 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+>> #
+>> #       Load water and ions for SPC/E + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> addAtomTypes {
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>>     { "OW"   "O"   "sp3" }
+>>     { "HW"   "H"   "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = SPC
+>> WAT = SPC
+>> loadAmberParams frcmod.spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+>> loadAmberParams frcmod.ionsjc_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+>> 
+> 
+>  F4F = sequence { ACE ALA F4F ALA NME } 
+Sequence: ACE
+Sequence: ALA
+Sequence: F4F
+Sequence: ALA
+Sequence: NME
+>  check F4F 
+Checking 'F4F'....
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.645 angstroms between nonbonded atoms HD2 and H
+-------  .R<F4F 3>.A<HD2 18> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.392 angstroms between nonbonded atoms HD2 and N
+-------  .R<F4F 3>.A<HD2 18> and .R<ALA 4>.A<N 1>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.984 angstroms between nonbonded atoms CD2 and H
+-------  .R<F4F 3>.A<CD2 17> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.421 angstroms between nonbonded atoms HE2 and O
+-------  .R<F4F 3>.A<HE2 16> and .R<ALA 4>.A<O 10>
+Checking parameters for unit 'F4F'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+>  savepdb F4F F4F_tet.pdb 
+Writing pdb file: F4F_tet.pdb
+>  quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
+log started: Fri Apr 15 13:37:27 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff15ipq force field, developmental version
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #       Version 10.3, solvated:
+>> #         Charges fit with H sigma=1.3 and SPC/Eb, backbone charges held equal
+>> #        
+>> #         vdw (LJEDITs removed, H sigma=1.3, ARG side chain TH sigma=1.5)
+>> #         torsions generation 6 (0 ff14ipq, ALAPROALA,
+>> #                                1 dipeptides,
+>> #                                2 XXXGLY & GLYXXX tripeptides,
+>> #                                3 XXXPRO & PROXXX tripeptides)
+>> #                                4 charged tripeptides)
+>> #                                5 more charged tripeptides and termini
+>> #                                6 angle peptides and more termini)
+>> #         Parm cleaned up extensively
+>> #         Torsion phases restored to 0 and 180 degrees
+>> #         Backbone CNA, HNA, NAC, ACN, and ACO angles fit
+>> #         Additional assorted updates to bonded parameters and types
+>> #         The SPC/Eb water model was used to derive partial charges
+>> #           for this force field
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H"  "sp3" }
+>> 	{ "HO"  "H"  "sp3" }
+>> 	{ "HS"  "H"  "sp3" }
+>> 	{ "H1"  "H"  "sp3" }
+>> 	{ "H2"  "H"  "sp3" }
+>> 	{ "H3"  "H"  "sp3" }
+>> 	{ "H4"  "H"  "sp3" }
+>> 	{ "H5"  "H"  "sp3" }
+>> 	{ "HW"  "H"  "sp3" }
+>> 	{ "HC"  "H"  "sp3" }
+>> 	{ "HA"  "H"  "sp3" }
+>> 	{ "HP"  "H"  "sp3" }
+>> 	{ "HZ"  "H"  "sp3" }
+>> 	{ "TH"  "H"  "sp3" }
+>> 	{ "OH"  "O"  "sp3" }
+>> 	{ "OS"  "O"  "sp3" }
+>> 	{ "O"   "O"  "sp2" }
+>> 	{ "OD"  "O"  "sp2" }
+>> 	{ "O2"  "O"  "sp2" }
+>> 	{ "O3"  "O"  "sp2" }
+>> 	{ "OP"  "O"  "sp2" }
+>> 	{ "OW"  "O"  "sp3" }
+>> 	{ "OA"  "O"  "sp3" }
+>> 	{ "CT"  "C"  "sp3" }
+>> 	{ "CX"  "C"  "sp3" }
+>> 	{ "TJ"  "C"  "sp3" }
+>> 	{ "TG"  "C"  "sp3" }
+>> 	{ "TM"  "C"  "sp3" }
+>> 	{ "TP"  "C"  "sp3" }
+>> 	{ "C8"  "C"  "sp3" }
+>> 	{ "2C"  "C"  "sp3" }
+>> 	{ "3C"  "C"  "sp3" }
+>> 	{ "TA"  "C"  "sp3" }
+>> 	{ "CH"  "C"  "sp3" }
+>> 	{ "CS"  "C"  "sp2" }
+>> 	{ "C"   "C"  "sp2" }
+>> 	{ "CO"  "C"  "sp2" }
+>> 	{ "C*"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CB"  "C"  "sp2" }
+>> 	{ "CC"  "C"  "sp2" }
+>> 	{ "CN"  "C"  "sp2" }
+>> 	{ "CM"  "C"  "sp2" }
+>> 	{ "CK"  "C"  "sp2" }
+>> 	{ "CQ"  "C"  "sp2" }
+>> 	{ "CD"  "C"  "sp2" }
+>> 	{ "C5"  "C"  "sp2" }
+>> 	{ "C4"  "C"  "sp2" }
+>> 	{ "CP"  "C"  "sp2" }
+>> 	{ "CI"  "C"  "sp3" }
+>> 	{ "CJ"  "C"  "sp2" }
+>> 	{ "CW"  "C"  "sp2" }
+>> 	{ "CV"  "C"  "sp2" }
+>> 	{ "CR"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CY"  "C"  "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N"  "sp2" }
+>> 	{ "NA"  "N"  "sp2" }
+>> 	{ "N2"  "N"  "sp2" }
+>> 	{ "N*"  "N"  "sp2" }
+>> 	{ "NP"  "N"  "sp2" }
+>> 	{ "NQ"  "N"  "sp2" }
+>> 	{ "NB"  "N"  "sp2" }
+>> 	{ "NC"  "N"  "sp2" }
+>> 	{ "TN"  "N"  "sp2" }
+>> 	{ "NT"  "N"  "sp3" }
+>> 	{ "NY"  "N"  "sp2" }
+>> 	{ "N3"  "N"  "sp3" }
+>> 	{ "NL"  "N"  "sp3" }
+>> 	{ "ND"  "N"  "sp3" }
+>> 	{ "S"   "S"  "sp3" }
+>> 	{ "SH"  "S"  "sp3" }
+>> 	{ "P"   "P"  "sp3" }
+>> 	{ "LP"  ""   "sp3" }
+>> 	{ "EP"  ""   "sp3" }
+>> 	{ "F"   "F"  "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm15ipq = loadamberparams parm15ipq_10.3.dat
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+(UNKNOWN ATOM TYPE: CZ)
+(UNKNOWN ATOM TYPE: CU)
+(UNKNOWN ATOM TYPE: FE)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> #
+>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>> #
+>> loadOff amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: MTB
+Loading: NLE
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading: CALA
+Loading: CARG
+Loading: CASH
+Loading: CASN
+Loading: CASP
+Loading: CCYM
+Loading: CCYS
+Loading: CCYX
+Loading: CGLH
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYN
+Loading: CLYS
+Loading: CMET
+Loading: CNLE
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASH
+Loading: NASN
+Loading: NASP
+Loading: NCYM
+Loading: NCYS
+Loading: NCYX
+Loading: NGLH
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NNLE
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids 
+>> #
+>> addPdbResMap {
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASH" "NASH" } { 1 "ASH" "CASH" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYM" "NCYM" } { 1 "CYM" "CCYM" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLH" "NGLH" } { 1 "GLH" "CGLH" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>                      { 1 "LYN" "CLYN" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "NLE" "NNLE" } { 1 "NLE" "CNLE" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> 
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+>  source leaprc.fluorine.ff15ipq 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+>> logFile leap.log
+log started: Fri Apr 15 13:37:27 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading ff15ipq fluorinated, aromatic amino acid residues
+>> #       D.T. Yang, A.M Gronenborn, L.T. Chong, Development and Validation 
+>> #       of Fluorinated, Aromatic Amino Acid Parameters for Use with the 
+>> #       AMBER ff15ipq Protein Force Field 
+>> #       J. Phys. Chem. A, 126, 14, 2286-2297 (2022). 
+>> #
+>> # This file contains IPolQ optimized parameters for fluorinated amino acids:
+>> #
+>> # F4F:   4(para)-fluoro-phenylalanine
+>> # FTF:   4(para)-trifluoromethyl-phenylalanine  
+>> # Y3F:   3(meta)-fluoro-tyrosine
+>> # YDF:   3,5(meta)-fluro-tyrosine
+>> # W4F:   4-fluoro-tryptophan 
+>> # W5F:   5-fluoro-tryptophan
+>> # W6F:   6-fluoro-tryptophan
+>> # W7F:   7-fluoro-tryptophan 
+>> #
+>> # To use these residues, load this file into leap, after the Amber-FF, e.g.:
+>> #
+>> # > source leaprc.protein.ff15ipq
+>> # > source leaprc.fluorine.ff15ipq
+>> #
+>> #   Load the fluorinated amino acid parameter set.
+>> #
+>> loadamberparams frcmod.ff15ipq-19F
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+>> #
+>> #   Load the fluorinated amino acid libraries.
+>> #
+>> # load individual residues
+>> loadoff ff15ipq-19F.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+Loading: F4F
+Loading: FTF
+Loading: W4F
+Loading: W5F
+Loading: W6F
+Loading: W7F
+Loading: Y3F
+Loading: YDF
+> 
+>  source leaprc.water.spce 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+>> #
+>> #       Load water and ions for SPC/E + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> addAtomTypes {
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>>     { "OW"   "O"   "sp3" }
+>>     { "HW"   "H"   "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = SPC
+>> WAT = SPC
+>> loadAmberParams frcmod.spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+>> loadAmberParams frcmod.ionsjc_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+>> 
+> 
+>  FTF = sequence { ACE ALA FTF ALA NME } 
+Sequence: ACE
+Sequence: ALA
+Sequence: FTF
+Sequence: ALA
+Sequence: NME
+>  check FTF 
+Checking 'FTF'....
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.645 angstroms between nonbonded atoms HD2 and H
+-------  .R<FTF 3>.A<HD2 21> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.392 angstroms between nonbonded atoms HD2 and N
+-------  .R<FTF 3>.A<HD2 21> and .R<ALA 4>.A<N 1>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.984 angstroms between nonbonded atoms CD2 and H
+-------  .R<FTF 3>.A<CD2 20> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.421 angstroms between nonbonded atoms HE2 and O
+-------  .R<FTF 3>.A<HE2 19> and .R<ALA 4>.A<O 10>
+Checking parameters for unit 'FTF'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+>  savepdb FTF FTF_tet.pdb 
+Writing pdb file: FTF_tet.pdb
+>  quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
+log started: Fri Apr 15 13:37:27 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff15ipq force field, developmental version
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #       Version 10.3, solvated:
+>> #         Charges fit with H sigma=1.3 and SPC/Eb, backbone charges held equal
+>> #        
+>> #         vdw (LJEDITs removed, H sigma=1.3, ARG side chain TH sigma=1.5)
+>> #         torsions generation 6 (0 ff14ipq, ALAPROALA,
+>> #                                1 dipeptides,
+>> #                                2 XXXGLY & GLYXXX tripeptides,
+>> #                                3 XXXPRO & PROXXX tripeptides)
+>> #                                4 charged tripeptides)
+>> #                                5 more charged tripeptides and termini
+>> #                                6 angle peptides and more termini)
+>> #         Parm cleaned up extensively
+>> #         Torsion phases restored to 0 and 180 degrees
+>> #         Backbone CNA, HNA, NAC, ACN, and ACO angles fit
+>> #         Additional assorted updates to bonded parameters and types
+>> #         The SPC/Eb water model was used to derive partial charges
+>> #           for this force field
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H"  "sp3" }
+>> 	{ "HO"  "H"  "sp3" }
+>> 	{ "HS"  "H"  "sp3" }
+>> 	{ "H1"  "H"  "sp3" }
+>> 	{ "H2"  "H"  "sp3" }
+>> 	{ "H3"  "H"  "sp3" }
+>> 	{ "H4"  "H"  "sp3" }
+>> 	{ "H5"  "H"  "sp3" }
+>> 	{ "HW"  "H"  "sp3" }
+>> 	{ "HC"  "H"  "sp3" }
+>> 	{ "HA"  "H"  "sp3" }
+>> 	{ "HP"  "H"  "sp3" }
+>> 	{ "HZ"  "H"  "sp3" }
+>> 	{ "TH"  "H"  "sp3" }
+>> 	{ "OH"  "O"  "sp3" }
+>> 	{ "OS"  "O"  "sp3" }
+>> 	{ "O"   "O"  "sp2" }
+>> 	{ "OD"  "O"  "sp2" }
+>> 	{ "O2"  "O"  "sp2" }
+>> 	{ "O3"  "O"  "sp2" }
+>> 	{ "OP"  "O"  "sp2" }
+>> 	{ "OW"  "O"  "sp3" }
+>> 	{ "OA"  "O"  "sp3" }
+>> 	{ "CT"  "C"  "sp3" }
+>> 	{ "CX"  "C"  "sp3" }
+>> 	{ "TJ"  "C"  "sp3" }
+>> 	{ "TG"  "C"  "sp3" }
+>> 	{ "TM"  "C"  "sp3" }
+>> 	{ "TP"  "C"  "sp3" }
+>> 	{ "C8"  "C"  "sp3" }
+>> 	{ "2C"  "C"  "sp3" }
+>> 	{ "3C"  "C"  "sp3" }
+>> 	{ "TA"  "C"  "sp3" }
+>> 	{ "CH"  "C"  "sp3" }
+>> 	{ "CS"  "C"  "sp2" }
+>> 	{ "C"   "C"  "sp2" }
+>> 	{ "CO"  "C"  "sp2" }
+>> 	{ "C*"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CB"  "C"  "sp2" }
+>> 	{ "CC"  "C"  "sp2" }
+>> 	{ "CN"  "C"  "sp2" }
+>> 	{ "CM"  "C"  "sp2" }
+>> 	{ "CK"  "C"  "sp2" }
+>> 	{ "CQ"  "C"  "sp2" }
+>> 	{ "CD"  "C"  "sp2" }
+>> 	{ "C5"  "C"  "sp2" }
+>> 	{ "C4"  "C"  "sp2" }
+>> 	{ "CP"  "C"  "sp2" }
+>> 	{ "CI"  "C"  "sp3" }
+>> 	{ "CJ"  "C"  "sp2" }
+>> 	{ "CW"  "C"  "sp2" }
+>> 	{ "CV"  "C"  "sp2" }
+>> 	{ "CR"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CY"  "C"  "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N"  "sp2" }
+>> 	{ "NA"  "N"  "sp2" }
+>> 	{ "N2"  "N"  "sp2" }
+>> 	{ "N*"  "N"  "sp2" }
+>> 	{ "NP"  "N"  "sp2" }
+>> 	{ "NQ"  "N"  "sp2" }
+>> 	{ "NB"  "N"  "sp2" }
+>> 	{ "NC"  "N"  "sp2" }
+>> 	{ "TN"  "N"  "sp2" }
+>> 	{ "NT"  "N"  "sp3" }
+>> 	{ "NY"  "N"  "sp2" }
+>> 	{ "N3"  "N"  "sp3" }
+>> 	{ "NL"  "N"  "sp3" }
+>> 	{ "ND"  "N"  "sp3" }
+>> 	{ "S"   "S"  "sp3" }
+>> 	{ "SH"  "S"  "sp3" }
+>> 	{ "P"   "P"  "sp3" }
+>> 	{ "LP"  ""   "sp3" }
+>> 	{ "EP"  ""   "sp3" }
+>> 	{ "F"   "F"  "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm15ipq = loadamberparams parm15ipq_10.3.dat
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+(UNKNOWN ATOM TYPE: CZ)
+(UNKNOWN ATOM TYPE: CU)
+(UNKNOWN ATOM TYPE: FE)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> #
+>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>> #
+>> loadOff amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: MTB
+Loading: NLE
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading: CALA
+Loading: CARG
+Loading: CASH
+Loading: CASN
+Loading: CASP
+Loading: CCYM
+Loading: CCYS
+Loading: CCYX
+Loading: CGLH
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYN
+Loading: CLYS
+Loading: CMET
+Loading: CNLE
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASH
+Loading: NASN
+Loading: NASP
+Loading: NCYM
+Loading: NCYS
+Loading: NCYX
+Loading: NGLH
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NNLE
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids 
+>> #
+>> addPdbResMap {
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASH" "NASH" } { 1 "ASH" "CASH" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYM" "NCYM" } { 1 "CYM" "CCYM" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLH" "NGLH" } { 1 "GLH" "CGLH" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>                      { 1 "LYN" "CLYN" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "NLE" "NNLE" } { 1 "NLE" "CNLE" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> 
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+>  source leaprc.fluorine.ff15ipq 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+>> logFile leap.log
+log started: Fri Apr 15 13:37:27 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading ff15ipq fluorinated, aromatic amino acid residues
+>> #       D.T. Yang, A.M Gronenborn, L.T. Chong, Development and Validation 
+>> #       of Fluorinated, Aromatic Amino Acid Parameters for Use with the 
+>> #       AMBER ff15ipq Protein Force Field 
+>> #       J. Phys. Chem. A, 126, 14, 2286-2297 (2022). 
+>> #
+>> # This file contains IPolQ optimized parameters for fluorinated amino acids:
+>> #
+>> # F4F:   4(para)-fluoro-phenylalanine
+>> # FTF:   4(para)-trifluoromethyl-phenylalanine  
+>> # Y3F:   3(meta)-fluoro-tyrosine
+>> # YDF:   3,5(meta)-fluro-tyrosine
+>> # W4F:   4-fluoro-tryptophan 
+>> # W5F:   5-fluoro-tryptophan
+>> # W6F:   6-fluoro-tryptophan
+>> # W7F:   7-fluoro-tryptophan 
+>> #
+>> # To use these residues, load this file into leap, after the Amber-FF, e.g.:
+>> #
+>> # > source leaprc.protein.ff15ipq
+>> # > source leaprc.fluorine.ff15ipq
+>> #
+>> #   Load the fluorinated amino acid parameter set.
+>> #
+>> loadamberparams frcmod.ff15ipq-19F
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+>> #
+>> #   Load the fluorinated amino acid libraries.
+>> #
+>> # load individual residues
+>> loadoff ff15ipq-19F.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+Loading: F4F
+Loading: FTF
+Loading: W4F
+Loading: W5F
+Loading: W6F
+Loading: W7F
+Loading: Y3F
+Loading: YDF
+> 
+>  source leaprc.water.spce 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+>> #
+>> #       Load water and ions for SPC/E + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> addAtomTypes {
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>>     { "OW"   "O"   "sp3" }
+>>     { "HW"   "H"   "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = SPC
+>> WAT = SPC
+>> loadAmberParams frcmod.spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+>> loadAmberParams frcmod.ionsjc_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+>> 
+> 
+>  Y3F = sequence { ACE ALA Y3F ALA NME } 
+Sequence: ACE
+Sequence: ALA
+Sequence: Y3F
+Sequence: ALA
+Sequence: NME
+>  check Y3F 
+Checking 'Y3F'....
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.784 angstroms between nonbonded atoms HD2 and H
+-------  .R<Y3F 3>.A<HD2 19> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.330 angstroms between nonbonded atoms HD2 and N
+-------  .R<Y3F 3>.A<HD2 19> and .R<ALA 4>.A<N 1>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.798 angstroms between nonbonded atoms CD2 and H
+-------  .R<Y3F 3>.A<CD2 18> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.357 angstroms between nonbonded atoms HE2 and O
+-------  .R<Y3F 3>.A<HE2 17> and .R<ALA 4>.A<O 10>
+Checking parameters for unit 'Y3F'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+>  savepdb Y3F Y3F_tet.pdb 
+Writing pdb file: Y3F_tet.pdb
+>  quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
+log started: Fri Apr 15 13:37:27 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff15ipq force field, developmental version
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #       Version 10.3, solvated:
+>> #         Charges fit with H sigma=1.3 and SPC/Eb, backbone charges held equal
+>> #        
+>> #         vdw (LJEDITs removed, H sigma=1.3, ARG side chain TH sigma=1.5)
+>> #         torsions generation 6 (0 ff14ipq, ALAPROALA,
+>> #                                1 dipeptides,
+>> #                                2 XXXGLY & GLYXXX tripeptides,
+>> #                                3 XXXPRO & PROXXX tripeptides)
+>> #                                4 charged tripeptides)
+>> #                                5 more charged tripeptides and termini
+>> #                                6 angle peptides and more termini)
+>> #         Parm cleaned up extensively
+>> #         Torsion phases restored to 0 and 180 degrees
+>> #         Backbone CNA, HNA, NAC, ACN, and ACO angles fit
+>> #         Additional assorted updates to bonded parameters and types
+>> #         The SPC/Eb water model was used to derive partial charges
+>> #           for this force field
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H"  "sp3" }
+>> 	{ "HO"  "H"  "sp3" }
+>> 	{ "HS"  "H"  "sp3" }
+>> 	{ "H1"  "H"  "sp3" }
+>> 	{ "H2"  "H"  "sp3" }
+>> 	{ "H3"  "H"  "sp3" }
+>> 	{ "H4"  "H"  "sp3" }
+>> 	{ "H5"  "H"  "sp3" }
+>> 	{ "HW"  "H"  "sp3" }
+>> 	{ "HC"  "H"  "sp3" }
+>> 	{ "HA"  "H"  "sp3" }
+>> 	{ "HP"  "H"  "sp3" }
+>> 	{ "HZ"  "H"  "sp3" }
+>> 	{ "TH"  "H"  "sp3" }
+>> 	{ "OH"  "O"  "sp3" }
+>> 	{ "OS"  "O"  "sp3" }
+>> 	{ "O"   "O"  "sp2" }
+>> 	{ "OD"  "O"  "sp2" }
+>> 	{ "O2"  "O"  "sp2" }
+>> 	{ "O3"  "O"  "sp2" }
+>> 	{ "OP"  "O"  "sp2" }
+>> 	{ "OW"  "O"  "sp3" }
+>> 	{ "OA"  "O"  "sp3" }
+>> 	{ "CT"  "C"  "sp3" }
+>> 	{ "CX"  "C"  "sp3" }
+>> 	{ "TJ"  "C"  "sp3" }
+>> 	{ "TG"  "C"  "sp3" }
+>> 	{ "TM"  "C"  "sp3" }
+>> 	{ "TP"  "C"  "sp3" }
+>> 	{ "C8"  "C"  "sp3" }
+>> 	{ "2C"  "C"  "sp3" }
+>> 	{ "3C"  "C"  "sp3" }
+>> 	{ "TA"  "C"  "sp3" }
+>> 	{ "CH"  "C"  "sp3" }
+>> 	{ "CS"  "C"  "sp2" }
+>> 	{ "C"   "C"  "sp2" }
+>> 	{ "CO"  "C"  "sp2" }
+>> 	{ "C*"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CB"  "C"  "sp2" }
+>> 	{ "CC"  "C"  "sp2" }
+>> 	{ "CN"  "C"  "sp2" }
+>> 	{ "CM"  "C"  "sp2" }
+>> 	{ "CK"  "C"  "sp2" }
+>> 	{ "CQ"  "C"  "sp2" }
+>> 	{ "CD"  "C"  "sp2" }
+>> 	{ "C5"  "C"  "sp2" }
+>> 	{ "C4"  "C"  "sp2" }
+>> 	{ "CP"  "C"  "sp2" }
+>> 	{ "CI"  "C"  "sp3" }
+>> 	{ "CJ"  "C"  "sp2" }
+>> 	{ "CW"  "C"  "sp2" }
+>> 	{ "CV"  "C"  "sp2" }
+>> 	{ "CR"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CY"  "C"  "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N"  "sp2" }
+>> 	{ "NA"  "N"  "sp2" }
+>> 	{ "N2"  "N"  "sp2" }
+>> 	{ "N*"  "N"  "sp2" }
+>> 	{ "NP"  "N"  "sp2" }
+>> 	{ "NQ"  "N"  "sp2" }
+>> 	{ "NB"  "N"  "sp2" }
+>> 	{ "NC"  "N"  "sp2" }
+>> 	{ "TN"  "N"  "sp2" }
+>> 	{ "NT"  "N"  "sp3" }
+>> 	{ "NY"  "N"  "sp2" }
+>> 	{ "N3"  "N"  "sp3" }
+>> 	{ "NL"  "N"  "sp3" }
+>> 	{ "ND"  "N"  "sp3" }
+>> 	{ "S"   "S"  "sp3" }
+>> 	{ "SH"  "S"  "sp3" }
+>> 	{ "P"   "P"  "sp3" }
+>> 	{ "LP"  ""   "sp3" }
+>> 	{ "EP"  ""   "sp3" }
+>> 	{ "F"   "F"  "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm15ipq = loadamberparams parm15ipq_10.3.dat
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+(UNKNOWN ATOM TYPE: CZ)
+(UNKNOWN ATOM TYPE: CU)
+(UNKNOWN ATOM TYPE: FE)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> #
+>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>> #
+>> loadOff amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: MTB
+Loading: NLE
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading: CALA
+Loading: CARG
+Loading: CASH
+Loading: CASN
+Loading: CASP
+Loading: CCYM
+Loading: CCYS
+Loading: CCYX
+Loading: CGLH
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYN
+Loading: CLYS
+Loading: CMET
+Loading: CNLE
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASH
+Loading: NASN
+Loading: NASP
+Loading: NCYM
+Loading: NCYS
+Loading: NCYX
+Loading: NGLH
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NNLE
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids 
+>> #
+>> addPdbResMap {
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASH" "NASH" } { 1 "ASH" "CASH" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYM" "NCYM" } { 1 "CYM" "CCYM" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLH" "NGLH" } { 1 "GLH" "CGLH" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>                      { 1 "LYN" "CLYN" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "NLE" "NNLE" } { 1 "NLE" "CNLE" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> 
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+>  source leaprc.fluorine.ff15ipq 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+>> logFile leap.log
+log started: Fri Apr 15 13:37:28 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading ff15ipq fluorinated, aromatic amino acid residues
+>> #       D.T. Yang, A.M Gronenborn, L.T. Chong, Development and Validation 
+>> #       of Fluorinated, Aromatic Amino Acid Parameters for Use with the 
+>> #       AMBER ff15ipq Protein Force Field 
+>> #       J. Phys. Chem. A, 126, 14, 2286-2297 (2022). 
+>> #
+>> # This file contains IPolQ optimized parameters for fluorinated amino acids:
+>> #
+>> # F4F:   4(para)-fluoro-phenylalanine
+>> # FTF:   4(para)-trifluoromethyl-phenylalanine  
+>> # Y3F:   3(meta)-fluoro-tyrosine
+>> # YDF:   3,5(meta)-fluro-tyrosine
+>> # W4F:   4-fluoro-tryptophan 
+>> # W5F:   5-fluoro-tryptophan
+>> # W6F:   6-fluoro-tryptophan
+>> # W7F:   7-fluoro-tryptophan 
+>> #
+>> # To use these residues, load this file into leap, after the Amber-FF, e.g.:
+>> #
+>> # > source leaprc.protein.ff15ipq
+>> # > source leaprc.fluorine.ff15ipq
+>> #
+>> #   Load the fluorinated amino acid parameter set.
+>> #
+>> loadamberparams frcmod.ff15ipq-19F
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+>> #
+>> #   Load the fluorinated amino acid libraries.
+>> #
+>> # load individual residues
+>> loadoff ff15ipq-19F.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+Loading: F4F
+Loading: FTF
+Loading: W4F
+Loading: W5F
+Loading: W6F
+Loading: W7F
+Loading: Y3F
+Loading: YDF
+> 
+>  source leaprc.water.spce 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+>> #
+>> #       Load water and ions for SPC/E + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> addAtomTypes {
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>>     { "OW"   "O"   "sp3" }
+>>     { "HW"   "H"   "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = SPC
+>> WAT = SPC
+>> loadAmberParams frcmod.spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+>> loadAmberParams frcmod.ionsjc_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+>> 
+> 
+>  YDF = sequence { ACE ALA YDF ALA NME } 
+Sequence: ACE
+Sequence: ALA
+Sequence: YDF
+Sequence: ALA
+Sequence: NME
+>  check YDF 
+Checking 'YDF'....
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.784 angstroms between nonbonded atoms HD2 and H
+-------  .R<YDF 3>.A<HD2 19> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.330 angstroms between nonbonded atoms HD2 and N
+-------  .R<YDF 3>.A<HD2 19> and .R<ALA 4>.A<N 1>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.798 angstroms between nonbonded atoms CD2 and H
+-------  .R<YDF 3>.A<CD2 18> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.373 angstroms between nonbonded atoms FE2 and O
+-------  .R<YDF 3>.A<FE2 17> and .R<ALA 4>.A<O 10>
+Checking parameters for unit 'YDF'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+>  savepdb YDF YDF_tet.pdb 
+Writing pdb file: YDF_tet.pdb
+>  quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
+log started: Fri Apr 15 13:37:28 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff15ipq force field, developmental version
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #       Version 10.3, solvated:
+>> #         Charges fit with H sigma=1.3 and SPC/Eb, backbone charges held equal
+>> #        
+>> #         vdw (LJEDITs removed, H sigma=1.3, ARG side chain TH sigma=1.5)
+>> #         torsions generation 6 (0 ff14ipq, ALAPROALA,
+>> #                                1 dipeptides,
+>> #                                2 XXXGLY & GLYXXX tripeptides,
+>> #                                3 XXXPRO & PROXXX tripeptides)
+>> #                                4 charged tripeptides)
+>> #                                5 more charged tripeptides and termini
+>> #                                6 angle peptides and more termini)
+>> #         Parm cleaned up extensively
+>> #         Torsion phases restored to 0 and 180 degrees
+>> #         Backbone CNA, HNA, NAC, ACN, and ACO angles fit
+>> #         Additional assorted updates to bonded parameters and types
+>> #         The SPC/Eb water model was used to derive partial charges
+>> #           for this force field
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H"  "sp3" }
+>> 	{ "HO"  "H"  "sp3" }
+>> 	{ "HS"  "H"  "sp3" }
+>> 	{ "H1"  "H"  "sp3" }
+>> 	{ "H2"  "H"  "sp3" }
+>> 	{ "H3"  "H"  "sp3" }
+>> 	{ "H4"  "H"  "sp3" }
+>> 	{ "H5"  "H"  "sp3" }
+>> 	{ "HW"  "H"  "sp3" }
+>> 	{ "HC"  "H"  "sp3" }
+>> 	{ "HA"  "H"  "sp3" }
+>> 	{ "HP"  "H"  "sp3" }
+>> 	{ "HZ"  "H"  "sp3" }
+>> 	{ "TH"  "H"  "sp3" }
+>> 	{ "OH"  "O"  "sp3" }
+>> 	{ "OS"  "O"  "sp3" }
+>> 	{ "O"   "O"  "sp2" }
+>> 	{ "OD"  "O"  "sp2" }
+>> 	{ "O2"  "O"  "sp2" }
+>> 	{ "O3"  "O"  "sp2" }
+>> 	{ "OP"  "O"  "sp2" }
+>> 	{ "OW"  "O"  "sp3" }
+>> 	{ "OA"  "O"  "sp3" }
+>> 	{ "CT"  "C"  "sp3" }
+>> 	{ "CX"  "C"  "sp3" }
+>> 	{ "TJ"  "C"  "sp3" }
+>> 	{ "TG"  "C"  "sp3" }
+>> 	{ "TM"  "C"  "sp3" }
+>> 	{ "TP"  "C"  "sp3" }
+>> 	{ "C8"  "C"  "sp3" }
+>> 	{ "2C"  "C"  "sp3" }
+>> 	{ "3C"  "C"  "sp3" }
+>> 	{ "TA"  "C"  "sp3" }
+>> 	{ "CH"  "C"  "sp3" }
+>> 	{ "CS"  "C"  "sp2" }
+>> 	{ "C"   "C"  "sp2" }
+>> 	{ "CO"  "C"  "sp2" }
+>> 	{ "C*"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CB"  "C"  "sp2" }
+>> 	{ "CC"  "C"  "sp2" }
+>> 	{ "CN"  "C"  "sp2" }
+>> 	{ "CM"  "C"  "sp2" }
+>> 	{ "CK"  "C"  "sp2" }
+>> 	{ "CQ"  "C"  "sp2" }
+>> 	{ "CD"  "C"  "sp2" }
+>> 	{ "C5"  "C"  "sp2" }
+>> 	{ "C4"  "C"  "sp2" }
+>> 	{ "CP"  "C"  "sp2" }
+>> 	{ "CI"  "C"  "sp3" }
+>> 	{ "CJ"  "C"  "sp2" }
+>> 	{ "CW"  "C"  "sp2" }
+>> 	{ "CV"  "C"  "sp2" }
+>> 	{ "CR"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CY"  "C"  "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N"  "sp2" }
+>> 	{ "NA"  "N"  "sp2" }
+>> 	{ "N2"  "N"  "sp2" }
+>> 	{ "N*"  "N"  "sp2" }
+>> 	{ "NP"  "N"  "sp2" }
+>> 	{ "NQ"  "N"  "sp2" }
+>> 	{ "NB"  "N"  "sp2" }
+>> 	{ "NC"  "N"  "sp2" }
+>> 	{ "TN"  "N"  "sp2" }
+>> 	{ "NT"  "N"  "sp3" }
+>> 	{ "NY"  "N"  "sp2" }
+>> 	{ "N3"  "N"  "sp3" }
+>> 	{ "NL"  "N"  "sp3" }
+>> 	{ "ND"  "N"  "sp3" }
+>> 	{ "S"   "S"  "sp3" }
+>> 	{ "SH"  "S"  "sp3" }
+>> 	{ "P"   "P"  "sp3" }
+>> 	{ "LP"  ""   "sp3" }
+>> 	{ "EP"  ""   "sp3" }
+>> 	{ "F"   "F"  "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm15ipq = loadamberparams parm15ipq_10.3.dat
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+(UNKNOWN ATOM TYPE: CZ)
+(UNKNOWN ATOM TYPE: CU)
+(UNKNOWN ATOM TYPE: FE)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> #
+>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>> #
+>> loadOff amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: MTB
+Loading: NLE
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading: CALA
+Loading: CARG
+Loading: CASH
+Loading: CASN
+Loading: CASP
+Loading: CCYM
+Loading: CCYS
+Loading: CCYX
+Loading: CGLH
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYN
+Loading: CLYS
+Loading: CMET
+Loading: CNLE
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASH
+Loading: NASN
+Loading: NASP
+Loading: NCYM
+Loading: NCYS
+Loading: NCYX
+Loading: NGLH
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NNLE
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids 
+>> #
+>> addPdbResMap {
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASH" "NASH" } { 1 "ASH" "CASH" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYM" "NCYM" } { 1 "CYM" "CCYM" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLH" "NGLH" } { 1 "GLH" "CGLH" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>                      { 1 "LYN" "CLYN" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "NLE" "NNLE" } { 1 "NLE" "CNLE" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> 
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+>  source leaprc.fluorine.ff15ipq 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+>> logFile leap.log
+log started: Fri Apr 15 13:37:28 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading ff15ipq fluorinated, aromatic amino acid residues
+>> #       D.T. Yang, A.M Gronenborn, L.T. Chong, Development and Validation 
+>> #       of Fluorinated, Aromatic Amino Acid Parameters for Use with the 
+>> #       AMBER ff15ipq Protein Force Field 
+>> #       J. Phys. Chem. A, 126, 14, 2286-2297 (2022). 
+>> #
+>> # This file contains IPolQ optimized parameters for fluorinated amino acids:
+>> #
+>> # F4F:   4(para)-fluoro-phenylalanine
+>> # FTF:   4(para)-trifluoromethyl-phenylalanine  
+>> # Y3F:   3(meta)-fluoro-tyrosine
+>> # YDF:   3,5(meta)-fluro-tyrosine
+>> # W4F:   4-fluoro-tryptophan 
+>> # W5F:   5-fluoro-tryptophan
+>> # W6F:   6-fluoro-tryptophan
+>> # W7F:   7-fluoro-tryptophan 
+>> #
+>> # To use these residues, load this file into leap, after the Amber-FF, e.g.:
+>> #
+>> # > source leaprc.protein.ff15ipq
+>> # > source leaprc.fluorine.ff15ipq
+>> #
+>> #   Load the fluorinated amino acid parameter set.
+>> #
+>> loadamberparams frcmod.ff15ipq-19F
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+>> #
+>> #   Load the fluorinated amino acid libraries.
+>> #
+>> # load individual residues
+>> loadoff ff15ipq-19F.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+Loading: F4F
+Loading: FTF
+Loading: W4F
+Loading: W5F
+Loading: W6F
+Loading: W7F
+Loading: Y3F
+Loading: YDF
+> 
+>  source leaprc.water.spce 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+>> #
+>> #       Load water and ions for SPC/E + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> addAtomTypes {
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>>     { "OW"   "O"   "sp3" }
+>>     { "HW"   "H"   "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = SPC
+>> WAT = SPC
+>> loadAmberParams frcmod.spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+>> loadAmberParams frcmod.ionsjc_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+>> 
+> 
+>  W4F = sequence { ACE ALA W4F ALA NME } 
+Sequence: ACE
+Sequence: ALA
+Sequence: W4F
+Sequence: ALA
+Sequence: NME
+>  check W4F 
+Checking 'W4F'....
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.128 angstroms between nonbonded atoms CD2 and H
+-------  .R<W4F 3>.A<CD2 22> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.456 angstroms between nonbonded atoms FE3 and H
+-------  .R<W4F 3>.A<FE3 21> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.475 angstroms between nonbonded atoms FE3 and N
+-------  .R<W4F 3>.A<FE3 21> and .R<ALA 4>.A<N 1>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.874 angstroms between nonbonded atoms CE3 and H
+-------  .R<W4F 3>.A<CE3 20> and .R<ALA 4>.A<H 2>
+Checking parameters for unit 'W4F'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+>  savepdb W4F W4F_tet.pdb 
+Writing pdb file: W4F_tet.pdb
+>  quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
+log started: Fri Apr 15 13:37:28 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff15ipq force field, developmental version
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #       Version 10.3, solvated:
+>> #         Charges fit with H sigma=1.3 and SPC/Eb, backbone charges held equal
+>> #        
+>> #         vdw (LJEDITs removed, H sigma=1.3, ARG side chain TH sigma=1.5)
+>> #         torsions generation 6 (0 ff14ipq, ALAPROALA,
+>> #                                1 dipeptides,
+>> #                                2 XXXGLY & GLYXXX tripeptides,
+>> #                                3 XXXPRO & PROXXX tripeptides)
+>> #                                4 charged tripeptides)
+>> #                                5 more charged tripeptides and termini
+>> #                                6 angle peptides and more termini)
+>> #         Parm cleaned up extensively
+>> #         Torsion phases restored to 0 and 180 degrees
+>> #         Backbone CNA, HNA, NAC, ACN, and ACO angles fit
+>> #         Additional assorted updates to bonded parameters and types
+>> #         The SPC/Eb water model was used to derive partial charges
+>> #           for this force field
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H"  "sp3" }
+>> 	{ "HO"  "H"  "sp3" }
+>> 	{ "HS"  "H"  "sp3" }
+>> 	{ "H1"  "H"  "sp3" }
+>> 	{ "H2"  "H"  "sp3" }
+>> 	{ "H3"  "H"  "sp3" }
+>> 	{ "H4"  "H"  "sp3" }
+>> 	{ "H5"  "H"  "sp3" }
+>> 	{ "HW"  "H"  "sp3" }
+>> 	{ "HC"  "H"  "sp3" }
+>> 	{ "HA"  "H"  "sp3" }
+>> 	{ "HP"  "H"  "sp3" }
+>> 	{ "HZ"  "H"  "sp3" }
+>> 	{ "TH"  "H"  "sp3" }
+>> 	{ "OH"  "O"  "sp3" }
+>> 	{ "OS"  "O"  "sp3" }
+>> 	{ "O"   "O"  "sp2" }
+>> 	{ "OD"  "O"  "sp2" }
+>> 	{ "O2"  "O"  "sp2" }
+>> 	{ "O3"  "O"  "sp2" }
+>> 	{ "OP"  "O"  "sp2" }
+>> 	{ "OW"  "O"  "sp3" }
+>> 	{ "OA"  "O"  "sp3" }
+>> 	{ "CT"  "C"  "sp3" }
+>> 	{ "CX"  "C"  "sp3" }
+>> 	{ "TJ"  "C"  "sp3" }
+>> 	{ "TG"  "C"  "sp3" }
+>> 	{ "TM"  "C"  "sp3" }
+>> 	{ "TP"  "C"  "sp3" }
+>> 	{ "C8"  "C"  "sp3" }
+>> 	{ "2C"  "C"  "sp3" }
+>> 	{ "3C"  "C"  "sp3" }
+>> 	{ "TA"  "C"  "sp3" }
+>> 	{ "CH"  "C"  "sp3" }
+>> 	{ "CS"  "C"  "sp2" }
+>> 	{ "C"   "C"  "sp2" }
+>> 	{ "CO"  "C"  "sp2" }
+>> 	{ "C*"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CB"  "C"  "sp2" }
+>> 	{ "CC"  "C"  "sp2" }
+>> 	{ "CN"  "C"  "sp2" }
+>> 	{ "CM"  "C"  "sp2" }
+>> 	{ "CK"  "C"  "sp2" }
+>> 	{ "CQ"  "C"  "sp2" }
+>> 	{ "CD"  "C"  "sp2" }
+>> 	{ "C5"  "C"  "sp2" }
+>> 	{ "C4"  "C"  "sp2" }
+>> 	{ "CP"  "C"  "sp2" }
+>> 	{ "CI"  "C"  "sp3" }
+>> 	{ "CJ"  "C"  "sp2" }
+>> 	{ "CW"  "C"  "sp2" }
+>> 	{ "CV"  "C"  "sp2" }
+>> 	{ "CR"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CY"  "C"  "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N"  "sp2" }
+>> 	{ "NA"  "N"  "sp2" }
+>> 	{ "N2"  "N"  "sp2" }
+>> 	{ "N*"  "N"  "sp2" }
+>> 	{ "NP"  "N"  "sp2" }
+>> 	{ "NQ"  "N"  "sp2" }
+>> 	{ "NB"  "N"  "sp2" }
+>> 	{ "NC"  "N"  "sp2" }
+>> 	{ "TN"  "N"  "sp2" }
+>> 	{ "NT"  "N"  "sp3" }
+>> 	{ "NY"  "N"  "sp2" }
+>> 	{ "N3"  "N"  "sp3" }
+>> 	{ "NL"  "N"  "sp3" }
+>> 	{ "ND"  "N"  "sp3" }
+>> 	{ "S"   "S"  "sp3" }
+>> 	{ "SH"  "S"  "sp3" }
+>> 	{ "P"   "P"  "sp3" }
+>> 	{ "LP"  ""   "sp3" }
+>> 	{ "EP"  ""   "sp3" }
+>> 	{ "F"   "F"  "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm15ipq = loadamberparams parm15ipq_10.3.dat
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+(UNKNOWN ATOM TYPE: CZ)
+(UNKNOWN ATOM TYPE: CU)
+(UNKNOWN ATOM TYPE: FE)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> #
+>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>> #
+>> loadOff amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: MTB
+Loading: NLE
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading: CALA
+Loading: CARG
+Loading: CASH
+Loading: CASN
+Loading: CASP
+Loading: CCYM
+Loading: CCYS
+Loading: CCYX
+Loading: CGLH
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYN
+Loading: CLYS
+Loading: CMET
+Loading: CNLE
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASH
+Loading: NASN
+Loading: NASP
+Loading: NCYM
+Loading: NCYS
+Loading: NCYX
+Loading: NGLH
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NNLE
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids 
+>> #
+>> addPdbResMap {
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASH" "NASH" } { 1 "ASH" "CASH" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYM" "NCYM" } { 1 "CYM" "CCYM" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLH" "NGLH" } { 1 "GLH" "CGLH" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>                      { 1 "LYN" "CLYN" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "NLE" "NNLE" } { 1 "NLE" "CNLE" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> 
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+>  source leaprc.fluorine.ff15ipq 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+>> logFile leap.log
+log started: Fri Apr 15 13:37:28 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading ff15ipq fluorinated, aromatic amino acid residues
+>> #       D.T. Yang, A.M Gronenborn, L.T. Chong, Development and Validation 
+>> #       of Fluorinated, Aromatic Amino Acid Parameters for Use with the 
+>> #       AMBER ff15ipq Protein Force Field 
+>> #       J. Phys. Chem. A, 126, 14, 2286-2297 (2022). 
+>> #
+>> # This file contains IPolQ optimized parameters for fluorinated amino acids:
+>> #
+>> # F4F:   4(para)-fluoro-phenylalanine
+>> # FTF:   4(para)-trifluoromethyl-phenylalanine  
+>> # Y3F:   3(meta)-fluoro-tyrosine
+>> # YDF:   3,5(meta)-fluro-tyrosine
+>> # W4F:   4-fluoro-tryptophan 
+>> # W5F:   5-fluoro-tryptophan
+>> # W6F:   6-fluoro-tryptophan
+>> # W7F:   7-fluoro-tryptophan 
+>> #
+>> # To use these residues, load this file into leap, after the Amber-FF, e.g.:
+>> #
+>> # > source leaprc.protein.ff15ipq
+>> # > source leaprc.fluorine.ff15ipq
+>> #
+>> #   Load the fluorinated amino acid parameter set.
+>> #
+>> loadamberparams frcmod.ff15ipq-19F
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+>> #
+>> #   Load the fluorinated amino acid libraries.
+>> #
+>> # load individual residues
+>> loadoff ff15ipq-19F.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+Loading: F4F
+Loading: FTF
+Loading: W4F
+Loading: W5F
+Loading: W6F
+Loading: W7F
+Loading: Y3F
+Loading: YDF
+> 
+>  source leaprc.water.spce 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+>> #
+>> #       Load water and ions for SPC/E + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> addAtomTypes {
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>>     { "OW"   "O"   "sp3" }
+>>     { "HW"   "H"   "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = SPC
+>> WAT = SPC
+>> loadAmberParams frcmod.spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+>> loadAmberParams frcmod.ionsjc_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+>> 
+> 
+>  W5F = sequence { ACE ALA W5F ALA NME } 
+Sequence: ACE
+Sequence: ALA
+Sequence: W5F
+Sequence: ALA
+Sequence: NME
+>  check W5F 
+Checking 'W5F'....
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.127 angstroms between nonbonded atoms CD2 and H
+-------  .R<W5F 3>.A<CD2 22> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.349 angstroms between nonbonded atoms HE3 and H
+-------  .R<W5F 3>.A<HE3 21> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.436 angstroms between nonbonded atoms HE3 and N
+-------  .R<W5F 3>.A<HE3 21> and .R<ALA 4>.A<N 1>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.874 angstroms between nonbonded atoms CE3 and H
+-------  .R<W5F 3>.A<CE3 20> and .R<ALA 4>.A<H 2>
+Checking parameters for unit 'W5F'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+>  savepdb W5F W5F_tet.pdb 
+Writing pdb file: W5F_tet.pdb
+>  quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
+log started: Fri Apr 15 13:37:28 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff15ipq force field, developmental version
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #       Version 10.3, solvated:
+>> #         Charges fit with H sigma=1.3 and SPC/Eb, backbone charges held equal
+>> #        
+>> #         vdw (LJEDITs removed, H sigma=1.3, ARG side chain TH sigma=1.5)
+>> #         torsions generation 6 (0 ff14ipq, ALAPROALA,
+>> #                                1 dipeptides,
+>> #                                2 XXXGLY & GLYXXX tripeptides,
+>> #                                3 XXXPRO & PROXXX tripeptides)
+>> #                                4 charged tripeptides)
+>> #                                5 more charged tripeptides and termini
+>> #                                6 angle peptides and more termini)
+>> #         Parm cleaned up extensively
+>> #         Torsion phases restored to 0 and 180 degrees
+>> #         Backbone CNA, HNA, NAC, ACN, and ACO angles fit
+>> #         Additional assorted updates to bonded parameters and types
+>> #         The SPC/Eb water model was used to derive partial charges
+>> #           for this force field
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H"  "sp3" }
+>> 	{ "HO"  "H"  "sp3" }
+>> 	{ "HS"  "H"  "sp3" }
+>> 	{ "H1"  "H"  "sp3" }
+>> 	{ "H2"  "H"  "sp3" }
+>> 	{ "H3"  "H"  "sp3" }
+>> 	{ "H4"  "H"  "sp3" }
+>> 	{ "H5"  "H"  "sp3" }
+>> 	{ "HW"  "H"  "sp3" }
+>> 	{ "HC"  "H"  "sp3" }
+>> 	{ "HA"  "H"  "sp3" }
+>> 	{ "HP"  "H"  "sp3" }
+>> 	{ "HZ"  "H"  "sp3" }
+>> 	{ "TH"  "H"  "sp3" }
+>> 	{ "OH"  "O"  "sp3" }
+>> 	{ "OS"  "O"  "sp3" }
+>> 	{ "O"   "O"  "sp2" }
+>> 	{ "OD"  "O"  "sp2" }
+>> 	{ "O2"  "O"  "sp2" }
+>> 	{ "O3"  "O"  "sp2" }
+>> 	{ "OP"  "O"  "sp2" }
+>> 	{ "OW"  "O"  "sp3" }
+>> 	{ "OA"  "O"  "sp3" }
+>> 	{ "CT"  "C"  "sp3" }
+>> 	{ "CX"  "C"  "sp3" }
+>> 	{ "TJ"  "C"  "sp3" }
+>> 	{ "TG"  "C"  "sp3" }
+>> 	{ "TM"  "C"  "sp3" }
+>> 	{ "TP"  "C"  "sp3" }
+>> 	{ "C8"  "C"  "sp3" }
+>> 	{ "2C"  "C"  "sp3" }
+>> 	{ "3C"  "C"  "sp3" }
+>> 	{ "TA"  "C"  "sp3" }
+>> 	{ "CH"  "C"  "sp3" }
+>> 	{ "CS"  "C"  "sp2" }
+>> 	{ "C"   "C"  "sp2" }
+>> 	{ "CO"  "C"  "sp2" }
+>> 	{ "C*"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CB"  "C"  "sp2" }
+>> 	{ "CC"  "C"  "sp2" }
+>> 	{ "CN"  "C"  "sp2" }
+>> 	{ "CM"  "C"  "sp2" }
+>> 	{ "CK"  "C"  "sp2" }
+>> 	{ "CQ"  "C"  "sp2" }
+>> 	{ "CD"  "C"  "sp2" }
+>> 	{ "C5"  "C"  "sp2" }
+>> 	{ "C4"  "C"  "sp2" }
+>> 	{ "CP"  "C"  "sp2" }
+>> 	{ "CI"  "C"  "sp3" }
+>> 	{ "CJ"  "C"  "sp2" }
+>> 	{ "CW"  "C"  "sp2" }
+>> 	{ "CV"  "C"  "sp2" }
+>> 	{ "CR"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CY"  "C"  "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N"  "sp2" }
+>> 	{ "NA"  "N"  "sp2" }
+>> 	{ "N2"  "N"  "sp2" }
+>> 	{ "N*"  "N"  "sp2" }
+>> 	{ "NP"  "N"  "sp2" }
+>> 	{ "NQ"  "N"  "sp2" }
+>> 	{ "NB"  "N"  "sp2" }
+>> 	{ "NC"  "N"  "sp2" }
+>> 	{ "TN"  "N"  "sp2" }
+>> 	{ "NT"  "N"  "sp3" }
+>> 	{ "NY"  "N"  "sp2" }
+>> 	{ "N3"  "N"  "sp3" }
+>> 	{ "NL"  "N"  "sp3" }
+>> 	{ "ND"  "N"  "sp3" }
+>> 	{ "S"   "S"  "sp3" }
+>> 	{ "SH"  "S"  "sp3" }
+>> 	{ "P"   "P"  "sp3" }
+>> 	{ "LP"  ""   "sp3" }
+>> 	{ "EP"  ""   "sp3" }
+>> 	{ "F"   "F"  "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm15ipq = loadamberparams parm15ipq_10.3.dat
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+(UNKNOWN ATOM TYPE: CZ)
+(UNKNOWN ATOM TYPE: CU)
+(UNKNOWN ATOM TYPE: FE)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> #
+>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>> #
+>> loadOff amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: MTB
+Loading: NLE
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading: CALA
+Loading: CARG
+Loading: CASH
+Loading: CASN
+Loading: CASP
+Loading: CCYM
+Loading: CCYS
+Loading: CCYX
+Loading: CGLH
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYN
+Loading: CLYS
+Loading: CMET
+Loading: CNLE
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASH
+Loading: NASN
+Loading: NASP
+Loading: NCYM
+Loading: NCYS
+Loading: NCYX
+Loading: NGLH
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NNLE
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids 
+>> #
+>> addPdbResMap {
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASH" "NASH" } { 1 "ASH" "CASH" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYM" "NCYM" } { 1 "CYM" "CCYM" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLH" "NGLH" } { 1 "GLH" "CGLH" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>                      { 1 "LYN" "CLYN" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "NLE" "NNLE" } { 1 "NLE" "CNLE" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> 
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+>  source leaprc.fluorine.ff15ipq 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+>> logFile leap.log
+log started: Fri Apr 15 13:37:28 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading ff15ipq fluorinated, aromatic amino acid residues
+>> #       D.T. Yang, A.M Gronenborn, L.T. Chong, Development and Validation 
+>> #       of Fluorinated, Aromatic Amino Acid Parameters for Use with the 
+>> #       AMBER ff15ipq Protein Force Field 
+>> #       J. Phys. Chem. A, 126, 14, 2286-2297 (2022). 
+>> #
+>> # This file contains IPolQ optimized parameters for fluorinated amino acids:
+>> #
+>> # F4F:   4(para)-fluoro-phenylalanine
+>> # FTF:   4(para)-trifluoromethyl-phenylalanine  
+>> # Y3F:   3(meta)-fluoro-tyrosine
+>> # YDF:   3,5(meta)-fluro-tyrosine
+>> # W4F:   4-fluoro-tryptophan 
+>> # W5F:   5-fluoro-tryptophan
+>> # W6F:   6-fluoro-tryptophan
+>> # W7F:   7-fluoro-tryptophan 
+>> #
+>> # To use these residues, load this file into leap, after the Amber-FF, e.g.:
+>> #
+>> # > source leaprc.protein.ff15ipq
+>> # > source leaprc.fluorine.ff15ipq
+>> #
+>> #   Load the fluorinated amino acid parameter set.
+>> #
+>> loadamberparams frcmod.ff15ipq-19F
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+>> #
+>> #   Load the fluorinated amino acid libraries.
+>> #
+>> # load individual residues
+>> loadoff ff15ipq-19F.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+Loading: F4F
+Loading: FTF
+Loading: W4F
+Loading: W5F
+Loading: W6F
+Loading: W7F
+Loading: Y3F
+Loading: YDF
+> 
+>  source leaprc.water.spce 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+>> #
+>> #       Load water and ions for SPC/E + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> addAtomTypes {
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>>     { "OW"   "O"   "sp3" }
+>>     { "HW"   "H"   "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = SPC
+>> WAT = SPC
+>> loadAmberParams frcmod.spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+>> loadAmberParams frcmod.ionsjc_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+>> 
+> 
+>  W6F = sequence { ACE ALA W6F ALA NME } 
+Sequence: ACE
+Sequence: ALA
+Sequence: W6F
+Sequence: ALA
+Sequence: NME
+>  check W6F 
+Checking 'W6F'....
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.128 angstroms between nonbonded atoms CD2 and H
+-------  .R<W6F 3>.A<CD2 22> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.349 angstroms between nonbonded atoms HE3 and H
+-------  .R<W6F 3>.A<HE3 21> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.436 angstroms between nonbonded atoms HE3 and N
+-------  .R<W6F 3>.A<HE3 21> and .R<ALA 4>.A<N 1>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.874 angstroms between nonbonded atoms CE3 and H
+-------  .R<W6F 3>.A<CE3 20> and .R<ALA 4>.A<H 2>
+Checking parameters for unit 'W6F'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+>  savepdb W6F W6F_tet.pdb 
+Writing pdb file: W6F_tet.pdb
+>  quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
+log started: Fri Apr 15 13:37:29 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff15ipq force field, developmental version
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #       Version 10.3, solvated:
+>> #         Charges fit with H sigma=1.3 and SPC/Eb, backbone charges held equal
+>> #        
+>> #         vdw (LJEDITs removed, H sigma=1.3, ARG side chain TH sigma=1.5)
+>> #         torsions generation 6 (0 ff14ipq, ALAPROALA,
+>> #                                1 dipeptides,
+>> #                                2 XXXGLY & GLYXXX tripeptides,
+>> #                                3 XXXPRO & PROXXX tripeptides)
+>> #                                4 charged tripeptides)
+>> #                                5 more charged tripeptides and termini
+>> #                                6 angle peptides and more termini)
+>> #         Parm cleaned up extensively
+>> #         Torsion phases restored to 0 and 180 degrees
+>> #         Backbone CNA, HNA, NAC, ACN, and ACO angles fit
+>> #         Additional assorted updates to bonded parameters and types
+>> #         The SPC/Eb water model was used to derive partial charges
+>> #           for this force field
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H"  "sp3" }
+>> 	{ "HO"  "H"  "sp3" }
+>> 	{ "HS"  "H"  "sp3" }
+>> 	{ "H1"  "H"  "sp3" }
+>> 	{ "H2"  "H"  "sp3" }
+>> 	{ "H3"  "H"  "sp3" }
+>> 	{ "H4"  "H"  "sp3" }
+>> 	{ "H5"  "H"  "sp3" }
+>> 	{ "HW"  "H"  "sp3" }
+>> 	{ "HC"  "H"  "sp3" }
+>> 	{ "HA"  "H"  "sp3" }
+>> 	{ "HP"  "H"  "sp3" }
+>> 	{ "HZ"  "H"  "sp3" }
+>> 	{ "TH"  "H"  "sp3" }
+>> 	{ "OH"  "O"  "sp3" }
+>> 	{ "OS"  "O"  "sp3" }
+>> 	{ "O"   "O"  "sp2" }
+>> 	{ "OD"  "O"  "sp2" }
+>> 	{ "O2"  "O"  "sp2" }
+>> 	{ "O3"  "O"  "sp2" }
+>> 	{ "OP"  "O"  "sp2" }
+>> 	{ "OW"  "O"  "sp3" }
+>> 	{ "OA"  "O"  "sp3" }
+>> 	{ "CT"  "C"  "sp3" }
+>> 	{ "CX"  "C"  "sp3" }
+>> 	{ "TJ"  "C"  "sp3" }
+>> 	{ "TG"  "C"  "sp3" }
+>> 	{ "TM"  "C"  "sp3" }
+>> 	{ "TP"  "C"  "sp3" }
+>> 	{ "C8"  "C"  "sp3" }
+>> 	{ "2C"  "C"  "sp3" }
+>> 	{ "3C"  "C"  "sp3" }
+>> 	{ "TA"  "C"  "sp3" }
+>> 	{ "CH"  "C"  "sp3" }
+>> 	{ "CS"  "C"  "sp2" }
+>> 	{ "C"   "C"  "sp2" }
+>> 	{ "CO"  "C"  "sp2" }
+>> 	{ "C*"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CB"  "C"  "sp2" }
+>> 	{ "CC"  "C"  "sp2" }
+>> 	{ "CN"  "C"  "sp2" }
+>> 	{ "CM"  "C"  "sp2" }
+>> 	{ "CK"  "C"  "sp2" }
+>> 	{ "CQ"  "C"  "sp2" }
+>> 	{ "CD"  "C"  "sp2" }
+>> 	{ "C5"  "C"  "sp2" }
+>> 	{ "C4"  "C"  "sp2" }
+>> 	{ "CP"  "C"  "sp2" }
+>> 	{ "CI"  "C"  "sp3" }
+>> 	{ "CJ"  "C"  "sp2" }
+>> 	{ "CW"  "C"  "sp2" }
+>> 	{ "CV"  "C"  "sp2" }
+>> 	{ "CR"  "C"  "sp2" }
+>> 	{ "CA"  "C"  "sp2" }
+>> 	{ "CY"  "C"  "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N"  "sp2" }
+>> 	{ "NA"  "N"  "sp2" }
+>> 	{ "N2"  "N"  "sp2" }
+>> 	{ "N*"  "N"  "sp2" }
+>> 	{ "NP"  "N"  "sp2" }
+>> 	{ "NQ"  "N"  "sp2" }
+>> 	{ "NB"  "N"  "sp2" }
+>> 	{ "NC"  "N"  "sp2" }
+>> 	{ "TN"  "N"  "sp2" }
+>> 	{ "NT"  "N"  "sp3" }
+>> 	{ "NY"  "N"  "sp2" }
+>> 	{ "N3"  "N"  "sp3" }
+>> 	{ "NL"  "N"  "sp3" }
+>> 	{ "ND"  "N"  "sp3" }
+>> 	{ "S"   "S"  "sp3" }
+>> 	{ "SH"  "S"  "sp3" }
+>> 	{ "P"   "P"  "sp3" }
+>> 	{ "LP"  ""   "sp3" }
+>> 	{ "EP"  ""   "sp3" }
+>> 	{ "F"   "F"  "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm15ipq = loadamberparams parm15ipq_10.3.dat
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+(UNKNOWN ATOM TYPE: CZ)
+(UNKNOWN ATOM TYPE: CU)
+(UNKNOWN ATOM TYPE: FE)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> #
+>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>> #
+>> loadOff amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: MTB
+Loading: NLE
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading: CALA
+Loading: CARG
+Loading: CASH
+Loading: CASN
+Loading: CASP
+Loading: CCYM
+Loading: CCYS
+Loading: CCYX
+Loading: CGLH
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYN
+Loading: CLYS
+Loading: CMET
+Loading: CNLE
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASH
+Loading: NASN
+Loading: NASP
+Loading: NCYM
+Loading: NCYS
+Loading: NCYX
+Loading: NGLH
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NNLE
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids 
+>> #
+>> addPdbResMap {
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASH" "NASH" } { 1 "ASH" "CASH" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYM" "NCYM" } { 1 "CYM" "CCYM" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLH" "NGLH" } { 1 "GLH" "CGLH" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>                      { 1 "LYN" "CLYN" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "NLE" "NNLE" } { 1 "NLE" "CNLE" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> 
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+>  source leaprc.fluorine.ff15ipq 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+>> logFile leap.log
+log started: Fri Apr 15 13:37:29 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading ff15ipq fluorinated, aromatic amino acid residues
+>> #       D.T. Yang, A.M Gronenborn, L.T. Chong, Development and Validation 
+>> #       of Fluorinated, Aromatic Amino Acid Parameters for Use with the 
+>> #       AMBER ff15ipq Protein Force Field 
+>> #       J. Phys. Chem. A, 126, 14, 2286-2297 (2022). 
+>> #
+>> # This file contains IPolQ optimized parameters for fluorinated amino acids:
+>> #
+>> # F4F:   4(para)-fluoro-phenylalanine
+>> # FTF:   4(para)-trifluoromethyl-phenylalanine  
+>> # Y3F:   3(meta)-fluoro-tyrosine
+>> # YDF:   3,5(meta)-fluro-tyrosine
+>> # W4F:   4-fluoro-tryptophan 
+>> # W5F:   5-fluoro-tryptophan
+>> # W6F:   6-fluoro-tryptophan
+>> # W7F:   7-fluoro-tryptophan 
+>> #
+>> # To use these residues, load this file into leap, after the Amber-FF, e.g.:
+>> #
+>> # > source leaprc.protein.ff15ipq
+>> # > source leaprc.fluorine.ff15ipq
+>> #
+>> #   Load the fluorinated amino acid parameter set.
+>> #
+>> loadamberparams frcmod.ff15ipq-19F
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+>> #
+>> #   Load the fluorinated amino acid libraries.
+>> #
+>> # load individual residues
+>> loadoff ff15ipq-19F.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+Loading: F4F
+Loading: FTF
+Loading: W4F
+Loading: W5F
+Loading: W6F
+Loading: W7F
+Loading: Y3F
+Loading: YDF
+> 
+>  source leaprc.water.spce 
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+>> #
+>> #       Load water and ions for SPC/E + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> addAtomTypes {
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>>     { "OW"   "O"   "sp3" }
+>>     { "HW"   "H"   "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = SPC
+>> WAT = SPC
+>> loadAmberParams frcmod.spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+>> loadAmberParams frcmod.ionsjc_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_spce
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+>> 
+> 
+>  W7F = sequence { ACE ALA W7F ALA NME } 
+Sequence: ACE
+Sequence: ALA
+Sequence: W7F
+Sequence: ALA
+Sequence: NME
+>  check W7F 
+Checking 'W7F'....
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.128 angstroms between nonbonded atoms CD2 and H
+-------  .R<W7F 3>.A<CD2 22> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.349 angstroms between nonbonded atoms HE3 and H
+-------  .R<W7F 3>.A<HE3 21> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.436 angstroms between nonbonded atoms HE3 and N
+-------  .R<W7F 3>.A<HE3 21> and .R<ALA 4>.A<N 1>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.874 angstroms between nonbonded atoms CE3 and H
+-------  .R<W7F 3>.A<CE3 20> and .R<ALA 4>.A<H 2>
+Checking parameters for unit 'W7F'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+>  savepdb W7F W7F_tet.pdb 
+Writing pdb file: W7F_tet.pdb
+>  quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.

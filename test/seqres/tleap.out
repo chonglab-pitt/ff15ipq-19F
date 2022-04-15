@@ -1,0 +1,68 @@
+-I: Adding /Users/darian/anaconda3/envs/md19f/dat/leap/prep to search path.
+-I: Adding /Users/darian/anaconda3/envs/md19f/dat/leap/lib to search path.
+-I: Adding /Users/darian/anaconda3/envs/md19f/dat/leap/parm to search path.
+-I: Adding /Users/darian/anaconda3/envs/md19f/dat/leap/cmd to search path.
+-f: Source tleap.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./tleap.in
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.protein.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.protein.ff15ipq done
+Log file: ./leap.log
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/parm15ipq_10.3.dat
+Reading title:
+Parm15 developmental parameter set
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/amino15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminoct15ipq_10.0.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/aminont15ipq_10.0.lib
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.fluorine.ff15ipq done
+Log file: ./leap.log
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ff15ipq-19F
+Reading force field modification type file (frcmod)
+Reading title:
+Set of parameters for fluorinated aromatic amino acids for use with the ff15ipq force field
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/ff15ipq-19F.lib
+----- Source: /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce
+----- Source of /Users/darian/anaconda3/envs/md19f/dat/leap/cmd/leaprc.water.spce done
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/atomic_ions.lib
+Loading library: /Users/darian/anaconda3/envs/md19f/dat/leap/lib/solvents.lib
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+Loading parameters: /Users/darian/anaconda3/envs/md19f/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+Checking 'W7F'....
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.128 angstroms between nonbonded atoms CD2 and H
+-------  .R<W7F 3>.A<CD2 22> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.349 angstroms between nonbonded atoms HE3 and H
+-------  .R<W7F 3>.A<HE3 21> and .R<ALA 4>.A<H 2>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 1.436 angstroms between nonbonded atoms HE3 and N
+-------  .R<W7F 3>.A<HE3 21> and .R<ALA 4>.A<N 1>
+
+/Users/darian/anaconda3/envs/md19f/bin/teLeap: Warning!
+Close contact of 0.874 angstroms between nonbonded atoms CE3 and H
+-------  .R<W7F 3>.A<CE3 20> and .R<ALA 4>.A<H 2>
+Checking parameters for unit 'W7F'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+Writing pdb file: W7F_tet.pdb
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
