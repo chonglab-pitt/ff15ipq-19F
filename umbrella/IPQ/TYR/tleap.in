@@ -1,0 +1,11 @@
+source leaprc.protein.ff15ipq
+source leaprc.water.spce
+loadoff ../../19F_FF15IPQ_V03_IPQ_ADJ.lib
+loadAmberParams ../../19F_FF15IPQ_FIT_V01.frcmod
+TYR = sequence { ACE ALA TYR ALA NME }
+check TYR
+saveAmberParm TYR TYR_tet_dry.prmtop TYR_tet_dry.inpcrd
+solvateoct TYR SPCBOX 10.0
+saveAmberParm TYR TYR_tet.prmtop TYR_tet.inpcrd
+savepdb TYR TYR_tet.pdb
+quit

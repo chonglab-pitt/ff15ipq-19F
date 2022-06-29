@@ -1,0 +1,11 @@
+source leaprc.protein.ff15ipq
+source leaprc.water.spce
+loadoff ../../19F_FF15IPQ_V03_IPQ_ADJ.lib
+loadAmberParams ../../19F_FF15IPQ_FIT_V01.frcmod
+TRP = sequence { ACE ALA TRP ALA NME }
+check TRP
+saveAmberParm TRP TRP_tet_dry.prmtop TRP_tet_dry.inpcrd
+solvateoct TRP SPCBOX 10.0
+saveAmberParm TRP TRP_tet.prmtop TRP_tet.inpcrd
+savepdb TRP TRP_tet.pdb
+quit

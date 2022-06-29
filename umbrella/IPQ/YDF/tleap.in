@@ -1,0 +1,11 @@
+source leaprc.protein.ff15ipq
+source leaprc.water.spce
+loadoff ../../19F_FF15IPQ_V03_IPQ_ADJ.lib
+loadAmberParams ../../19F_FF15IPQ_FIT_V01.frcmod
+YDF = sequence { ACE ALA YDF ALA NME }
+check YDF
+saveAmberParm YDF YDF_tet_dry.prmtop YDF_tet_dry.inpcrd
+solvateoct YDF SPCBOX 10.0
+saveAmberParm YDF YDF_tet.prmtop YDF_tet.inpcrd
+savepdb YDF YDF_tet.pdb
+quit

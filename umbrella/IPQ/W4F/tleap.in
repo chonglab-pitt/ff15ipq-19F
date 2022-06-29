@@ -1,0 +1,11 @@
+source leaprc.protein.ff15ipq
+source leaprc.water.spce
+loadoff ../../19F_FF15IPQ_V03_IPQ_ADJ.lib
+loadAmberParams ../../19F_FF15IPQ_FIT_V01.frcmod
+W4F = sequence { ACE ALA W4F ALA NME }
+check W4F
+saveAmberParm W4F W4F_tet_dry.prmtop W4F_tet_dry.inpcrd
+solvateoct W4F SPCBOX 10.0
+saveAmberParm W4F W4F_tet.prmtop W4F_tet.inpcrd
+savepdb W4F W4F_tet.pdb
+quit
